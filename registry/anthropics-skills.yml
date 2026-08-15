@@ -1,0 +1,4 @@
+name: anthropics/skills
+url: https://github.com/anthropics/skills
+clone: https://github.com/anthropics/skills.git
+description: Anthropic's own published skills

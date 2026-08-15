@@ -1,0 +1,53 @@
+name: scan
+
+# Weekly: clone every repo in registry/ and re-grade it. Skills change after
+# you install them, so a grade is only ever true of a commit.
+
+on:
+  schedule:
+    - cron: '23 4 * * 2'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Regression suite must pass before any grade is published
+        run: node scripts/test.mjs
+
+      - name: Clone and scan every registered repo
+        run: |
+          mkdir -p /tmp/corpus
+          for f in registry/*.yml; do
+            slug=$(basename "$f" .yml)
+            clone=$(grep -m1 '^clone:' "$f" | cut -d' ' -f2-)
+            name=$(grep -m1 '^name:'  "$f" | cut -d' ' -f2-)
+            url=$(grep -m1 '^url:'    "$f" | cut -d' ' -f2-)
+            echo "::group::$slug"
+            if git clone -q --depth 1 "$clone" "/tmp/corpus/$slug"; then
+              node scripts/scan.mjs "/tmp/corpus/$slug" --slug "$slug" --name "$name" --url "$url" --quiet \
+                || echo "::warning::scan failed for $slug"
+            else
+              echo "::warning::clone failed for $slug"
+            fi
+            echo "::endgroup::"
+          done
+
+      - name: Rebuild pages
+        run: node scripts/build.mjs
+
+      - name: Commit any grade changes
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports README.md
+          git diff --staged --quiet || git commit -m "chore: weekly rescan"
+          git push

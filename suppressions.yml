@@ -1,0 +1,51 @@
+# Reviewed exceptions. Every entry is a human saying "the scanner is right that
+# this pattern is present, and wrong that it is a risk" — in public, with a
+# reason and a name attached.
+#
+# This file exists because the alternative is worse. A scanner with no
+# suppression mechanism gets tuned into uselessness to avoid embarrassing false
+# positives. A scanner with a *private* suppression mechanism is just a scanner
+# you cannot audit. So: baseline in the open, or not at all.
+#
+# Suppressed findings still appear in the report. They are shown, labelled, and
+# excluded from the score — never deleted.
+
+suppressions:
+  - repo: borghei-claude-skills
+    skill: skill-security-auditor
+    detectors: [secret-access, obfuscation, privilege-escalation, persistence, instruction-override, network-egress, dotenv-access, unpinned-install]
+    reason: >
+      This skill's entire purpose is to teach an agent to recognise these
+      patterns, so its reference files list them verbatim. Reviewed the fenced
+      blocks: every hit is an example inside a "Pattern:" line, none is an
+      instruction to execute.
+    reviewed_by: mohitagw15856
+    date: 2026-08-15
+
+  - repo: borghei-claude-skills
+    skill: threat-detection
+    detectors: [pipe-to-shell, destructive, privilege-escalation, network-egress, dotenv-access]
+    reason: >
+      references/threat-indicators.md is a catalogue of attack signatures —
+      SQL injection strings, XSS payloads, `curl … | sh`. It is a detection
+      corpus, not a runbook. Same category as a WAF ruleset containing the
+      attacks it blocks.
+    reviewed_by: mohitagw15856
+    date: 2026-08-15
+
+  - repo: pm-claude-skills
+    skill: skill-vetting
+    detectors: [secret-access, network-egress, dotenv-access]
+    reason: >
+      A skill that tells you which patterns to look for necessarily contains
+      those patterns. All hits are inside a red-flag table.
+    reviewed_by: mohitagw15856
+    date: 2026-08-15
+
+  - repo: pm-claude-skills
+    skill: skill-security-auditor
+    detectors: [network-egress, destructive, privilege-escalation]
+    reason: >
+      Same as above — a threat table describing what to look for.
+    reviewed_by: mohitagw15856
+    date: 2026-08-15

@@ -1,0 +1,301 @@
+{
+  "slug": "obra-superpowers",
+  "name": "obra/superpowers",
+  "url": "https://github.com/obra/superpowers",
+  "scanned_at": "2026-08-15",
+  "scanner_version": 1,
+  "skill_count": 14,
+  "average_score": 97.8,
+  "repo_grade": "A",
+  "distribution": {
+    "A": 13,
+    "B": 1,
+    "C": 0,
+    "D": 0,
+    "F": 0
+  },
+  "tiers": {
+    "0": 0,
+    "1": 1,
+    "2": 3,
+    "3": 10,
+    "4": 0
+  },
+  "by_detector": {
+    "destructive": 2,
+    "unpinned-install": 1
+  },
+  "suppressed_skills": [],
+  "skills": [
+    {
+      "name": "brainstorming",
+      "path": "skills/brainstorming",
+      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+      "grade": "B",
+      "score": 80,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 8,
+      "unscanned_files": 1,
+      "bytes": 79957,
+      "findings": [
+        {
+          "id": "destructive",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "plain",
+          "file": "scripts/start-server.sh",
+          "line": 148,
+          "match": "rm -f \"$PID_FILE\"",
+          "evidence": "rm -f \"$PID_FILE\""
+        },
+        {
+          "id": "destructive",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "plain",
+          "file": "scripts/stop-server.sh",
+          "line": 22,
+          "match": "rm -f \"${STATE_DIR}/server-info\"",
+          "evidence": "rm -f \"${STATE_DIR}/server-info\""
+        },
+        {
+          "id": "destructive",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "plain",
+          "file": "scripts/stop-server.sh",
+          "line": 79,
+          "match": "rm -f \"$PID_FILE\" \"$SERVER_ID_FILE\"",
+          "evidence": "rm -f \"$PID_FILE\" \"$SERVER_ID_FILE\""
+        },
+        {
+          "id": "destructive",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "plain",
+          "file": "scripts/stop-server.sh",
+          "line": 109,
+          "match": "rm -f \"$PID_FILE\" \"$SERVER_ID_FILE\" \"${STATE_DIR}/server.log\"",
+          "evidence": "rm -f \"$PID_FILE\" \"$SERVER_ID_FILE\" \"${STATE_DIR}/server.log\""
+        },
+        {
+          "id": "destructive",
+          "severity": "info",
+          "declared_severity": "high",
+          "context": "rollup",
+          "file": "scripts/stop-server.sh",
+          "line": 0,
+          "match": "+1 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        }
+      ],
+      "fingerprint": "ef75957a5294ffda"
+    },
+    {
+      "name": "subagent-driven-development",
+      "path": "skills/subagent-driven-development",
+      "description": "Use when executing implementation plans with independent tasks in the current session",
+      "grade": "A",
+      "score": 92,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 7,
+      "unscanned_files": 3,
+      "bytes": 56327,
+      "findings": [
+        {
+          "id": "destructive",
+          "severity": "medium",
+          "declared_severity": "high",
+          "context": "inline-code",
+          "file": "SKILL.md",
+          "line": 483,
+          "match": "rm -rf <workspace>`) — the git history is",
+          "evidence": "delete this plan's workspace (`rm -rf <workspace>`) — the git history is"
+        }
+      ],
+      "fingerprint": "80935e66c997c5f5"
+    },
+    {
+      "name": "writing-skills",
+      "path": "skills/writing-skills",
+      "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
+      "grade": "A",
+      "score": 97,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 7,
+      "unscanned_files": 1,
+      "bytes": 107083,
+      "findings": [
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "anthropic-best-practices.md",
+          "line": 1082,
+          "match": "pip install pypdf`",
+          "evidence": "\"Install required package: `pip install pypdf`"
+        }
+      ],
+      "fingerprint": "b229f01257dcd423"
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "path": "skills/dispatching-parallel-agents",
+      "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 6052,
+      "findings": [],
+      "fingerprint": "537dea8e6e21013f"
+    },
+    {
+      "name": "executing-plans",
+      "path": "skills/executing-plans",
+      "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+      "grade": "A",
+      "score": 100,
+      "tier": 1,
+      "tier_name": "read",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 2305,
+      "findings": [],
+      "fingerprint": "9c19fbded68e58b3"
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "path": "skills/finishing-a-development-branch",
+      "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 7729,
+      "findings": [],
+      "fingerprint": "8d565b86878ae142"
+    },
+    {
+      "name": "receiving-code-review",
+      "path": "skills/receiving-code-review",
+      "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 6165,
+      "findings": [],
+      "fingerprint": "1bf7ae86cefc5a66"
+    },
+    {
+      "name": "requesting-code-review",
+      "path": "skills/requesting-code-review",
+      "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 8609,
+      "findings": [],
+      "fingerprint": "2573cde51c50e83e"
+    },
+    {
+      "name": "systematic-debugging",
+      "path": "skills/systematic-debugging",
+      "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 11,
+      "unscanned_files": 0,
+      "bytes": 40682,
+      "findings": [],
+      "fingerprint": "f0a98bff4404e370"
+    },
+    {
+      "name": "test-driven-development",
+      "path": "skills/test-driven-development",
+      "description": "Use when implementing any feature or bugfix, before writing implementation code",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 17211,
+      "findings": [],
+      "fingerprint": "fecd39c8ff79ca8f"
+    },
+    {
+      "name": "using-git-worktrees",
+      "path": "skills/using-git-worktrees",
+      "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 6803,
+      "findings": [],
+      "fingerprint": "20f7b4815e124ed1"
+    },
+    {
+      "name": "using-superpowers",
+      "path": "skills/using-superpowers",
+      "description": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 6,
+      "unscanned_files": 0,
+      "bytes": 17111,
+      "findings": [],
+      "fingerprint": "bbd73f0651484755"
+    },
+    {
+      "name": "verification-before-completion",
+      "path": "skills/verification-before-completion",
+      "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3598,
+      "findings": [],
+      "fingerprint": "4ee9294746e02bed"
+    },
+    {
+      "name": "writing-plans",
+      "path": "skills/writing-plans",
+      "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 8742,
+      "findings": [],
+      "fingerprint": "b37304aa6208b77c"
+    }
+  ]
+}

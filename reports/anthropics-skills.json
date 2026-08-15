@@ -1,0 +1,2139 @@
+{
+  "slug": "anthropics-skills",
+  "name": "anthropics/skills",
+  "url": "https://github.com/anthropics/skills",
+  "scanned_at": "2026-08-15",
+  "scanner_version": 1,
+  "skill_count": 18,
+  "average_score": 91.3,
+  "repo_grade": "A",
+  "distribution": {
+    "A": 13,
+    "B": 3,
+    "C": 2,
+    "D": 0,
+    "F": 0
+  },
+  "tiers": {
+    "0": 1,
+    "1": 1,
+    "2": 5,
+    "3": 11,
+    "4": 0
+  },
+  "by_detector": {
+    "unpinned-install": 6,
+    "destructive": 4,
+    "bundled-binary": 3,
+    "network-egress": 3,
+    "env-key-reference": 3,
+    "privilege-escalation": 1,
+    "dotenv-access": 1
+  },
+  "suppressed_skills": [],
+  "skills": [
+    {
+      "name": "claude-api",
+      "path": "skills/claude-api",
+      "description": "Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.\nTRIGGER — read BEFORE opening the target file; do",
+      "grade": "C",
+      "score": 63,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 67,
+      "unscanned_files": 0,
+      "bytes": 936292,
+      "findings": [
+        {
+          "id": "privilege-escalation",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "fence",
+          "file": "shared/anthropic-cli.md",
+          "line": 25,
+          "match": "sudo t",
+          "evidence": "| sudo tar -xz -C /usr/local/bin ant"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "curl/examples.md",
+          "line": 1,
+          "match": "cURL",
+          "evidence": "# Claude API — cURL / Raw HTTP"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "curl/examples.md",
+          "line": 16,
+          "match": "curl",
+          "evidence": "curl https://api.anthropic.com/v1/messages \\"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "curl/examples.md",
+          "line": 37,
+          "match": "curl",
+          "evidence": "response=$(curl -s https://api.anthropic.com/v1/messages \\"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "curl/managed-agents.md",
+          "line": 1,
+          "match": "cURL",
+          "evidence": "# Managed Agents — cURL / Raw HTTP"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "curl/managed-agents.md",
+          "line": 24,
+          "match": "curl",
+          "evidence": "curl -X POST https://api.anthropic.com/v1/environments \\"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "curl/managed-agents.md",
+          "line": 38,
+          "match": "curl",
+          "evidence": "curl -X POST https://api.anthropic.com/v1/environments \\"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "go/managed-agents/README.md",
+          "line": 3,
+          "match": "cURL",
+          "evidence": "> **Bindings not shown here:** This README covers the most common managed-agents flows for Go. If you need a class, method, namespace, field, or behavior that isn't shown, WebFetch the Go SDK repo **o"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "java/managed-agents/README.md",
+          "line": 3,
+          "match": "cURL",
+          "evidence": "> **Bindings not shown here:** This README covers the most common managed-agents flows for Java. If you need a class, method, namespace, field, or behavior that isn't shown, WebFetch the Java SDK repo"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "php/managed-agents/README.md",
+          "line": 3,
+          "match": "cURL",
+          "evidence": "> **Bindings not shown here:** This README covers the most common managed-agents flows for PHP. If you need a class, method, namespace, field, or behavior that isn't shown, WebFetch the PHP SDK repo *"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "php/managed-agents/README.md",
+          "line": 207,
+          "match": "cURL",
+          "evidence": "> ℹ️ **PHP file upload:** The PHP SDK's beta managed-agents file upload binding is not shown in the apps source examples; the canonical PHP example uses raw cURL against `POST /v1/files`. If your code"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "php/managed-agents/README.md",
+          "line": 212,
+          "match": "cURL",
+          "evidence": "// Raw cURL upload (canonical example from the apps source)"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "python/managed-agents/README.md",
+          "line": 3,
+          "match": "cURL",
+          "evidence": "> **Bindings not shown here:** This README covers the most common managed-agents flows for Python. If you need a class, method, namespace, field, or behavior that isn't shown, WebFetch the Python SDK"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "ruby/managed-agents/README.md",
+          "line": 3,
+          "match": "cURL",
+          "evidence": "> **Bindings not shown here:** This README covers the most common managed-agents flows for Ruby. If you need a class, method, namespace, field, or behavior that isn't shown, WebFetch the Ruby SDK repo"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "shared/anthropic-cli.md",
+          "line": 24,
+          "match": "curl",
+          "evidence": "curl -fsSL \"https://github.com/anthropics/anthropic-cli/releases/download/v${VERSION}/ant_${VERSION}_$(uname -s | tr A-Z a-z)_$(uname -m | sed -e s/x86_64/amd64/ -e s/aarch64/arm64/).tar.gz\" \\"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "shared/anthropic-cli.md",
+          "line": 57,
+          "match": "curl",
+          "evidence": "# Bare access token — for curl's Authorization header"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "quote",
+          "file": "shared/live-sources.md",
+          "line": 89,
+          "match": "webhook",
+          "evidence": "| Self-Hosted Sandboxes | `https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes.md`    | \"Extract config:{type:self_hosted}, ANTHROPIC_ENVIRONMENT_KEY, EnvironmentWorker.run/run_on"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "quote",
+          "file": "shared/live-sources.md",
+          "line": 97,
+          "match": "webhook",
+          "evidence": "| Webhooks              | `https://platform.claude.com/docs/en/managed-agents/webhooks.md`                 | \"Extract webhook endpoint registration, HMAC signature verification, supported event types,"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-api-reference.md",
+          "line": 140,
+          "match": "webhook",
+          "evidence": "| `GET`    | `/v1/deployment_runs/{deployment_run_id}`        | GetDeploymentRun   | Retrieve a single run by ID (a `deployment_run.*` webhook event carries this as `data.id`) |"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-client-patterns.md",
+          "line": 5,
+          "match": "cURL",
+          "evidence": "Code samples are TypeScript — other languages follow the same shape; see `{lang}/managed-agents/README.md` (cURL and C#: `curl/managed-agents.md`) for equivalents."
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-environments.md",
+          "line": 108,
+          "match": "curl",
+          "evidence": "- The filter parameter is **`scope_id`** (REST query param `?scope_id=<session_id>`). The SDK's files resource auto-adds only the `files-api-2025-04-14` header, so pass `betas: [\"managed-agents-2026-0"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-memory.md",
+          "line": 199,
+          "match": "cURL",
+          "evidence": "For cURL examples and the CLI (`ant beta:memory-stores ...`), WebFetch the Memory URL in `shared/live-sources.md` → Managed Agents."
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-onboarding.md",
+          "line": 73,
+          "match": "cURL",
+          "evidence": "**Block 2 — Runtime (every invocation; conversational and Outcome shapes).** SDK code in the detected language (Python/TS/cURL — SKILL.md → Language Detection); don't emit shell loops here:"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-onboarding.md",
+          "line": 82,
+          "match": "cURL",
+          "evidence": "Pull exact syntax from `{lang}/managed-agents/README.md` for your detected language (cURL and C#: use `curl/managed-agents.md` as the wire-level reference). Don't invent field names."
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-overview.md",
+          "line": 32,
+          "match": "cURL",
+          "evidence": "**Which beta header goes where:** The SDK sets `managed-agents-2026-04-01` automatically on `client.beta.{agents,environments,sessions,vaults,memory_stores,deployments,deployment_runs}.*` calls, and `"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-overview.md",
+          "line": 44,
+          "match": "cURL",
+          "evidence": "| Create a session                       | `shared/managed-agents-core.md` + `{lang}/managed-agents/README.md` (cURL/C#: `curl/managed-agents.md`) |"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "shared/managed-agents-scheduled-deployments.md",
+          "line": 16,
+          "match": "curl",
+          "evidence": "curl -fsSL https://api.anthropic.com/v1/deployments \\"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-scheduled-deployments.md",
+          "line": 117,
+          "match": "webhook",
+          "evidence": "Raw HTTP: `GET /v1/deployment_runs?deployment_id=...&has_error=true`. To retrieve a single run by ID, `GET /v1/deployment_runs/{deployment_run_id}` (SDK: `client.beta.deployment_runs.retrieve(run_id)`"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-scheduled-deployments.md",
+          "line": 136,
+          "match": "webhook",
+          "evidence": "The outcome of each **scheduled** run (started/succeeded/failed) and each deployment lifecycle change (created/updated/paused/unpaused/archived/deleted) is also delivered as a webhook event — see `sha"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-self-hosted-sandboxes.md",
+          "line": 28,
+          "match": "webhook",
+          "evidence": "`EnvironmentWorker` wraps the poll → dispatch → tool-execute loop. `.run()` is the always-on loop; `.run_one()` / `.runOne()` handles one work item (for webhook-driven wake)."
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-self-hosted-sandboxes.md",
+          "line": 98,
+          "match": "Webhook",
+          "evidence": "## Webhook-driven wake (instead of always-on)"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-self-hosted-sandboxes.md",
+          "line": 100,
+          "match": "webhook",
+          "evidence": "Register a webhook for `session.status_run_started` (see `shared/managed-agents-webhooks.md`), verify the delivery, then drain one work item with `.run_one()`:"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-tools.md",
+          "line": 208,
+          "match": "webhook",
+          "evidence": "- **Environment-variable credentials** appear in the sandbox as an opaque placeholder; the real value replaces the placeholder at egress, on requests to the credential's allowed hosts only. Substituti"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "shared/models.md",
+          "line": 35,
+          "match": "curl",
+          "evidence": "curl https://api.anthropic.com/v1/models/claude-opus-4-8 \\"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/tool-use-concepts.md",
+          "line": 437,
+          "match": "cURL",
+          "evidence": "| Python / TypeScript / Ruby / cURL | plain object `{\"type\": \"bash_20250124\", \"name\": \"bash\"}` |"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "SKILL.md",
+          "line": 23,
+          "match": "cURL",
+          "evidence": "2. **Raw HTTP** (`curl`, `requests`, `fetch`, `httpx`, etc.) — only when the user explicitly asks for cURL/REST/raw HTTP, the project is a shell/cURL project, or the language has no official SDK."
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "SKILL.md",
+          "line": 23,
+          "match": "cURL",
+          "evidence": "2. **Raw HTTP** (`curl`, `requests`, `fetch`, `httpx`, etc.) — only when the user explicitly asks for cURL/REST/raw HTTP, the project is a shell/cURL project, or the language has no official SDK."
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "typescript/managed-agents/README.md",
+          "line": 3,
+          "match": "cURL",
+          "evidence": "> **Bindings not shown here:** This README covers the most common managed-agents flows for TypeScript. If you need a class, method, namespace, field, or behavior that isn't shown, WebFetch the TypeScr"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "csharp/claude-api/README.md",
+          "line": 108,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "// Default (uses ANTHROPIC_API_KEY env var)"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "csharp/claude-api/README.md",
+          "line": 113,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "ApiKey = Environment.GetEnvironmentVariable(\"ANTHROPIC_API_KEY\")"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "csharp/claude-api/README.md",
+          "line": 362,
+          "match": "curl",
+          "evidence": "The C# SDK supports Managed Agents via `client.Beta.Agents`, `client.Beta.Sessions`, `client.Beta.Environments`, and related namespaces. See `shared/managed-agents-overview.md` for the architecture an"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "curl/examples.md",
+          "line": 8,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "export ANTHROPIC_API_KEY=\"your-api-key\""
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "curl/examples.md",
+          "line": 18,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "-H \"x-api-key: $ANTHROPIC_API_KEY\" \\"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "curl/examples.md",
+          "line": 39,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "-H \"x-api-key: $ANTHROPIC_API_KEY\" \\"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "curl/managed-agents.md",
+          "line": 8,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "export ANTHROPIC_API_KEY=\"your-api-key\""
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "curl/managed-agents.md",
+          "line": 13,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "-H \"x-api-key: $ANTHROPIC_API_KEY\""
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "curl/managed-agents.md",
+          "line": 282,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "-H \"x-api-key: $ANTHROPIC_API_KEY\" \\"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "go/claude-api/README.md",
+          "line": 19,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "// Default (uses ANTHROPIC_API_KEY env var)"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "go/managed-agents/README.md",
+          "line": 23,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "// Default (uses ANTHROPIC_API_KEY env var)"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "java/claude-api/README.md",
+          "line": 66,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "// Default (reads ANTHROPIC_API_KEY from environment)"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "java/managed-agents/README.md",
+          "line": 21,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "// Default (uses ANTHROPIC_API_KEY env var)"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "php/claude-api/README.md",
+          "line": 17,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "$client = new Client(apiKey: getenv(\"ANTHROPIC_API_KEY\"));"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "php/managed-agents/README.md",
+          "line": 18,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "// Default (uses ANTHROPIC_API_KEY env var)"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "php/managed-agents/README.md",
+          "line": 219,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "'x-api-key: ' . getenv('ANTHROPIC_API_KEY'),"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "python/claude-api/README.md",
+          "line": 15,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "# ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile."
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "python/claude-api/README.md",
+          "line": 15,
+          "match": "ANTHROPIC_AUTH_TOKEN",
+          "evidence": "# ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile."
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "python/claude-api/README.md",
+          "line": 6,
+          "match": "pip install anthropic",
+          "evidence": "pip install anthropic"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "python/managed-agents/README.md",
+          "line": 19,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "# ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile."
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "python/managed-agents/README.md",
+          "line": 19,
+          "match": "ANTHROPIC_AUTH_TOKEN",
+          "evidence": "# ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile."
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "python/managed-agents/README.md",
+          "line": 102,
+          "match": "GITHUB_TOKEN",
+          "evidence": "\"authorization_token\": os.environ[\"GITHUB_TOKEN\"],"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "python/managed-agents/README.md",
+          "line": 10,
+          "match": "pip install anthropic",
+          "evidence": "pip install anthropic"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "ruby/claude-api/README.md",
+          "line": 16,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "# Default (uses ANTHROPIC_API_KEY env var)"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "ruby/claude-api/README.md",
+          "line": 8,
+          "match": "gem install anthropic",
+          "evidence": "gem install anthropic"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "ruby/managed-agents/README.md",
+          "line": 18,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "# Default (uses ANTHROPIC_API_KEY env var)"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "ruby/managed-agents/README.md",
+          "line": 10,
+          "match": "gem install anthropic",
+          "evidence": "gem install anthropic"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "shared/agent-design.md",
+          "line": 28,
+          "match": "send_email",
+          "evidence": "- **Security boundary.** Actions that require gating are natural candidates. Reversibility is a useful criterion: hard-to-reverse actions (external API calls, sending messages, deleting data) can be g"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "shared/agent-design.md",
+          "line": 28,
+          "match": "curl",
+          "evidence": "- **Security boundary.** Actions that require gating are natural candidates. Reversibility is a useful criterion: hard-to-reverse actions (external API calls, sending messages, deleting data) can be g"
+        },
+        {
+          "id": "dotenv-access",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "shared/anthropic-cli.md",
+          "line": 65,
+          "match": ".env",
+          "evidence": "# .env format — sets ANTHROPIC_AUTH_TOKEN (and ANTHROPIC_BASE_URL if the profile has one)."
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "shared/anthropic-cli.md",
+          "line": 3,
+          "match": "curl",
+          "evidence": "The `ant` CLI exposes every Claude API resource as a shell subcommand. Compared to `curl`: request bodies are built from typed flags or piped YAML instead of hand-written JSON, `@path` inlines file co"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "shared/anthropic-cli.md",
+          "line": 28,
+          "match": "go install github.com/anthropics/anthropic-cli/cmd/ant@latest",
+          "evidence": "go install github.com/anthropics/anthropic-cli/cmd/ant@latest"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "shared/managed-agents-client-patterns.md",
+          "line": 5,
+          "match": "curl",
+          "evidence": "Code samples are TypeScript — other languages follow the same shape; see `{lang}/managed-agents/README.md` (cURL and C#: `curl/managed-agents.md`) for equivalents."
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "shared/managed-agents-environments.md",
+          "line": 169,
+          "match": "GITHUB_TOKEN",
+          "evidence": "authorization_token: process.env.GITHUB_TOKEN,  // repo clone token (≠ MCP auth)"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "shared/managed-agents-environments.md",
+          "line": 202,
+          "match": "GITHUB_TOKEN",
+          "evidence": "\"authorization_token\": os.environ[\"GITHUB_TOKEN\"],  # repo clone token (≠ MCP auth)"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "shared/managed-agents-onboarding.md",
+          "line": 82,
+          "match": "curl",
+          "evidence": "Pull exact syntax from `{lang}/managed-agents/README.md` for your detected language (cURL and C#: use `curl/managed-agents.md` as the wire-level reference). Don't invent field names."
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "shared/managed-agents-overview.md",
+          "line": 44,
+          "match": "curl",
+          "evidence": "| Create a session                       | `shared/managed-agents-core.md` + `{lang}/managed-agents/README.md` (cURL/C#: `curl/managed-agents.md`) |"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "shared/managed-agents-scheduled-deployments.md",
+          "line": 17,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "-H \"x-api-key: $ANTHROPIC_API_KEY\" \\"
+        },
+        {
+          "id": "dotenv-access",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "shared/managed-agents-tools.md",
+          "line": 92,
+          "match": ".env.example",
+          "evidence": "{ \"type\": \"user.tool_confirmation\", \"tool_use_id\": \"sevt_def456\", \"result\": \"deny\", \"message\": \"Read .env.example instead\" }"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "shared/managed-agents-tools.md",
+          "line": 198,
+          "match": "curl",
+          "evidence": "- **Environment variables** (`environment_variable`) — keyed by `secret_name` (the env var name). The sandbox sees only an **opaque placeholder**; the real secret is substituted into the outbound requ"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "shared/managed-agents-webhooks.md",
+          "line": 23,
+          "match": "webhook",
+          "evidence": "Every delivery carries the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers. **Use the SDK's `client.beta.webhooks.unwrap()`** — it verifies the signature, rejects payloads more than"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "shared/managed-agents-webhooks.md",
+          "line": 23,
+          "match": "webhook",
+          "evidence": "Every delivery carries the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers. **Use the SDK's `client.beta.webhooks.unwrap()`** — it verifies the signature, rejects payloads more than"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "shared/managed-agents-webhooks.md",
+          "line": 23,
+          "match": "webhook",
+          "evidence": "Every delivery carries the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers. **Use the SDK's `client.beta.webhooks.unwrap()`** — it verifies the signature, rejects payloads more than"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "shared/models.md",
+          "line": 36,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "-H \"x-api-key: $ANTHROPIC_API_KEY\" \\"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "shared/tool-use-concepts.md",
+          "line": 37,
+          "match": "send_email",
+          "evidence": "- Use clear, descriptive names (e.g., `get_weather`, `search_database`, `send_email`)"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "SKILL.md",
+          "line": 23,
+          "match": "curl",
+          "evidence": "2. **Raw HTTP** (`curl`, `requests`, `fetch`, `httpx`, etc.) — only when the user explicitly asks for cURL/REST/raw HTTP, the project is a shell/cURL project, or the language has no official SDK."
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "typescript/claude-api/README.md",
+          "line": 21,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "// ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile."
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "typescript/claude-api/README.md",
+          "line": 21,
+          "match": "ANTHROPIC_AUTH_TOKEN",
+          "evidence": "// ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile."
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "typescript/claude-api/README.md",
+          "line": 10,
+          "match": "npm install @anthropic-ai/sdk",
+          "evidence": "npm install @anthropic-ai/sdk"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "typescript/managed-agents/README.md",
+          "line": 19,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "// ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile."
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "typescript/managed-agents/README.md",
+          "line": 19,
+          "match": "ANTHROPIC_AUTH_TOKEN",
+          "evidence": "// ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile."
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "typescript/managed-agents/README.md",
+          "line": 109,
+          "match": "GITHUB_TOKEN",
+          "evidence": "authorization_token: process.env.GITHUB_TOKEN,"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "typescript/managed-agents/README.md",
+          "line": 10,
+          "match": "npm install @anthropic-ai/sdk",
+          "evidence": "npm install @anthropic-ai/sdk"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "rollup",
+          "file": "curl/examples.md",
+          "line": 0,
+          "match": "+6 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "network-egress",
+          "severity": "info",
+          "declared_severity": "medium",
+          "context": "rollup",
+          "file": "curl/examples.md",
+          "line": 0,
+          "match": "+6 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "rollup",
+          "file": "curl/managed-agents.md",
+          "line": 0,
+          "match": "+2 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "network-egress",
+          "severity": "info",
+          "declared_severity": "medium",
+          "context": "rollup",
+          "file": "curl/managed-agents.md",
+          "line": 0,
+          "match": "+23 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "python/claude-api/tool-use.md",
+          "line": 91,
+          "match": "pip install anthropic[mcp]` (Python 3.10+).",
+          "evidence": "**Beta.** Convert [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) tools, prompts, and resources to Anthropic API types for use with the tool runner. Requires `pip install anthropic[mc"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/anthropic-cli.md",
+          "line": 31,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "**Auth** — the CLI resolves credentials the same way the SDKs do (first match wins): explicit flags, then `ANTHROPIC_API_KEY`, then `ANTHROPIC_AUTH_TOKEN`, then the `ANTHROPIC_PROFILE`-selected or act"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/anthropic-cli.md",
+          "line": 31,
+          "match": "ANTHROPIC_AUTH_TOKEN",
+          "evidence": "**Auth** — the CLI resolves credentials the same way the SDKs do (first match wins): explicit flags, then `ANTHROPIC_API_KEY`, then `ANTHROPIC_AUTH_TOKEN`, then the `ANTHROPIC_PROFILE`-selected or act"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/anthropic-cli.md",
+          "line": 33,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "- **API key**: set `ANTHROPIC_API_KEY` in the environment."
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "rollup",
+          "file": "shared/anthropic-cli.md",
+          "line": 0,
+          "match": "+10 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "network-egress",
+          "severity": "info",
+          "declared_severity": "medium",
+          "context": "rollup",
+          "file": "shared/anthropic-cli.md",
+          "line": 0,
+          "match": "+2 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/claude-platform-on-aws.md",
+          "line": 49,
+          "match": "AWS_ACCESS_KEY_ID",
+          "evidence": "The client resolves AWS credentials via the standard precedence chain: explicit constructor args → environment (`AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY`/`AWS_SESSION_TOKEN`) → shared profile → assu"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/claude-platform-on-aws.md",
+          "line": 49,
+          "match": "AWS_SECRET_ACCESS_KEY",
+          "evidence": "The client resolves AWS credentials via the standard precedence chain: explicit constructor args → environment (`AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY`/`AWS_SESSION_TOKEN`) → shared profile → assu"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/claude-platform-on-aws.md",
+          "line": 14,
+          "match": "npm install @anthropic-ai/aws-sdk` | `import AnthropicAws from \"@anthropic-ai/aws-sdk\"` → `ne",
+          "evidence": "| TypeScript | `npm install @anthropic-ai/aws-sdk` | `import AnthropicAws from \"@anthropic-ai/aws-sdk\"` → `new AnthropicAws()` |"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/claude-platform-on-aws.md",
+          "line": 18,
+          "match": "gem install anthropic aws-sdk-core` | See SDK repo in `shared/live-sources.md` |",
+          "evidence": "| Ruby | `gem install anthropic aws-sdk-core` | See SDK repo in `shared/live-sources.md` |"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/error-codes.md",
+          "line": 59,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "- Both `ANTHROPIC_API_KEY` and `ANTHROPIC_AUTH_TOKEN` set — the SDK sends both headers and the API rejects the request"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/error-codes.md",
+          "line": 59,
+          "match": "ANTHROPIC_AUTH_TOKEN",
+          "evidence": "- Both `ANTHROPIC_API_KEY` and `ANTHROPIC_AUTH_TOKEN` set — the SDK sends both headers and the API rejects the request"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/error-codes.md",
+          "line": 61,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "**Fix:** Set `ANTHROPIC_API_KEY`, or run `ant auth login` and leave the client constructor empty. For raw HTTP with an OAuth token, use `Authorization: Bearer <token>` (not `x-api-key:`)."
+        },
+        {
+          "id": "network-egress",
+          "severity": "info",
+          "declared_severity": "medium",
+          "context": "rollup",
+          "file": "shared/managed-agents-overview.md",
+          "line": 0,
+          "match": "+1 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "network-egress",
+          "severity": "info",
+          "declared_severity": "medium",
+          "context": "rollup",
+          "file": "shared/managed-agents-scheduled-deployments.md",
+          "line": 0,
+          "match": "+1 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/managed-agents-self-hosted-sandboxes.md",
+          "line": 145,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "These are **control-plane** calls — authenticate with `x-api-key` (not the environment key); `managed-agents-2026-04-01` beta header. **Call them from outside the worker host** — setting `ANTHROPIC_AP"
+        },
+        {
+          "id": "network-egress",
+          "severity": "info",
+          "declared_severity": "medium",
+          "context": "rollup",
+          "file": "shared/managed-agents-self-hosted-sandboxes.md",
+          "line": 0,
+          "match": "+2 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "network-egress",
+          "severity": "info",
+          "declared_severity": "medium",
+          "context": "rollup",
+          "file": "shared/managed-agents-webhooks.md",
+          "line": 0,
+          "match": "+13 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "SKILL.md",
+          "line": 212,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` → `ANTHROPIC_AUTH_TOKEN` →"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "SKILL.md",
+          "line": 212,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` → `ANTHROPIC_AUTH_TOKEN` →"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "SKILL.md",
+          "line": 212,
+          "match": "ANTHROPIC_AUTH_TOKEN",
+          "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` → `ANTHROPIC_AUTH_TOKEN` →"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "rollup",
+          "file": "SKILL.md",
+          "line": 0,
+          "match": "+4 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "network-egress",
+          "severity": "info",
+          "declared_severity": "medium",
+          "context": "rollup",
+          "file": "SKILL.md",
+          "line": 0,
+          "match": "+17 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        }
+      ],
+      "fingerprint": "b82c2d46bc2af342"
+    },
+    {
+      "name": "mcp-builder",
+      "path": "skills/mcp-builder",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate externa",
+      "grade": "C",
+      "score": 66,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 10,
+      "unscanned_files": 0,
+      "bytes": 121630,
+      "findings": [
+        {
+          "id": "destructive",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "fence",
+          "file": "reference/node_mcp_server.md",
+          "line": 541,
+          "match": "rm -rf dist\"",
+          "evidence": "\"clean\": \"rm -rf dist\""
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "reference/node_mcp_server.md",
+          "line": 474,
+          "match": "axios.",
+          "evidence": "const response = await axios.get(`${API_URL}/resource/${resourceId}`);"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "reference/node_mcp_server.md",
+          "line": 480,
+          "match": "axios.",
+          "evidence": "return axios.get(`${API_URL}/resource/${resourceId}`)"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "reference/python_mcp_server.md",
+          "line": 260,
+          "match": "requests.get",
+          "evidence": "response = requests.get(f\"{API_URL}/resource/{resource_id}\")  # Blocks"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "reference/evaluation.md",
+          "line": 398,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "export ANTHROPIC_API_KEY=your_api_key_here"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "reference/evaluation.md",
+          "line": 557,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "export ANTHROPIC_API_KEY=your_api_key"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "reference/evaluation.md",
+          "line": 567,
+          "match": "GITHUB_TOKEN",
+          "evidence": "-e GITHUB_TOKEN=ghp_xxx \\"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "reference/evaluation.md",
+          "line": 392,
+          "match": "pip install anthropic mcp",
+          "evidence": "pip install anthropic mcp"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "reference/node_mcp_server.md",
+          "line": 942,
+          "match": "axios.",
+          "evidence": "- [ ] Error handling uses proper type guards (e.g., `axios.isAxiosError`, `z.ZodError`)"
+        }
+      ],
+      "fingerprint": "e1a834f9b1889508"
+    },
+    {
+      "name": "web-artifacts-builder",
+      "path": "skills/web-artifacts-builder",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state manag",
+      "grade": "B",
+      "score": 77,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 5,
+      "unscanned_files": 1,
+      "bytes": 25787,
+      "findings": [
+        {
+          "id": "destructive",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "plain",
+          "file": "scripts/bundle-artifact.sh",
+          "line": 36,
+          "match": "rm -rf dist bundle.html",
+          "evidence": "rm -rf dist bundle.html"
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "scripts/shadcn-components.tar.gz",
+          "line": 0,
+          "match": "19 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        }
+      ],
+      "fingerprint": "95ae5b6371d7c970"
+    },
+    {
+      "name": "docx",
+      "path": "skills/docx",
+      "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files) or Word templates (.dotx files). Triggers include: any mention of 'Word doc', 'word document', ",
+      "grade": "B",
+      "score": 80,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 61,
+      "unscanned_files": 39,
+      "bytes": 1128621,
+      "findings": [
+        {
+          "id": "destructive",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "fence",
+          "file": "SKILL.md",
+          "line": 56,
+          "match": "rm -f ../out.docx && zip -Xr ../out.docx .)",
+          "evidence": "(cd unpacked && rm -f ../out.docx && zip -Xr ../out.docx .)"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "SKILL.md",
+          "line": 21,
+          "match": "npm install docx`. The model knows the API; these are the footguns:",
+          "evidence": "`docx` is preinstalled — do not run `npm install` first; write the script and `require('docx')` directly. Only if that require fails: `npm install docx`. The model knows the API; these are the footgun"
+        }
+      ],
+      "fingerprint": "b2dfda60cb97ef2f"
+    },
+    {
+      "name": "pptx",
+      "path": "skills/pptx",
+      "description": "Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting te",
+      "grade": "B",
+      "score": 80,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 56,
+      "unscanned_files": 39,
+      "bytes": 1138993,
+      "findings": [
+        {
+          "id": "destructive",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "fence",
+          "file": "SKILL.md",
+          "line": 62,
+          "match": "rm -f ../out.pptx && zip -Xr ../out.pptx .)           # zip from INSIDE the dir; rm first or deleted parts survive",
+          "evidence": "(cd unpacked && rm -f ../out.pptx && zip -Xr ../out.pptx .)           # zip from INSIDE the dir; rm first or deleted parts survive"
+        },
+        {
+          "id": "destructive",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "fence",
+          "file": "SKILL.md",
+          "line": 227,
+          "match": "rm -f slide-*.jpg",
+          "evidence": "rm -f slide-*.jpg"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "SKILL.md",
+          "line": 31,
+          "match": "npm install pptxgenjs`. The model knows the API; these are the footguns:",
+          "evidence": "`pptxgenjs` is preinstalled — do not run `npm install` first; write the script and `require('pptxgenjs')` directly. Only if that require fails: `npm install pptxgenjs`. The model knows the API; these"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "SKILL.md",
+          "line": 50,
+          "match": "npm install react-icons react react-dom sharp` only if a require fails).",
+          "evidence": "- **Icons:** render `react-icons` to SVG (`ReactDOMServer.renderToStaticMarkup`), rasterize with `sharp` at ≥256px, and insert via `addImage({ data: \"image/png;base64,\" + buf.toString(\"base64\") })` —"
+        }
+      ],
+      "fingerprint": "36b3ef46c0c209d6"
+    },
+    {
+      "name": "frontend-design",
+      "path": "skills/frontend-design",
+      "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defau",
+      "grade": "A",
+      "score": 92,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 18424,
+      "findings": [
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "SKILL.md",
+          "line": 49,
+          "match": "webhook",
+          "evidence": "Write from the end user's side of the screen. Name things by what people control and recognize, never by how the system is built. A person manages notifications, not webhook config. Describe what some"
+        }
+      ],
+      "fingerprint": "ffd7ed812b649494"
+    },
+    {
+      "name": "canvas-design",
+      "path": "skills/canvas-design",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create ori",
+      "grade": "A",
+      "score": 97,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 83,
+      "unscanned_files": 54,
+      "bytes": 141896,
+      "findings": [
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/ArsenalSC-Regular.ttf",
+          "line": 0,
+          "match": "162 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/BigShoulders-Bold.ttf",
+          "line": 0,
+          "match": "92 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/BigShoulders-Regular.ttf",
+          "line": 0,
+          "match": "92 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Boldonse-Regular.ttf",
+          "line": 0,
+          "match": "75 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/BricolageGrotesque-Bold.ttf",
+          "line": 0,
+          "match": "89 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/BricolageGrotesque-Regular.ttf",
+          "line": 0,
+          "match": "89 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/CrimsonPro-Bold.ttf",
+          "line": 0,
+          "match": "105 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/CrimsonPro-Italic.ttf",
+          "line": 0,
+          "match": "106 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/CrimsonPro-Regular.ttf",
+          "line": 0,
+          "match": "104 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/DMMono-Regular.ttf",
+          "line": 0,
+          "match": "48 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/EricaOne-Regular.ttf",
+          "line": 0,
+          "match": "24 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/GeistMono-Bold.ttf",
+          "line": 0,
+          "match": "76 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/GeistMono-Regular.ttf",
+          "line": 0,
+          "match": "76 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Gloock-Regular.ttf",
+          "line": 0,
+          "match": "93 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/IBMPlexMono-Bold.ttf",
+          "line": 0,
+          "match": "133 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/IBMPlexMono-Regular.ttf",
+          "line": 0,
+          "match": "131 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/IBMPlexSerif-Bold.ttf",
+          "line": 0,
+          "match": "157 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/IBMPlexSerif-BoldItalic.ttf",
+          "line": 0,
+          "match": "166 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/IBMPlexSerif-Italic.ttf",
+          "line": 0,
+          "match": "166 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/IBMPlexSerif-Regular.ttf",
+          "line": 0,
+          "match": "157 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/InstrumentSans-Bold.ttf",
+          "line": 0,
+          "match": "66 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/InstrumentSans-BoldItalic.ttf",
+          "line": 0,
+          "match": "68 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/InstrumentSans-Italic.ttf",
+          "line": 0,
+          "match": "68 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/InstrumentSans-Regular.ttf",
+          "line": 0,
+          "match": "66 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/InstrumentSerif-Italic.ttf",
+          "line": 0,
+          "match": "69 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/InstrumentSerif-Regular.ttf",
+          "line": 0,
+          "match": "68 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Italiana-Regular.ttf",
+          "line": 0,
+          "match": "27 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/JetBrainsMono-Bold.ttf",
+          "line": 0,
+          "match": "112 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/JetBrainsMono-Regular.ttf",
+          "line": 0,
+          "match": "112 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Jura-Light.ttf",
+          "line": 0,
+          "match": "151 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Jura-Medium.ttf",
+          "line": 0,
+          "match": "151 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/LibreBaskerville-Regular.ttf",
+          "line": 0,
+          "match": "144 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Lora-Bold.ttf",
+          "line": 0,
+          "match": "131 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Lora-BoldItalic.ttf",
+          "line": 0,
+          "match": "137 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Lora-Italic.ttf",
+          "line": 0,
+          "match": "136 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Lora-Regular.ttf",
+          "line": 0,
+          "match": "131 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/NationalPark-Bold.ttf",
+          "line": 0,
+          "match": "77 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/NationalPark-Regular.ttf",
+          "line": 0,
+          "match": "75 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/NothingYouCouldDo-Regular.ttf",
+          "line": 0,
+          "match": "31 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Outfit-Bold.ttf",
+          "line": 0,
+          "match": "54 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Outfit-Regular.ttf",
+          "line": 0,
+          "match": "54 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/PixelifySans-Medium.ttf",
+          "line": 0,
+          "match": "50 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/PoiretOne-Regular.ttf",
+          "line": 0,
+          "match": "44 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/RedHatMono-Bold.ttf",
+          "line": 0,
+          "match": "34 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/RedHatMono-Regular.ttf",
+          "line": 0,
+          "match": "34 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Silkscreen-Regular.ttf",
+          "line": 0,
+          "match": "31 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/SmoochSans-Medium.ttf",
+          "line": 0,
+          "match": "58 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Tektur-Medium.ttf",
+          "line": 0,
+          "match": "74 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/Tektur-Regular.ttf",
+          "line": 0,
+          "match": "74 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/WorkSans-Bold.ttf",
+          "line": 0,
+          "match": "187 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/WorkSans-BoldItalic.ttf",
+          "line": 0,
+          "match": "172 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/WorkSans-Italic.ttf",
+          "line": 0,
+          "match": "170 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/WorkSans-Regular.ttf",
+          "line": 0,
+          "match": "184 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        },
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "canvas-fonts/YoungSerif-Regular.ttf",
+          "line": 0,
+          "match": "103 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        }
+      ],
+      "fingerprint": "6529af0142e36c2d"
+    },
+    {
+      "name": "pdf",
+      "path": "skills/pdf",
+      "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rota",
+      "grade": "A",
+      "score": 97,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 12,
+      "unscanned_files": 0,
+      "bytes": 58654,
+      "findings": [
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "SKILL.md",
+          "line": 235,
+          "match": "pip install pytesseract pdf2image",
+          "evidence": "# Requires: pip install pytesseract pdf2image"
+        }
+      ],
+      "fingerprint": "891a63cf55c82279"
+    },
+    {
+      "name": "skill-creator",
+      "path": "skills/skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill",
+      "grade": "A",
+      "score": 97,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 18,
+      "unscanned_files": 2,
+      "bytes": 224551,
+      "findings": [
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "plain",
+          "file": "scripts/improve_description.py",
+          "line": 6,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "uses the session's Claude Code auth, no separate ANTHROPIC_API_KEY needed)."
+        }
+      ],
+      "fingerprint": "572a012eb8b5c1f6"
+    },
+    {
+      "name": "slack-gif-creator",
+      "path": "skills/slack-gif-creator",
+      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a G",
+      "grade": "A",
+      "score": 97,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 7,
+      "unscanned_files": 0,
+      "bytes": 43695,
+      "findings": [
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "SKILL.md",
+          "line": 253,
+          "match": "pip install pillow imageio numpy",
+          "evidence": "pip install pillow imageio numpy"
+        }
+      ],
+      "fingerprint": "445e83fee58c15ec"
+    },
+    {
+      "name": "theme-factory",
+      "path": "skills/theme-factory",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact t",
+      "grade": "A",
+      "score": 97,
+      "tier": 1,
+      "tier_name": "read",
+      "file_count": 13,
+      "unscanned_files": 1,
+      "bytes": 19784,
+      "findings": [
+        {
+          "id": "bundled-binary",
+          "severity": "low",
+          "file": "theme-showcase.pdf",
+          "line": 0,
+          "match": "121 KB binary",
+          "evidence": "Binary file shipped with the skill. Not analysable statically — review it yourself."
+        }
+      ],
+      "fingerprint": "16dbc0fad1cdb82b"
+    },
+    {
+      "name": "algorithmic-art",
+      "path": "skills/algorithmic-art",
+      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 4,
+      "unscanned_files": 1,
+      "bytes": 57858,
+      "findings": [],
+      "fingerprint": "246f3ac229b7de54"
+    },
+    {
+      "name": "brand-guidelines",
+      "path": "skills/brand-guidelines",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 13580,
+      "findings": [],
+      "fingerprint": "feffb8a10fb4fd04"
+    },
+    {
+      "name": "doc-coauthoring",
+      "path": "skills/doc-coauthoring",
+      "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This wor",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 15815,
+      "findings": [],
+      "fingerprint": "3858ffd662169072"
+    },
+    {
+      "name": "internal-comms",
+      "path": "skills/internal-comms",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal com",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 6,
+      "unscanned_files": 0,
+      "bytes": 22393,
+      "findings": [],
+      "fingerprint": "614ca96e91c4578c"
+    },
+    {
+      "name": "template-skill",
+      "path": "template",
+      "description": "Replace with description of the skill and when Claude should use it.",
+      "grade": "A",
+      "score": 100,
+      "tier": 0,
+      "tier_name": "text",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 140,
+      "findings": [],
+      "fingerprint": "c06190c9c7fc89c5"
+    },
+    {
+      "name": "webapp-testing",
+      "path": "skills/webapp-testing",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser l",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 6,
+      "unscanned_files": 0,
+      "bytes": 22342,
+      "findings": [],
+      "fingerprint": "d8119bcf43a65576"
+    },
+    {
+      "name": "xlsx",
+      "path": "skills/xlsx",
+      "description": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .xltx, .csv, or .tsv file (e.",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 53,
+      "unscanned_files": 39,
+      "bytes": 1102818,
+      "findings": [],
+      "fingerprint": "dded01b7edc8ce90"
+    }
+  ]
+}

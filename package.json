@@ -1,0 +1,15 @@
+{
+  "name": "skillrank",
+  "version": "0.1.0",
+  "description": "What can this agent skill actually do to your machine? Static analysis, zero API cost.",
+  "type": "module",
+  "bin": { "skillrank": "bin/skillrank.mjs" },
+  "files": ["bin/", "lib/", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "keywords": ["claude", "skills", "agent", "security", "static-analysis", "mcp", "prompt-injection"],
+  "license": "MIT",
+  "engines": { "node": ">=18" }
+}

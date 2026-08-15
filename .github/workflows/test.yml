@@ -1,0 +1,21 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Scanner regression suite
+        run: node scripts/test.mjs
+      - name: Generated pages must be current
+        run: |
+          node scripts/build.mjs
+          git diff --quiet || { echo "::error::run 'node scripts/build.mjs' and commit"; git diff --stat; exit 1; }
