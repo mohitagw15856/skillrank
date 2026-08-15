@@ -1,5 +1,5 @@
 {
-  "name": "skillrank",
+  "name": "@mohitagw15856/skillrank",
   "version": "0.1.0",
   "description": "What can this agent skill actually do to your machine? Static analysis, zero API cost.",
   "type": "module",
