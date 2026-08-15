@@ -1,10 +1,18 @@
-# skillrank
+<div align="center">
+
+<img src="assets/banner.svg" alt="skillrank — what can this agent skill actually do to your machine?" width="820">
+
+![repos](https://img.shields.io/badge/repos-4-blue) ![skills](https://img.shields.io/badge/skills%20scanned-3,771-blue) ![exec](https://img.shields.io/badge/can%20run%20commands-656-orange) ![f](https://img.shields.io/badge/graded%20F-2-red) ![cost](https://img.shields.io/badge/cost%20to%20run-%240.00-brightgreen)
+
+<img src="assets/demo.gif" alt="skillrank in action" width="820">
+
+</div>
+
 
 **You installed forty agent skills. Do you know which ones can read your SSH key?**
 
 There are at least seven competing directories of agent skills and a combined corpus in the thousands. Every one of them tells you what a skill *does*. None of them tells you what it *can do* — to your files, your credentials, and your machine. This is that layer.
 
-![repos](https://img.shields.io/badge/repos-4-blue) ![skills](https://img.shields.io/badge/skills%20scanned-3,771-blue) ![exec](https://img.shields.io/badge/can%20run%20commands-656-orange) ![f](https://img.shields.io/badge/graded%20F-2-red) ![cost](https://img.shields.io/badge/cost%20to%20run-%240.00-brightgreen)
 
 ## Scan something right now
 

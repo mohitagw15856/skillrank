@@ -107,7 +107,21 @@ function readme() {
   const totalExec = reports.reduce((a, r) => a + (r.tiers[3] || 0) + (r.tiers[4] || 0), 0);
 
   const out = [];
-  out.push('# skillrank');
+  out.push('<div align="center">');
+  out.push('');
+  out.push('<img src="assets/banner.svg" alt="skillrank — what can this agent skill actually do to your machine?" width="820">');
+  out.push('');
+  out.push(
+    `![repos](https://img.shields.io/badge/repos-${reports.length}-blue) ` +
+      `![skills](https://img.shields.io/badge/skills%20scanned-${totalSkills.toLocaleString('en-US')}-blue) ` +
+      `![exec](https://img.shields.io/badge/can%20run%20commands-${totalExec.toLocaleString('en-US')}-orange) ` +
+      `![f](https://img.shields.io/badge/graded%20F-${totalF}-red) ` +
+      '![cost](https://img.shields.io/badge/cost%20to%20run-%240.00-brightgreen)');
+  out.push('');
+  out.push('<img src="assets/demo.gif" alt="skillrank in action" width="820">');
+  out.push('');
+  out.push('</div>');
+  out.push('');
   out.push('');
   out.push('**You installed forty agent skills. Do you know which ones can read your SSH key?**');
   out.push('');
@@ -117,12 +131,6 @@ function readme() {
       'what it *can do* — to your files, your credentials, and your machine. This is that layer.'
   );
   out.push('');
-  out.push(
-    `![repos](https://img.shields.io/badge/repos-${reports.length}-blue) ` +
-      `![skills](https://img.shields.io/badge/skills%20scanned-${totalSkills.toLocaleString('en-US')}-blue) ` +
-      `![exec](https://img.shields.io/badge/can%20run%20commands-${totalExec.toLocaleString('en-US')}-orange) ` +
-      `![f](https://img.shields.io/badge/graded%20F-${totalF}-red) ` +
-      '![cost](https://img.shields.io/badge/cost%20to%20run-%240.00-brightgreen)');
   out.push('');
   out.push('## Scan something right now');
   out.push('');

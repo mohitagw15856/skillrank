@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="skillrank — What can this agent skill actually do to your machine?">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0E14"/><stop offset="1" stop-color="#141925"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#A78BFA" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0 L0 0 0 30" fill="none" stroke="#A78BFA" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="300" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="300" rx="18" fill="url(#grid)"/>
+  <circle cx="1010" cy="150" r="185" fill="url(#glow)"/>
+  <rect x="0" y="0" width="7" height="300" rx="3.5" fill="#A78BFA"/>
+
+  <text x="66" y="122.9" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="62" font-weight="700"
+        fill="#F7F5F0" letter-spacing="-1.5">skillrank</text>
+  <text x="68" y="168" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="21" fill="#8B94A7">What can this agent skill actually do to your machine?</text>
+
+  <rect x="66" y="200" width="358" height="46" rx="10"
+        fill="#A78BFA" fill-opacity="0.10" stroke="#A78BFA" stroke-opacity="0.35" stroke-width="1.5"/>
+  <text x="84" y="229" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="17" fill="#A78BFA">npx skillrank ~/.claude/skills</text>
+
+  <g transform="translate(942, 82) scale(1.35)">
+    <path d="M50 6 L88 22 L88 52 C88 76 70 90 50 96 C30 90 12 76 12 52 L12 22 Z"
+          fill="none" stroke="#A78BFA" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M32 50 L45 64 L69 36" fill="none" stroke="#A78BFA" stroke-width="8"
+          stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>
