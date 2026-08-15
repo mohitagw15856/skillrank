@@ -135,12 +135,12 @@ function readme() {
   out.push('## Scan something right now');
   out.push('');
   out.push('```bash');
-  out.push('npx github:mohitagw15856/skillrank ~/.claude/skills          # what you have already installed');
-  out.push('npx github:mohitagw15856/skillrank ./some-skill-you-found    # before you install it');
-  out.push('npx github:mohitagw15856/skillrank . --min B                 # exit 1 in CI if anything is worse than B');
+  out.push('npx @mohitagw15856/skillrank ~/.claude/skills          # what you have already installed');
+  out.push('npx @mohitagw15856/skillrank ./some-skill-you-found    # before you install it');
+  out.push('npx @mohitagw15856/skillrank . --min B                 # exit 1 in CI if anything is worse than B');
   out.push('```');
   out.push('');
-  out.push('Runs straight from this repo — nothing to install, nothing to clean up. (The bare name `skillrank` on npm belongs to an unrelated package, so the published name here is `@mohitagw15856/skillrank`.)');
+  out.push('No API key, no account, no model call. (The bare name `skillrank` on npm belongs to a different agent-skills project, which is why this one is scoped.)');
   out.push('');
   out.push(
     'No API key. No account. No model call. **No tokens spent** — this is regex and file reads, ' +

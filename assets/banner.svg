@@ -21,9 +21,9 @@
         fill="#F7F5F0" letter-spacing="-1.5">skillrank</text>
   <text x="68" y="168" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="21" fill="#8B94A7">What can this agent skill actually do to your machine?</text>
 
-  <rect x="66" y="200" width="402.79999999999995" height="46" rx="10"
+  <rect x="66" y="200" width="335.59999999999997" height="46" rx="10"
         fill="#A78BFA" fill-opacity="0.10" stroke="#A78BFA" stroke-opacity="0.35" stroke-width="1.5"/>
-  <text x="84" y="229" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="17" fill="#A78BFA">npx github:mohitagw15856/skillrank</text>
+  <text x="84" y="229" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="17" fill="#A78BFA">npx @mohitagw15856/skillrank</text>
 
   <g transform="translate(942, 82) scale(1.35)">
     <path d="M50 6 L88 22 L88 52 C88 76 70 90 50 96 C30 90 12 76 12 52 L12 22 Z"

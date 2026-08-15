@@ -17,12 +17,12 @@ There are at least seven competing directories of agent skills and a combined co
 ## Scan something right now
 
 ```bash
-npx github:mohitagw15856/skillrank ~/.claude/skills          # what you have already installed
-npx github:mohitagw15856/skillrank ./some-skill-you-found    # before you install it
-npx github:mohitagw15856/skillrank . --min B                 # exit 1 in CI if anything is worse than B
+npx @mohitagw15856/skillrank ~/.claude/skills          # what you have already installed
+npx @mohitagw15856/skillrank ./some-skill-you-found    # before you install it
+npx @mohitagw15856/skillrank . --min B                 # exit 1 in CI if anything is worse than B
 ```
 
-Runs straight from this repo — nothing to install, nothing to clean up. (The bare name `skillrank` on npm belongs to an unrelated package, so the published name here is `@mohitagw15856/skillrank`.)
+No API key, no account, no model call. (The bare name `skillrank` on npm belongs to a different agent-skills project, which is why this one is scoped.)
 
 No API key. No account. No model call. **No tokens spent** — this is regex and file reads, which is a deliberate design constraint: the moment grading costs money per skill, coverage becomes a budget decision and the long tail never gets scanned. The 3,771 skills below were graded in under five seconds for nothing.
 
