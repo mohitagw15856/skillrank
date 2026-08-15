@@ -3,13 +3,42 @@
   "version": "0.1.0",
   "description": "What can this agent skill actually do to your machine? Static analysis, zero API cost.",
   "type": "module",
-  "bin": { "skillrank": "bin/skillrank.mjs" },
-  "files": ["bin/", "lib/", "README.md", "LICENSE"],
+  "bin": {
+    "skillrank": "bin/skillrank.mjs"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "node scripts/test.mjs",
     "build": "node scripts/build.mjs"
   },
-  "keywords": ["claude", "skills", "agent", "security", "static-analysis", "mcp", "prompt-injection"],
+  "keywords": [
+    "claude",
+    "skills",
+    "agent",
+    "security",
+    "static-analysis",
+    "mcp",
+    "prompt-injection"
+  ],
   "license": "MIT",
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohitagw15856/skillrank.git"
+  },
+  "homepage": "https://github.com/mohitagw15856/skillrank#readme",
+  "bugs": {
+    "url": "https://github.com/mohitagw15856/skillrank/issues"
+  },
+  "author": "Mohit Aggarwal (https://github.com/mohitagw15856)",
+  "publishConfig": {
+    "access": "public"
+  }
 }
