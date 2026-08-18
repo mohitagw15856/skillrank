@@ -2,23 +2,23 @@
   "slug": "pm-claude-skills",
   "name": "pm-claude-skills",
   "url": "https://github.com/mohitagw15856/pm-claude-skills",
-  "scanned_at": "2026-08-15",
+  "scanned_at": "2026-08-18",
   "scanner_version": 1,
-  "skill_count": 3370,
+  "skill_count": 3373,
   "average_score": 99.7,
   "repo_grade": "A",
   "distribution": {
-    "A": 3353,
+    "A": 3356,
     "B": 11,
     "C": 6,
     "D": 0,
     "F": 0
   },
   "tiers": {
-    "0": 1110,
+    "0": 1107,
     "1": 587,
-    "2": 1391,
-    "3": 282,
+    "2": 1370,
+    "3": 309,
     "4": 0
   },
   "by_detector": {
@@ -6752,13 +6752,13 @@
       "description": "Generate a WCAG 2.2 accessibility audit checklist and remediation suggestions for any UI or design. Use when asked to audit for accessibility, check WCAG compliance, review a design for a11y issues, o",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6816,
+      "bytes": 7954,
       "findings": [],
-      "fingerprint": "8930a9e631c6e272"
+      "fingerprint": "e10a3898b2456931"
     },
     {
       "name": "accessibility-audit",
@@ -6766,13 +6766,13 @@
       "description": "Generate a WCAG 2.2 accessibility audit checklist and remediation suggestions for any UI or design. Use when asked to audit for accessibility, check WCAG compliance, review a design for a11y issues, o",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6674,
+      "bytes": 7812,
       "findings": [],
-      "fingerprint": "11d99e2ce1f7455c"
+      "fingerprint": "89a013a0d3807bb9"
     },
     {
       "name": "accessibility-audit",
@@ -6780,13 +6780,13 @@
       "description": "Generate a WCAG 2.2 accessibility audit checklist and remediation suggestions for any UI or design. Use when asked to audit for accessibility, check WCAG compliance, review a design for a11y issues, o",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6674,
+      "bytes": 7812,
       "findings": [],
-      "fingerprint": "11d99e2ce1f7455c"
+      "fingerprint": "89a013a0d3807bb9"
     },
     {
       "name": "accessible-travel-planner",
@@ -9972,13 +9972,13 @@
       "description": "Plan a board game night that actually lands — the right games for your group size, mix, and time, in a running order that keeps energy up. Use when asked to plan a game night, what board game should w",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4026,
+      "bytes": 4993,
       "findings": [],
-      "fingerprint": "38c6cc19671aef74"
+      "fingerprint": "c827cd46aacd1fe7"
     },
     {
       "name": "board-game-night-planner",
@@ -9986,13 +9986,13 @@
       "description": "Plan a board game night that actually lands — the right games for your group size, mix, and time, in a running order that keeps energy up. Use when asked to plan a game night, what board game should w",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3879,
+      "bytes": 4846,
       "findings": [],
-      "fingerprint": "77596a7c7906d74d"
+      "fingerprint": "60f824bd00c045cd"
     },
     {
       "name": "board-game-night-planner",
@@ -10000,13 +10000,13 @@
       "description": "Plan a board game night that actually lands — the right games for your group size, mix, and time, in a running order that keeps energy up. Use when asked to plan a game night, what board game should w",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3879,
+      "bytes": 4846,
       "findings": [],
-      "fingerprint": "77596a7c7906d74d"
+      "fingerprint": "60f824bd00c045cd"
     },
     {
       "name": "board-minutes",
@@ -10420,13 +10420,13 @@
       "description": "Extract a brand's visual and verbal identity into an applicable guideline kit — tokens, voice rules, and do/don't pairs — then apply it consistently to any artifact. Use when asked to apply brand guid",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5536,
+      "bytes": 6747,
       "findings": [],
-      "fingerprint": "24b33d23c9a36323"
+      "fingerprint": "def3f0fafd397535"
     },
     {
       "name": "brand-guidelines",
@@ -10434,13 +10434,13 @@
       "description": "Extract a brand's visual and verbal identity into an applicable guideline kit — tokens, voice rules, and do/don't pairs — then apply it consistently to any artifact. Use when asked to apply brand guid",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5397,
+      "bytes": 6608,
       "findings": [],
-      "fingerprint": "772b917297bc2eee"
+      "fingerprint": "6e0ab3fd3de4b371"
     },
     {
       "name": "brand-guidelines",
@@ -10448,13 +10448,13 @@
       "description": "Extract a brand's visual and verbal identity into an applicable guideline kit — tokens, voice rules, and do/don't pairs — then apply it consistently to any artifact. Use when asked to apply brand guid",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5397,
+      "bytes": 6608,
       "findings": [],
-      "fingerprint": "772b917297bc2eee"
+      "fingerprint": "6e0ab3fd3de4b371"
     },
     {
       "name": "brand-impersonation-response",
@@ -18489,13 +18489,13 @@
       "description": "Transform feature briefs into structured design briefs that give designers the context they need before opening Figma. Use when asked to write a design brief, create a design handoff, brief a designer",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4054,
+      "bytes": 5162,
       "findings": [],
-      "fingerprint": "d00ab212b5cb0c2f"
+      "fingerprint": "f040003b6b64b4de"
     },
     {
       "name": "design-handoff-brief",
@@ -18503,13 +18503,13 @@
       "description": "Transform feature briefs into structured design briefs that give designers the context they need before opening Figma. Use when asked to write a design brief, create a design handoff, brief a designer",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3911,
+      "bytes": 5019,
       "findings": [],
-      "fingerprint": "b8e29a99e66aba8a"
+      "fingerprint": "c125afa86799aeb5"
     },
     {
       "name": "design-handoff-brief",
@@ -18517,13 +18517,13 @@
       "description": "Transform feature briefs into structured design briefs that give designers the context they need before opening Figma. Use when asked to write a design brief, create a design handoff, brief a designer",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3911,
+      "bytes": 5019,
       "findings": [],
-      "fingerprint": "b8e29a99e66aba8a"
+      "fingerprint": "c125afa86799aeb5"
     },
     {
       "name": "design-system-audit",
@@ -18531,13 +18531,13 @@
       "description": "Audit a design system for consistency, coverage, and quality. Use when asked to audit a design system, review a component library, assess design token coverage, or evaluate the health of a shared desi",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 11639,
+      "bytes": 13177,
       "findings": [],
-      "fingerprint": "fddc2c96ee00e95f"
+      "fingerprint": "5a2ca917021b6483"
     },
     {
       "name": "design-system-audit",
@@ -18545,13 +18545,13 @@
       "description": "Audit a design system for consistency, coverage, and quality. Use when asked to audit a design system, review a component library, assess design token coverage, or evaluate the health of a shared desi",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 11497,
+      "bytes": 13035,
       "findings": [],
-      "fingerprint": "9457987dc1992852"
+      "fingerprint": "0de3e0c5057098bf"
     },
     {
       "name": "design-system-audit",
@@ -18559,13 +18559,55 @@
       "description": "Audit a design system for consistency, coverage, and quality. Use when asked to audit a design system, review a component library, assess design token coverage, or evaluate the health of a shared desi",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 11497,
+      "bytes": 13035,
       "findings": [],
-      "fingerprint": "9457987dc1992852"
+      "fingerprint": "0de3e0c5057098bf"
+    },
+    {
+      "name": "design-system-generate",
+      "path": "exports/openclaw/design-system-generate",
+      "description": "Generate a complete, accessibility-checked design system from scratch — colour ramps, type scale, spacing, elevation, and exports for CSS, Tailwind, design tokens, Figma, VS Code and PowerPoint. Use w",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 6882,
+      "findings": [],
+      "fingerprint": "2ebfa4afcdb47216"
+    },
+    {
+      "name": "design-system-generate",
+      "path": "plugins/pm-design/skills/design-system-generate",
+      "description": "Generate a complete, accessibility-checked design system from scratch — colour ramps, type scale, spacing, elevation, and exports for CSS, Tailwind, design tokens, Figma, VS Code and PowerPoint. Use w",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 6737,
+      "findings": [],
+      "fingerprint": "38f2fd6753d7f7b2"
+    },
+    {
+      "name": "design-system-generate",
+      "path": "skills/design-system-generate",
+      "description": "Generate a complete, accessibility-checked design system from scratch — colour ramps, type scale, spacing, elevation, and exports for CSS, Tailwind, design tokens, Figma, VS Code and PowerPoint. Use w",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 6737,
+      "findings": [],
+      "fingerprint": "38f2fd6753d7f7b2"
     },
     {
       "name": "desk-ergonomics-audit",
@@ -22521,13 +22563,13 @@
       "description": "Generate structured developer handoff annotations for a Figma screen or component. Use when asked to write Figma annotations, create dev handoff notes, document a Figma design for developers, or write",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3154,
+      "bytes": 4191,
       "findings": [],
-      "fingerprint": "40437ee563e11700"
+      "fingerprint": "b915f9d7ae9de923"
     },
     {
       "name": "figma-annotation-guide",
@@ -22535,13 +22577,13 @@
       "description": "Generate structured developer handoff annotations for a Figma screen or component. Use when asked to write Figma annotations, create dev handoff notes, document a Figma design for developers, or write",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3008,
+      "bytes": 4045,
       "findings": [],
-      "fingerprint": "c5422bf11ef0f133"
+      "fingerprint": "8910fe3bddfc7c09"
     },
     {
       "name": "figma-annotation-guide",
@@ -22549,13 +22591,13 @@
       "description": "Generate structured developer handoff annotations for a Figma screen or component. Use when asked to write Figma annotations, create dev handoff notes, document a Figma design for developers, or write",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3008,
+      "bytes": 4045,
       "findings": [],
-      "fingerprint": "c5422bf11ef0f133"
+      "fingerprint": "8910fe3bddfc7c09"
     },
     {
       "name": "figma-component-audit",
@@ -22605,13 +22647,13 @@
       "description": "Write a structured design brief for a Figma design task from a product requirement or feature request. Use when asked to write a design brief, create a design spec for Figma, turn a PRD into design re",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3159,
+      "bytes": 4207,
       "findings": [],
-      "fingerprint": "685b70da7225fd85"
+      "fingerprint": "280513494a8153d4"
     },
     {
       "name": "figma-design-brief",
@@ -22619,13 +22661,13 @@
       "description": "Write a structured design brief for a Figma design task from a product requirement or feature request. Use when asked to write a design brief, create a design spec for Figma, turn a PRD into design re",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3017,
+      "bytes": 4065,
       "findings": [],
-      "fingerprint": "88b56134ea20cfef"
+      "fingerprint": "a54e830c85538867"
     },
     {
       "name": "figma-design-brief",
@@ -22633,13 +22675,13 @@
       "description": "Write a structured design brief for a Figma design task from a product requirement or feature request. Use when asked to write a design brief, create a design spec for Figma, turn a PRD into design re",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3017,
+      "bytes": 4065,
       "findings": [],
-      "fingerprint": "88b56134ea20cfef"
+      "fingerprint": "a54e830c85538867"
     },
     {
       "name": "figma-design-critique-pm",
@@ -22689,13 +22731,13 @@
       "description": "Runs a pre-handoff QA checklist on a Figma design before it goes to engineering. Use when asked to QA a Figma design, do a pre-handoff check, or validate a Figma file is ready to build. Produces a str",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4127,
+      "bytes": 5207,
       "findings": [],
-      "fingerprint": "ef6396395821a634"
+      "fingerprint": "6b84fcf26762bf23"
     },
     {
       "name": "figma-design-qa",
@@ -22703,13 +22745,13 @@
       "description": "Runs a pre-handoff QA checklist on a Figma design before it goes to engineering. Use when asked to QA a Figma design, do a pre-handoff check, or validate a Figma file is ready to build. Produces a str",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3988,
+      "bytes": 5068,
       "findings": [],
-      "fingerprint": "b28b4ca6b056d906"
+      "fingerprint": "539fcf95af2def0a"
     },
     {
       "name": "figma-design-qa",
@@ -22717,13 +22759,13 @@
       "description": "Runs a pre-handoff QA checklist on a Figma design before it goes to engineering. Use when asked to QA a Figma design, do a pre-handoff check, or validate a Figma file is ready to build. Produces a str",
       "grade": "A",
       "score": 100,
-      "tier": 2,
-      "tier_name": "write",
+      "tier": 3,
+      "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3988,
+      "bytes": 5068,
       "findings": [],
-      "fingerprint": "b28b4ca6b056d906"
+      "fingerprint": "539fcf95af2def0a"
     },
     {
       "name": "figma-design-review",

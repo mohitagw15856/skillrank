@@ -2,13 +2,13 @@
   "slug": "anthropics-skills",
   "name": "anthropics/skills",
   "url": "https://github.com/anthropics/skills",
-  "scanned_at": "2026-08-15",
+  "scanned_at": "2026-08-18",
   "scanner_version": 1,
-  "skill_count": 18,
-  "average_score": 91.3,
+  "skill_count": 20,
+  "average_score": 92.2,
   "repo_grade": "A",
   "distribution": {
-    "A": 13,
+    "A": 15,
     "B": 3,
     "C": 2,
     "D": 0,
@@ -16,8 +16,8 @@
   },
   "tiers": {
     "0": 1,
-    "1": 1,
-    "2": 5,
+    "1": 2,
+    "2": 6,
     "3": 11,
     "4": 0
   },
@@ -2064,6 +2064,34 @@
       "bytes": 13580,
       "findings": [],
       "fingerprint": "feffb8a10fb4fd04"
+    },
+    {
+      "name": "claude-academy-guide",
+      "path": "skills/claude-academy-guide",
+      "description": "Stop and check this skill before finishing any reply to a question about how to use Claude or a Claude product — it recommends matching courses, tutorials, and use cases from Claude Academy (academy.c",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 19257,
+      "findings": [],
+      "fingerprint": "209afb9db5678227"
+    },
+    {
+      "name": "discernment-nudge",
+      "path": "skills/discernment-nudge",
+      "description": "After you give a substantive answer or draft that the user may act on — advice or recommendations, drafted artifacts such as goals, plans, pitches, proposals, or emails, estimates or projections, anal",
+      "grade": "A",
+      "score": 100,
+      "tier": 1,
+      "tier_name": "read",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 21837,
+      "findings": [],
+      "fingerprint": "1bf75eb3581a8343"
     },
     {
       "name": "doc-coauthoring",

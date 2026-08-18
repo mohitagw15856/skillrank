@@ -2,18 +2,18 @@
 
 Source: https://github.com/mohitagw15856/pm-claude-skills
 
-**3370 skills · average 99.7/100 · scanned 2026-08-15 with scanner v1**
+**3373 skills · average 99.7/100 · scanned 2026-08-18 with scanner v1**
 
-Grades: A 3353 · B 11 · C 6
+Grades: A 3356 · B 11 · C 6
 
 ## Capability profile
 
 | Tier | What it means | Skills |
 | :-: | --- | --: |
-| T0 text | Text in, text out. Touches nothing. | 1110 |
+| T0 text | Text in, text out. Touches nothing. | 1107 |
 | T1 read | Reads files in the working directory. | 587 |
-| T2 write | Writes or edits files. | 1391 |
-| T3 exec | Runs shell commands or bundled scripts. | 282 |
+| T2 write | Writes or edits files. | 1370 |
+| T3 exec | Runs shell commands or bundled scripts. | 309 |
 | T4 remote | Executes code or instructions fetched from the network. | 0 |
 
 ## What fired

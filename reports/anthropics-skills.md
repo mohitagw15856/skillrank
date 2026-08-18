@@ -2,17 +2,17 @@
 
 Source: https://github.com/anthropics/skills
 
-**18 skills · average 91.3/100 · scanned 2026-08-15 with scanner v1**
+**20 skills · average 92.2/100 · scanned 2026-08-18 with scanner v1**
 
-Grades: A 13 · B 3 · C 2
+Grades: A 15 · B 3 · C 2
 
 ## Capability profile
 
 | Tier | What it means | Skills |
 | :-: | --- | --: |
 | T0 text | Text in, text out. Touches nothing. | 1 |
-| T1 read | Reads files in the working directory. | 1 |
-| T2 write | Writes or edits files. | 5 |
+| T1 read | Reads files in the working directory. | 2 |
+| T2 write | Writes or edits files. | 6 |
 | T3 exec | Runs shell commands or bundled scripts. | 11 |
 | T4 remote | Executes code or instructions fetched from the network. | 0 |
 
@@ -20,13 +20,13 @@ Grades: A 13 · B 3 · C 2
 
 | Detector | Skills | Share |
 | --- | --: | --: |
-| `unpinned-install` | 6 | 33% |
-| `destructive` | 4 | 22% |
-| `bundled-binary` | 3 | 17% |
-| `network-egress` | 3 | 17% |
-| `env-key-reference` | 3 | 17% |
-| `privilege-escalation` | 1 | 6% |
-| `dotenv-access` | 1 | 6% |
+| `unpinned-install` | 6 | 30% |
+| `destructive` | 4 | 20% |
+| `bundled-binary` | 3 | 15% |
+| `network-egress` | 3 | 15% |
+| `env-key-reference` | 3 | 15% |
+| `privilege-escalation` | 1 | 5% |
+| `dotenv-access` | 1 | 5% |
 
 ## Everything below an A (5)
 

@@ -2,7 +2,7 @@
 
 Source: https://github.com/obra/superpowers
 
-**14 skills · average 97.8/100 · scanned 2026-08-15 with scanner v1**
+**14 skills · average 97.8/100 · scanned 2026-08-18 with scanner v1**
 
 Grades: A 13 · B 1
 

@@ -2,7 +2,7 @@
 
 <img src="assets/banner.svg" alt="skillrank — what can this agent skill actually do to your machine?" width="820">
 
-![repos](https://img.shields.io/badge/repos-4-blue) ![skills](https://img.shields.io/badge/skills%20scanned-3,771-blue) ![exec](https://img.shields.io/badge/can%20run%20commands-656-orange) ![f](https://img.shields.io/badge/graded%20F-2-red) ![cost](https://img.shields.io/badge/cost%20to%20run-%240.00-brightgreen)
+![repos](https://img.shields.io/badge/repos-4-blue) ![skills](https://img.shields.io/badge/skills%20scanned-3,776-blue) ![exec](https://img.shields.io/badge/can%20run%20commands-683-orange) ![f](https://img.shields.io/badge/graded%20F-2-red) ![cost](https://img.shields.io/badge/cost%20to%20run-%240.00-brightgreen)
 
 <img src="assets/demo.gif" alt="skillrank in action" width="820">
 
@@ -24,16 +24,16 @@ npx @mohitagw15856/skillrank . --min B                 # exit 1 in CI if anythin
 
 No API key, no account, no model call. (The bare name `skillrank` on npm belongs to a different agent-skills project, which is why this one is scoped.)
 
-No API key. No account. No model call. **No tokens spent** — this is regex and file reads, which is a deliberate design constraint: the moment grading costs money per skill, coverage becomes a budget decision and the long tail never gets scanned. The 3,771 skills below were graded in under five seconds for nothing.
+No API key. No account. No model call. **No tokens spent** — this is regex and file reads, which is a deliberate design constraint: the moment grading costs money per skill, coverage becomes a budget decision and the long tail never gets scanned. The 3,776 skills below were graded in under five seconds for nothing.
 
 ## The leaderboard
 
 | Repo | Skills | Avg | Grades | Can run commands | Report |
 | --- | --: | --: | --- | --: | --- |
-| [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills) | 3,370 | **99.7** | A 3353 · B 11 · C 6 | 282 (8%) | [details](reports/pm-claude-skills.md) |
+| [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills) | 3,373 | **99.7** | A 3356 · B 11 · C 6 | 309 (9%) | [details](reports/pm-claude-skills.md) |
 | [obra/superpowers](https://github.com/obra/superpowers) | 14 | **97.8** | A 13 · B 1 | 10 (71%) | [details](reports/obra-superpowers.md) |
 | [borghei/Claude-Skills](https://github.com/borghei/Claude-Skills) | 369 | **96.3** | A 334 · B 17 · C 9 · D 7 · F 2 | 353 (96%) | [details](reports/borghei-claude-skills.md) |
-| [anthropics/skills](https://github.com/anthropics/skills) | 18 | **91.3** | A 13 · B 3 · C 2 | 11 (61%) | [details](reports/anthropics-skills.md) |
+| [anthropics/skills](https://github.com/anthropics/skills) | 20 | **92.2** | A 15 · B 3 · C 2 | 11 (55%) | [details](reports/anthropics-skills.md) |
 
 <sub>Average score, 0–100. A repo of harmless text formatters will beat a repo of deployment tools, and that is correct — the score measures blast radius, not quality.</sub>
 
