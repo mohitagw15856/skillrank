@@ -2,7 +2,7 @@
 
 Source: https://github.com/anthropics/skills
 
-**20 skills · average 92.2/100 · scanned 2026-08-18 with scanner v1**
+**20 skills · average 92.2/100 · scanned 2026-08-25 with scanner v1**
 
 Grades: A 15 · B 3 · C 2
 
@@ -73,6 +73,7 @@ Grades: A 15 · B 3 · C 2
 | **low** | `env-key-reference` | `php/managed-agents/README.md:18` | fence | `// Default (uses ANTHROPIC_API_KEY env var)` |
 | **low** | `env-key-reference` | `python/claude-api/README.md:15` | fence | `# ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile.` |
 | **low** | `unpinned-install` | `python/claude-api/README.md:6` | fence | `pip install anthropic` |
+| **low** | `network-egress` | `python/claude-api/sdk-upgrade.md:18` | inline-code | `**Target version.** Before writing any pin, confirm a 1.x release is actually published: `pip index versions a` |
 | **low** | `env-key-reference` | `python/managed-agents/README.md:19` | fence | `# ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile.` |
 | **low** | `unpinned-install` | `python/managed-agents/README.md:10` | fence | `pip install anthropic` |
 | **low** | `env-key-reference` | `ruby/claude-api/README.md:16` | fence | `# Default (uses ANTHROPIC_API_KEY env var)` |

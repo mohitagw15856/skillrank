@@ -2,7 +2,7 @@
   "slug": "anthropics-skills",
   "name": "anthropics/skills",
   "url": "https://github.com/anthropics/skills",
-  "scanned_at": "2026-08-18",
+  "scanned_at": "2026-08-25",
   "scanner_version": 1,
   "skill_count": 20,
   "average_score": 92.2,
@@ -40,9 +40,9 @@
       "score": 63,
       "tier": 3,
       "tier_name": "exec",
-      "file_count": 67,
+      "file_count": 68,
       "unscanned_files": 0,
-      "bytes": 936292,
+      "bytes": 967783,
       "findings": [
         {
           "id": "privilege-escalation",
@@ -613,6 +613,16 @@
           "line": 6,
           "match": "pip install anthropic",
           "evidence": "pip install anthropic"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "python/claude-api/sdk-upgrade.md",
+          "line": 18,
+          "match": "curl",
+          "evidence": "**Target version.** Before writing any pin, confirm a 1.x release is actually published: `pip index versions anthropic` (or `curl -s https://pypi.org/pypi/anthropic/json` and read `info.version`). Use"
         },
         {
           "id": "env-key-reference",
@@ -1190,7 +1200,7 @@
           "declared_severity": "low",
           "context": "inline-code",
           "file": "SKILL.md",
-          "line": 212,
+          "line": 213,
           "match": "ANTHROPIC_API_KEY",
           "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` → `ANTHROPIC_AUTH_TOKEN` →"
         },
@@ -1200,7 +1210,7 @@
           "declared_severity": "low",
           "context": "inline-code",
           "file": "SKILL.md",
-          "line": 212,
+          "line": 213,
           "match": "ANTHROPIC_API_KEY",
           "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` → `ANTHROPIC_AUTH_TOKEN` →"
         },
@@ -1210,7 +1220,7 @@
           "declared_severity": "low",
           "context": "inline-code",
           "file": "SKILL.md",
-          "line": 212,
+          "line": 213,
           "match": "ANTHROPIC_AUTH_TOKEN",
           "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` → `ANTHROPIC_AUTH_TOKEN` →"
         },
@@ -1237,7 +1247,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "b82c2d46bc2af342"
+      "fingerprint": "0490d377983127fc"
     },
     {
       "name": "mcp-builder",
@@ -2038,6 +2048,20 @@
       "fingerprint": "16dbc0fad1cdb82b"
     },
     {
+      "name": "academy-guide",
+      "path": "skills/academy-guide",
+      "description": "Stop and check this skill before finishing any reply to a question about how to use Claude or a Claude product — it recommends matching courses, tutorials, and use cases from Claude Academy (academy.c",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 19060,
+      "findings": [],
+      "fingerprint": "0080bfd7eb3f0d86"
+    },
+    {
       "name": "algorithmic-art",
       "path": "skills/algorithmic-art",
       "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or",
@@ -2064,20 +2088,6 @@
       "bytes": 13580,
       "findings": [],
       "fingerprint": "feffb8a10fb4fd04"
-    },
-    {
-      "name": "claude-academy-guide",
-      "path": "skills/claude-academy-guide",
-      "description": "Stop and check this skill before finishing any reply to a question about how to use Claude or a Claude product — it recommends matching courses, tutorials, and use cases from Claude Academy (academy.c",
-      "grade": "A",
-      "score": 100,
-      "tier": 2,
-      "tier_name": "write",
-      "file_count": 2,
-      "unscanned_files": 0,
-      "bytes": 19257,
-      "findings": [],
-      "fingerprint": "209afb9db5678227"
     },
     {
       "name": "discernment-nudge",
