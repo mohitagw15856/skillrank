@@ -2,7 +2,7 @@
   "slug": "pm-claude-skills",
   "name": "pm-claude-skills",
   "url": "https://github.com/mohitagw15856/pm-claude-skills",
-  "scanned_at": "2026-08-25",
+  "scanned_at": "2026-09-01",
   "scanner_version": 1,
   "skill_count": 3535,
   "average_score": 99.7,
@@ -15,8 +15,8 @@
     "F": 0
   },
   "tiers": {
-    "0": 1164,
-    "1": 602,
+    "0": 1156,
+    "1": 610,
     "2": 1460,
     "3": 309,
     "4": 0
@@ -8688,9 +8688,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6080,
+      "bytes": 6389,
       "findings": [],
-      "fingerprint": "94540ce61d3cb53f"
+      "fingerprint": "030873f817e7525f"
     },
     {
       "name": "architectural-programme-brief",
@@ -8714,11 +8714,11 @@
       "score": 100,
       "tier": 2,
       "tier_name": "write",
-      "file_count": 1,
+      "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 5928,
+      "bytes": 11362,
       "findings": [],
-      "fingerprint": "f90f777c7345134d"
+      "fingerprint": "a54d5498b4e3c194"
     },
     {
       "name": "architectural-specification",
@@ -18773,9 +18773,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5562,
+      "bytes": 5617,
       "findings": [],
-      "fingerprint": "a8d07ce7a0edfe13"
+      "fingerprint": "c211ded75d7fd7af"
     },
     {
       "name": "dental-clinical-note",
@@ -21727,9 +21727,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4831,
+      "bytes": 4645,
       "findings": [],
-      "fingerprint": "36316b0a01907641"
+      "fingerprint": "a5b81d5e080e8bcc"
     },
     {
       "name": "eulogy-and-obituary-writer",
@@ -21755,9 +21755,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4682,
+      "bytes": 4496,
       "findings": [],
-      "fingerprint": "ba37e85381963832"
+      "fingerprint": "69287ae1c7f15e51"
     },
     {
       "name": "eulogy-writer",
@@ -21797,9 +21797,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3574,
+      "bytes": 3638,
       "findings": [],
-      "fingerprint": "f1715603ab909d50"
+      "fingerprint": "c672fab43e0e4178"
     },
     {
       "name": "euthanasia-conversation",
@@ -21933,13 +21933,13 @@
       "description": "Build an event budget that survives the event — every cost line including the ones people forget, the contingency sized to the actual risk, and the tracking that shows overspend while it can still be ",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 1,
+      "tier_name": "read",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6272,
+      "bytes": 6604,
       "findings": [],
-      "fingerprint": "a07ab3fc222a52a9"
+      "fingerprint": "3a5f5702445d2301"
     },
     {
       "name": "event-budget-plan",
@@ -21961,13 +21961,13 @@
       "description": "Build an event budget that survives the event — every cost line including the ones people forget, the contingency sized to the actual risk, and the tracking that shows overspend while it can still be ",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
-      "file_count": 1,
+      "tier": 1,
+      "tier_name": "read",
+      "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 6132,
+      "bytes": 10363,
       "findings": [],
-      "fingerprint": "84bd7c94c1077c90"
+      "fingerprint": "2b727d20a1e70420"
     },
     {
       "name": "event-run-of-show",
@@ -25335,13 +25335,13 @@
       "description": "Build a freight rate that covers the cost of actually running the load — the per-mile economics, the deadhead and detention nobody prices, and the accessorials that decide whether the lane is profitab",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 1,
+      "tier_name": "read",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6429,
+      "bytes": 6721,
       "findings": [],
-      "fingerprint": "0885ba530f636c1e"
+      "fingerprint": "1f3c1fa2d1dceaa2"
     },
     {
       "name": "freight-rate-quote",
@@ -25363,13 +25363,13 @@
       "description": "Build a freight rate that covers the cost of actually running the load — the per-mile economics, the deadhead and detention nobody prices, and the accessorials that decide whether the lane is profitab",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
-      "file_count": 1,
+      "tier": 1,
+      "tier_name": "read",
+      "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 6288,
+      "bytes": 10280,
       "findings": [],
-      "fingerprint": "6d1f74fd97054347"
+      "fingerprint": "a507a78cb39adb1d"
     },
     {
       "name": "from-first-principles",
@@ -32465,9 +32465,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6277,
+      "bytes": 6634,
       "findings": [],
-      "fingerprint": "3e06e3f173866c45"
+      "fingerprint": "3b6dfd79b33fdb83"
     },
     {
       "name": "medication-therapy-review",
@@ -32491,11 +32491,11 @@
       "score": 100,
       "tier": 2,
       "tier_name": "write",
-      "file_count": 1,
+      "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 6129,
+      "bytes": 11549,
       "findings": [],
-      "fingerprint": "1b3c806ac54993fb"
+      "fingerprint": "20342357a07a4a56"
     },
     {
       "name": "meeting-action-extractor",
@@ -34971,9 +34971,9 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5865,
+      "bytes": 5923,
       "findings": [],
-      "fingerprint": "cdf7f319a1c5d32a"
+      "fingerprint": "3be004aee83521a7"
     },
     {
       "name": "okr-builder",
@@ -42555,13 +42555,13 @@
       "description": "Set criteria-based return-to-activity milestones so the decision rests on what the patient can demonstrate rather than on how long it has been — the test battery, the thresholds, the graded reintroduc",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 1,
+      "tier_name": "read",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6559,
+      "bytes": 6852,
       "findings": [],
-      "fingerprint": "b33d27386e5deab7"
+      "fingerprint": "90764d455721a624"
     },
     {
       "name": "return-to-activity-criteria",
@@ -42583,13 +42583,13 @@
       "description": "Set criteria-based return-to-activity milestones so the decision rests on what the patient can demonstrate rather than on how long it has been — the test battery, the thresholds, the graded reintroduc",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
-      "file_count": 1,
+      "tier": 1,
+      "tier_name": "read",
+      "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 6409,
+      "bytes": 11247,
       "findings": [],
-      "fingerprint": "9ea0096f13f01f2a"
+      "fingerprint": "eb63274a03f3fa79"
     },
     {
       "name": "review-comments-resolver",
@@ -43868,16 +43868,16 @@
     {
       "name": "sales-demo-script",
       "path": "exports/openclaw/sales-demo-script",
-      "description": "Write a product demo script that tells a value story instead of a feature tour. Use when asked to write a sales demo script, structure a product demo, plan demo talk track and flow, or turn a feature ",
+      "description": "Write a product demo script that tells a value story instead of a feature tour — the buyer's-workflow storyline, the golden path rehearsed with fallbacks, the wow moment placed early, and the demo-dea",
       "grade": "A",
       "score": 100,
       "tier": 2,
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4208,
+      "bytes": 4363,
       "findings": [],
-      "fingerprint": "baaf50f72bdb11f7"
+      "fingerprint": "0f933f5154e8199c"
     },
     {
       "name": "sales-demo-script",
@@ -43896,16 +43896,16 @@
     {
       "name": "sales-demo-script",
       "path": "skills/sales-demo-script",
-      "description": "Write a product demo script that tells a value story instead of a feature tour. Use when asked to write a sales demo script, structure a product demo, plan demo talk track and flow, or turn a feature ",
+      "description": "Write a product demo script that tells a value story instead of a feature tour — the buyer's-workflow storyline, the golden path rehearsed with fallbacks, the wow moment placed early, and the demo-dea",
       "grade": "A",
       "score": 100,
       "tier": 2,
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4068,
+      "bytes": 4223,
       "findings": [],
-      "fingerprint": "724d1f167263872f"
+      "fingerprint": "76bdfadcecc1d984"
     },
     {
       "name": "sales-enablement-kit",
@@ -44113,23 +44113,23 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3537,
+      "bytes": 3591,
       "findings": [],
-      "fingerprint": "ad98527fa25ef88e"
+      "fingerprint": "0b078d26d855a7a2"
     },
     {
       "name": "saying-no-kindly",
       "path": "exports/openclaw/saying-no-kindly",
-      "description": "Decline requests without damaging relationships or your standing — the fast-clear-warm formula, the alternative-attached no, the no-to-the-boss version (tradeoffs, not refusal), and the scripts for th",
+      "description": "Decline requests without damaging relationships or your standing — the fast-clear-warm formula, the alternative-attached no, the no-to-the-boss version (tradeoffs, not refusal), and scripts for the as",
       "grade": "A",
       "score": 100,
       "tier": 0,
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5685,
+      "bytes": 5696,
       "findings": [],
-      "fingerprint": "f775ddd84bd8e0cd"
+      "fingerprint": "7c573d159b5f3c2c"
     },
     {
       "name": "saying-no-kindly",
@@ -44148,16 +44148,16 @@
     {
       "name": "saying-no-kindly",
       "path": "skills/saying-no-kindly",
-      "description": "Decline requests without damaging relationships or your standing — the fast-clear-warm formula, the alternative-attached no, the no-to-the-boss version (tradeoffs, not refusal), and the scripts for th",
+      "description": "Decline requests without damaging relationships or your standing — the fast-clear-warm formula, the alternative-attached no, the no-to-the-boss version (tradeoffs, not refusal), and scripts for the as",
       "grade": "A",
       "score": 100,
       "tier": 0,
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5546,
+      "bytes": 5557,
       "findings": [],
-      "fingerprint": "1bff9dc1cf92582d"
+      "fingerprint": "121fd7751c1a1c37"
     },
     {
       "name": "scam-message-decoder",
@@ -49751,16 +49751,16 @@
     {
       "name": "team-offsite-planner",
       "path": "exports/openclaw/team-offsite-planner",
-      "description": "Plan a team offsite from goals to full agenda. Use when asked to plan a team offsite, away day, team retreat, quarterly offsite, or team-building event. Produces a full agenda, session designs, facili",
+      "description": "Plan a team offsite that earns its cost — the purpose split (connection vs decisions vs planning, weighted deliberately), an agenda that alternates work and air, the logistics runbook, and the follow-",
       "grade": "A",
       "score": 100,
       "tier": 1,
       "tier_name": "read",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5596,
+      "bytes": 5880,
       "findings": [],
-      "fingerprint": "c1632920f51075cb"
+      "fingerprint": "bcba62c1ea2f3ce4"
     },
     {
       "name": "team-offsite-planner",
@@ -49779,16 +49779,16 @@
     {
       "name": "team-offsite-planner",
       "path": "skills/team-offsite-planner",
-      "description": "Plan a team offsite from goals to full agenda. Use when asked to plan a team offsite, away day, team retreat, quarterly offsite, or team-building event. Produces a full agenda, session designs, facili",
+      "description": "Plan a team offsite that earns its cost — the purpose split (connection vs decisions vs planning, weighted deliberately), an agenda that alternates work and air, the logistics runbook, and the follow-",
       "grade": "A",
       "score": 100,
       "tier": 1,
       "tier_name": "read",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5453,
+      "bytes": 5737,
       "findings": [],
-      "fingerprint": "35c25bd5043c5abe"
+      "fingerprint": "075a0cea966d702d"
     },
     {
       "name": "tech-radar",
@@ -52008,13 +52008,13 @@
       "description": "Present a dental treatment plan the patient actually understands and accepts — sequenced by clinical priority, costed with their coverage applied, and explained in the order that answers what-is-wrong",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 1,
+      "tier_name": "read",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6737,
+      "bytes": 7070,
       "findings": [],
-      "fingerprint": "ec8307ff609a87a6"
+      "fingerprint": "19f9ed9920291114"
     },
     {
       "name": "treatment-plan-presentation",
@@ -52036,13 +52036,13 @@
       "description": "Present a dental treatment plan the patient actually understands and accepts — sequenced by clinical priority, costed with their coverage applied, and explained in the order that answers what-is-wrong",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
-      "file_count": 1,
+      "tier": 1,
+      "tier_name": "read",
+      "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 6587,
+      "bytes": 11198,
       "findings": [],
-      "fingerprint": "59fbbe9b427546d1"
+      "fingerprint": "7437e61ad52a79ca"
     },
     {
       "name": "trip-planner",
@@ -54770,23 +54770,23 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5385,
+      "bytes": 5444,
       "findings": [],
-      "fingerprint": "0680faf63d52765e"
+      "fingerprint": "e1e21e57127aa8fc"
     },
     {
       "name": "youtube-script-writer",
       "path": "exports/openclaw/youtube-script-writer",
-      "description": "Write engaging, high-retention YouTube video scripts with visual and audio cues. Use when asked to write a YouTube script, design a video outline, draft a video hook, or structure a video narrative. P",
+      "description": "Write a high-retention YouTube script — explainer, tutorial, video essay, review, or talking head — on the packaging then cold-open then value-stack then retention structure that holds watch time past",
       "grade": "A",
       "score": 100,
       "tier": 3,
       "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 9462,
+      "bytes": 9675,
       "findings": [],
-      "fingerprint": "ac20d6d957121e0c"
+      "fingerprint": "f834463aa332dac8"
     },
     {
       "name": "youtube-script-writer",
@@ -54805,16 +54805,16 @@
     {
       "name": "youtube-script-writer",
       "path": "skills/youtube-script-writer",
-      "description": "Write engaging, high-retention YouTube video scripts with visual and audio cues. Use when asked to write a YouTube script, design a video outline, draft a video hook, or structure a video narrative. P",
+      "description": "Write a high-retention YouTube script — explainer, tutorial, video essay, review, or talking head — on the packaging then cold-open then value-stack then retention structure that holds watch time past",
       "grade": "A",
       "score": 100,
       "tier": 3,
       "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 9318,
+      "bytes": 9531,
       "findings": [],
-      "fingerprint": "7c83ce0e2ccd9970"
+      "fingerprint": "04c89cbe4c56f37c"
     }
   ]
 }
