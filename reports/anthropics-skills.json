@@ -2,16 +2,16 @@
   "slug": "anthropics-skills",
   "name": "anthropics/skills",
   "url": "https://github.com/anthropics/skills",
-  "scanned_at": "2026-09-01",
+  "scanned_at": "2026-09-08",
   "scanner_version": 1,
   "skill_count": 20,
-  "average_score": 92.2,
+  "average_score": 91.2,
   "repo_grade": "A",
   "distribution": {
     "A": 15,
     "B": 3,
-    "C": 2,
-    "D": 0,
+    "C": 1,
+    "D": 1,
     "F": 0
   },
   "tiers": {
@@ -28,6 +28,7 @@
     "network-egress": 3,
     "env-key-reference": 3,
     "privilege-escalation": 1,
+    "obfuscation": 1,
     "dotenv-access": 1
   },
   "suppressed_skills": [],
@@ -36,13 +37,13 @@
       "name": "claude-api",
       "path": "skills/claude-api",
       "description": "Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.\nTRIGGER — read BEFORE opening the target file; do",
-      "grade": "C",
-      "score": 63,
+      "grade": "D",
+      "score": 43,
       "tier": 3,
       "tier_name": "exec",
-      "file_count": 68,
+      "file_count": 70,
       "unscanned_files": 0,
-      "bytes": 967783,
+      "bytes": 1164158,
       "findings": [
         {
           "id": "privilege-escalation",
@@ -55,6 +56,36 @@
           "evidence": "| sudo tar -xz -C /usr/local/bin ant"
         },
         {
+          "id": "obfuscation",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "plain",
+          "file": "shared/cost-optimization.md",
+          "line": 26,
+          "match": "eval (",
+          "evidence": "- **From a baseline run, paid**: run the project's eval (or, with no eval, replay a representative sample of real requests) and roll up the same way. This spends real API money: state the expected"
+        },
+        {
+          "id": "privilege-escalation",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "fence",
+          "file": "shared/managed-agents-self-hosted-sandboxes.md",
+          "line": 187,
+          "match": "sudo m",
+          "evidence": "sudo mkdir -p /mnt/memory && sudo chown \"$USER\" /mnt/memory"
+        },
+        {
+          "id": "privilege-escalation",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "fence",
+          "file": "shared/managed-agents-self-hosted-sandboxes.md",
+          "line": 187,
+          "match": "sudo c",
+          "evidence": "sudo mkdir -p /mnt/memory && sudo chown \"$USER\" /mnt/memory"
+        },
+        {
           "id": "network-egress",
           "severity": "medium",
           "declared_severity": "medium",
@@ -62,7 +93,7 @@
           "file": "curl/examples.md",
           "line": 1,
           "match": "cURL",
-          "evidence": "# Claude API — cURL / Raw HTTP"
+          "evidence": "# Claude API - cURL / Raw HTTP"
         },
         {
           "id": "network-egress",
@@ -92,7 +123,7 @@
           "file": "curl/managed-agents.md",
           "line": 1,
           "match": "cURL",
-          "evidence": "# Managed Agents — cURL / Raw HTTP"
+          "evidence": "# Managed Agents - cURL / Raw HTTP"
         },
         {
           "id": "network-egress",
@@ -152,7 +183,7 @@
           "file": "php/managed-agents/README.md",
           "line": 207,
           "match": "cURL",
-          "evidence": "> ℹ️ **PHP file upload:** The PHP SDK's beta managed-agents file upload binding is not shown in the apps source examples; the canonical PHP example uses raw cURL against `POST /v1/files`. If your code"
+          "evidence": "> Note: **PHP file upload:** The PHP SDK's beta managed-agents file upload binding is not shown in the apps source examples; the canonical PHP example uses raw cURL against `POST /v1/files`. If your c"
         },
         {
           "id": "network-egress",
@@ -188,6 +219,36 @@
           "id": "network-egress",
           "severity": "medium",
           "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/admin-api.md",
+          "line": 39,
+          "match": "curl",
+          "evidence": "**curl** also needs `anthropic-version: 2023-06-01` on every request."
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/admin-api.md",
+          "line": 76,
+          "match": "curl",
+          "evidence": "| curl | `GET /v1/organizations/users?limit=10` | One page per request; cursor pagination per the Admin API reference |"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/admin-api.md",
+          "line": 179,
+          "match": "curl",
+          "evidence": "| Usage & cost reports (curl-only) | `https://platform.claude.com/docs/en/manage-claude/usage-cost-api.md` |"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
           "context": "fence",
           "file": "shared/anthropic-cli.md",
           "line": 24,
@@ -202,7 +263,7 @@
           "file": "shared/anthropic-cli.md",
           "line": 57,
           "match": "curl",
-          "evidence": "# Bare access token — for curl's Authorization header"
+          "evidence": "# Bare access token - for curl's Authorization header"
         },
         {
           "id": "network-egress",
@@ -210,9 +271,19 @@
           "declared_severity": "medium",
           "context": "quote",
           "file": "shared/live-sources.md",
-          "line": 89,
+          "line": 65,
+          "match": "curl",
+          "evidence": "| Usage & Cost Reports | `https://platform.claude.com/docs/en/manage-claude/usage-cost-api.md`   | \"Extract usage and cost report endpoints (curl-only, not in the SDKs)\"                 |"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "quote",
+          "file": "shared/live-sources.md",
+          "line": 103,
           "match": "webhook",
-          "evidence": "| Self-Hosted Sandboxes | `https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes.md`    | \"Extract config:{type:self_hosted}, ANTHROPIC_ENVIRONMENT_KEY, EnvironmentWorker.run/run_on"
+          "evidence": "| Self-Hosted Sandboxes | `https://platform.claude.com/docs/en/managed-agents/self-hosted-sandboxes.md`    | \"Extract config:{type:self_hosted}, ANTHROPIC_ENVIRONMENT_KEY, EnvironmentWorker.run/handle"
         },
         {
           "id": "network-egress",
@@ -220,7 +291,7 @@
           "declared_severity": "medium",
           "context": "quote",
           "file": "shared/live-sources.md",
-          "line": 97,
+          "line": 111,
           "match": "webhook",
           "evidence": "| Webhooks              | `https://platform.claude.com/docs/en/managed-agents/webhooks.md`                 | \"Extract webhook endpoint registration, HMAC signature verification, supported event types,"
         },
@@ -242,7 +313,7 @@
           "file": "shared/managed-agents-client-patterns.md",
           "line": 5,
           "match": "cURL",
-          "evidence": "Code samples are TypeScript — other languages follow the same shape; see `{lang}/managed-agents/README.md` (cURL and C#: `curl/managed-agents.md`) for equivalents."
+          "evidence": "Code samples are TypeScript - other languages follow the same shape; see `{lang}/managed-agents/README.md` (cURL and C#: `curl/managed-agents.md`) for equivalents."
         },
         {
           "id": "network-egress",
@@ -250,7 +321,7 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "shared/managed-agents-environments.md",
-          "line": 108,
+          "line": 112,
           "match": "curl",
           "evidence": "- The filter parameter is **`scope_id`** (REST query param `?scope_id=<session_id>`). The SDK's files resource auto-adds only the `files-api-2025-04-14` header, so pass `betas: [\"managed-agents-2026-0"
         },
@@ -260,9 +331,9 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "shared/managed-agents-memory.md",
-          "line": 199,
+          "line": 201,
           "match": "cURL",
-          "evidence": "For cURL examples and the CLI (`ant beta:memory-stores ...`), WebFetch the Memory URL in `shared/live-sources.md` → Managed Agents."
+          "evidence": "For cURL examples and the CLI (`ant beta:memory-stores ...`), WebFetch the Memory URL in `shared/live-sources.md` -> Managed Agents."
         },
         {
           "id": "network-egress",
@@ -272,7 +343,7 @@
           "file": "shared/managed-agents-onboarding.md",
           "line": 73,
           "match": "cURL",
-          "evidence": "**Block 2 — Runtime (every invocation; conversational and Outcome shapes).** SDK code in the detected language (Python/TS/cURL — SKILL.md → Language Detection); don't emit shell loops here:"
+          "evidence": "**Block 2 - Runtime (every invocation; conversational and Outcome shapes).** SDK code in the detected language (Python/TS/cURL - SKILL.md -> Language Detection); don't emit shell loops here:"
         },
         {
           "id": "network-egress",
@@ -332,7 +403,7 @@
           "file": "shared/managed-agents-scheduled-deployments.md",
           "line": 136,
           "match": "webhook",
-          "evidence": "The outcome of each **scheduled** run (started/succeeded/failed) and each deployment lifecycle change (created/updated/paused/unpaused/archived/deleted) is also delivered as a webhook event — see `sha"
+          "evidence": "The outcome of each **scheduled** run (started/succeeded/failed) and each deployment lifecycle change (created/updated/paused/unpaused/archived/deleted) is also delivered as a webhook event - see `sha"
         },
         {
           "id": "network-egress",
@@ -340,17 +411,7 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "shared/managed-agents-self-hosted-sandboxes.md",
-          "line": 28,
-          "match": "webhook",
-          "evidence": "`EnvironmentWorker` wraps the poll → dispatch → tool-execute loop. `.run()` is the always-on loop; `.run_one()` / `.runOne()` handles one work item (for webhook-driven wake)."
-        },
-        {
-          "id": "network-egress",
-          "severity": "medium",
-          "declared_severity": "medium",
-          "context": "plain",
-          "file": "shared/managed-agents-self-hosted-sandboxes.md",
-          "line": 98,
+          "line": 112,
           "match": "Webhook",
           "evidence": "## Webhook-driven wake (instead of always-on)"
         },
@@ -360,9 +421,19 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "shared/managed-agents-self-hosted-sandboxes.md",
-          "line": 100,
+          "line": 114,
           "match": "webhook",
-          "evidence": "Register a webhook for `session.status_run_started` (see `shared/managed-agents-webhooks.md`), verify the delivery, then drain one work item with `.run_one()`:"
+          "evidence": "Register a webhook for `session.status_run_started` (see `shared/managed-agents-webhooks.md`), verify the delivery, then **drain** the queue with the poller (`drain=True` stops when it's empty; `block"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-self-hosted-sandboxes.md",
+          "line": 114,
+          "match": "webhook",
+          "evidence": "Register a webhook for `session.status_run_started` (see `shared/managed-agents-webhooks.md`), verify the delivery, then **drain** the queue with the poller (`drain=True` stops when it's empty; `block"
         },
         {
           "id": "network-egress",
@@ -370,7 +441,7 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "shared/managed-agents-tools.md",
-          "line": 208,
+          "line": 258,
           "match": "webhook",
           "evidence": "- **Environment-variable credentials** appear in the sandbox as an opaque placeholder; the real value replaces the placeholder at egress, on requests to the credential's allowed hosts only. Substituti"
         },
@@ -390,7 +461,7 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "shared/tool-use-concepts.md",
-          "line": 437,
+          "line": 440,
           "match": "cURL",
           "evidence": "| Python / TypeScript / Ruby / cURL | plain object `{\"type\": \"bash_20250124\", \"name\": \"bash\"}` |"
         },
@@ -402,7 +473,7 @@
           "file": "SKILL.md",
           "line": 23,
           "match": "cURL",
-          "evidence": "2. **Raw HTTP** (`curl`, `requests`, `fetch`, `httpx`, etc.) — only when the user explicitly asks for cURL/REST/raw HTTP, the project is a shell/cURL project, or the language has no official SDK."
+          "evidence": "2. **Raw HTTP** (`curl`, `requests`, `fetch`, `httpx`, etc.) - only when the user explicitly asks for cURL/REST/raw HTTP, the project is a shell/cURL project, or the language has no official SDK."
         },
         {
           "id": "network-egress",
@@ -412,7 +483,7 @@
           "file": "SKILL.md",
           "line": 23,
           "match": "cURL",
-          "evidence": "2. **Raw HTTP** (`curl`, `requests`, `fetch`, `httpx`, etc.) — only when the user explicitly asks for cURL/REST/raw HTTP, the project is a shell/cURL project, or the language has no official SDK."
+          "evidence": "2. **Raw HTTP** (`curl`, `requests`, `fetch`, `httpx`, etc.) - only when the user explicitly asks for cURL/REST/raw HTTP, the project is a shell/cURL project, or the language has no official SDK."
         },
         {
           "id": "network-egress",
@@ -732,7 +803,7 @@
           "file": "shared/anthropic-cli.md",
           "line": 65,
           "match": ".env",
-          "evidence": "# .env format — sets ANTHROPIC_AUTH_TOKEN (and ANTHROPIC_BASE_URL if the profile has one)."
+          "evidence": "# .env format - sets ANTHROPIC_AUTH_TOKEN (and ANTHROPIC_BASE_URL if the profile has one)."
         },
         {
           "id": "network-egress",
@@ -762,7 +833,7 @@
           "file": "shared/managed-agents-client-patterns.md",
           "line": 5,
           "match": "curl",
-          "evidence": "Code samples are TypeScript — other languages follow the same shape; see `{lang}/managed-agents/README.md` (cURL and C#: `curl/managed-agents.md`) for equivalents."
+          "evidence": "Code samples are TypeScript - other languages follow the same shape; see `{lang}/managed-agents/README.md` (cURL and C#: `curl/managed-agents.md`) for equivalents."
         },
         {
           "id": "env-key-reference",
@@ -770,9 +841,9 @@
           "declared_severity": "low",
           "context": "fence",
           "file": "shared/managed-agents-environments.md",
-          "line": 169,
+          "line": 173,
           "match": "GITHUB_TOKEN",
-          "evidence": "authorization_token: process.env.GITHUB_TOKEN,  // repo clone token (≠ MCP auth)"
+          "evidence": "authorization_token: process.env.GITHUB_TOKEN,  // repo clone token (!= MCP auth)"
         },
         {
           "id": "env-key-reference",
@@ -780,9 +851,9 @@
           "declared_severity": "low",
           "context": "fence",
           "file": "shared/managed-agents-environments.md",
-          "line": 202,
+          "line": 206,
           "match": "GITHUB_TOKEN",
-          "evidence": "\"authorization_token\": os.environ[\"GITHUB_TOKEN\"],  # repo clone token (≠ MCP auth)"
+          "evidence": "\"authorization_token\": os.environ[\"GITHUB_TOKEN\"],  # repo clone token (!= MCP auth)"
         },
         {
           "id": "network-egress",
@@ -820,7 +891,7 @@
           "declared_severity": "low",
           "context": "fence",
           "file": "shared/managed-agents-tools.md",
-          "line": 92,
+          "line": 94,
           "match": ".env.example",
           "evidence": "{ \"type\": \"user.tool_confirmation\", \"tool_use_id\": \"sevt_def456\", \"result\": \"deny\", \"message\": \"Read .env.example instead\" }"
         },
@@ -830,9 +901,9 @@
           "declared_severity": "medium",
           "context": "inline-code",
           "file": "shared/managed-agents-tools.md",
-          "line": 198,
+          "line": 248,
           "match": "curl",
-          "evidence": "- **Environment variables** (`environment_variable`) — keyed by `secret_name` (the env var name). The sandbox sees only an **opaque placeholder**; the real secret is substituted into the outbound requ"
+          "evidence": "- **Environment variables** (`environment_variable`) - keyed by `secret_name` (the env var name). The sandbox sees only an **opaque placeholder**; the real secret is substituted into the outbound requ"
         },
         {
           "id": "network-egress",
@@ -842,7 +913,7 @@
           "file": "shared/managed-agents-webhooks.md",
           "line": 23,
           "match": "webhook",
-          "evidence": "Every delivery carries the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers. **Use the SDK's `client.beta.webhooks.unwrap()`** — it verifies the signature, rejects payloads more than"
+          "evidence": "Every delivery carries the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers. **Use the SDK's `client.beta.webhooks.unwrap()`** - it verifies the signature, rejects payloads more than"
         },
         {
           "id": "network-egress",
@@ -852,7 +923,7 @@
           "file": "shared/managed-agents-webhooks.md",
           "line": 23,
           "match": "webhook",
-          "evidence": "Every delivery carries the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers. **Use the SDK's `client.beta.webhooks.unwrap()`** — it verifies the signature, rejects payloads more than"
+          "evidence": "Every delivery carries the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers. **Use the SDK's `client.beta.webhooks.unwrap()`** - it verifies the signature, rejects payloads more than"
         },
         {
           "id": "network-egress",
@@ -862,7 +933,7 @@
           "file": "shared/managed-agents-webhooks.md",
           "line": 23,
           "match": "webhook",
-          "evidence": "Every delivery carries the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers. **Use the SDK's `client.beta.webhooks.unwrap()`** — it verifies the signature, rejects payloads more than"
+          "evidence": "Every delivery carries the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers. **Use the SDK's `client.beta.webhooks.unwrap()`** - it verifies the signature, rejects payloads more than"
         },
         {
           "id": "env-key-reference",
@@ -892,7 +963,7 @@
           "file": "SKILL.md",
           "line": 23,
           "match": "curl",
-          "evidence": "2. **Raw HTTP** (`curl`, `requests`, `fetch`, `httpx`, etc.) — only when the user explicitly asks for cURL/REST/raw HTTP, the project is a shell/cURL project, or the language has no official SDK."
+          "evidence": "2. **Raw HTTP** (`curl`, `requests`, `fetch`, `httpx`, etc.) - only when the user explicitly asks for cURL/REST/raw HTTP, the project is a shell/cURL project, or the language has no official SDK."
         },
         {
           "id": "env-key-reference",
@@ -1023,10 +1094,51 @@
           "severity": "info",
           "declared_severity": "low",
           "context": "inline-code",
+          "file": "shared/admin-api.md",
+          "line": 13,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "| Admin API key (`sk-ant-admin...`) | `ANTHROPIC_API_KEY` | `x-api-key` | Most endpoints |"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/admin-api.md",
+          "line": 14,
+          "match": "ANTHROPIC_AUTH_TOKEN",
+          "evidence": "| `org:admin` OAuth token | `ANTHROPIC_AUTH_TOKEN` | `authorization: Bearer` | Everything, including the OAuth-only endpoints |"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/admin-api.md",
+          "line": 17,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "- **Precedence gotcha:** when both env vars are set, some clients prefer the API key. When using a bearer token, leave `ANTHROPIC_API_KEY` unset in that shell."
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "rollup",
+          "file": "shared/admin-api.md",
+          "line": 0,
+          "match": "+2 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
           "file": "shared/anthropic-cli.md",
           "line": 31,
           "match": "ANTHROPIC_API_KEY",
-          "evidence": "**Auth** — the CLI resolves credentials the same way the SDKs do (first match wins): explicit flags, then `ANTHROPIC_API_KEY`, then `ANTHROPIC_AUTH_TOKEN`, then the `ANTHROPIC_PROFILE`-selected or act"
+          "evidence": "**Auth** - the CLI resolves credentials the same way the SDKs do (first match wins): explicit flags, then `ANTHROPIC_API_KEY`, then `ANTHROPIC_AUTH_TOKEN`, then the `ANTHROPIC_PROFILE`-selected or act"
         },
         {
           "id": "env-key-reference",
@@ -1036,7 +1148,7 @@
           "file": "shared/anthropic-cli.md",
           "line": 31,
           "match": "ANTHROPIC_AUTH_TOKEN",
-          "evidence": "**Auth** — the CLI resolves credentials the same way the SDKs do (first match wins): explicit flags, then `ANTHROPIC_API_KEY`, then `ANTHROPIC_AUTH_TOKEN`, then the `ANTHROPIC_PROFILE`-selected or act"
+          "evidence": "**Auth** - the CLI resolves credentials the same way the SDKs do (first match wins): explicit flags, then `ANTHROPIC_API_KEY`, then `ANTHROPIC_AUTH_TOKEN`, then the `ANTHROPIC_PROFILE`-selected or act"
         },
         {
           "id": "env-key-reference",
@@ -1078,7 +1190,7 @@
           "file": "shared/claude-platform-on-aws.md",
           "line": 49,
           "match": "AWS_ACCESS_KEY_ID",
-          "evidence": "The client resolves AWS credentials via the standard precedence chain: explicit constructor args → environment (`AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY`/`AWS_SESSION_TOKEN`) → shared profile → assu"
+          "evidence": "The client resolves AWS credentials via the standard precedence chain: explicit constructor args -> environment (`AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY`/`AWS_SESSION_TOKEN`) -> shared profile -> a"
         },
         {
           "id": "env-key-reference",
@@ -1088,7 +1200,7 @@
           "file": "shared/claude-platform-on-aws.md",
           "line": 49,
           "match": "AWS_SECRET_ACCESS_KEY",
-          "evidence": "The client resolves AWS credentials via the standard precedence chain: explicit constructor args → environment (`AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY`/`AWS_SESSION_TOKEN`) → shared profile → assu"
+          "evidence": "The client resolves AWS credentials via the standard precedence chain: explicit constructor args -> environment (`AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY`/`AWS_SESSION_TOKEN`) -> shared profile -> a"
         },
         {
           "id": "unpinned-install",
@@ -1097,8 +1209,8 @@
           "context": "inline-code",
           "file": "shared/claude-platform-on-aws.md",
           "line": 14,
-          "match": "npm install @anthropic-ai/aws-sdk` | `import AnthropicAws from \"@anthropic-ai/aws-sdk\"` → `ne",
-          "evidence": "| TypeScript | `npm install @anthropic-ai/aws-sdk` | `import AnthropicAws from \"@anthropic-ai/aws-sdk\"` → `new AnthropicAws()` |"
+          "match": "npm install @anthropic-ai/aws-sdk` | `import AnthropicAws from \"@anthropic-ai/aws-sdk\"` -> `n",
+          "evidence": "| TypeScript | `npm install @anthropic-ai/aws-sdk` | `import AnthropicAws from \"@anthropic-ai/aws-sdk\"` -> `new AnthropicAws()` |"
         },
         {
           "id": "unpinned-install",
@@ -1118,7 +1230,7 @@
           "file": "shared/error-codes.md",
           "line": 59,
           "match": "ANTHROPIC_API_KEY",
-          "evidence": "- Both `ANTHROPIC_API_KEY` and `ANTHROPIC_AUTH_TOKEN` set — the SDK sends both headers and the API rejects the request"
+          "evidence": "- Both `ANTHROPIC_API_KEY` and `ANTHROPIC_AUTH_TOKEN` set - the SDK sends both headers and the API rejects the request"
         },
         {
           "id": "env-key-reference",
@@ -1128,7 +1240,7 @@
           "file": "shared/error-codes.md",
           "line": 59,
           "match": "ANTHROPIC_AUTH_TOKEN",
-          "evidence": "- Both `ANTHROPIC_API_KEY` and `ANTHROPIC_AUTH_TOKEN` set — the SDK sends both headers and the API rejects the request"
+          "evidence": "- Both `ANTHROPIC_API_KEY` and `ANTHROPIC_AUTH_TOKEN` set - the SDK sends both headers and the API rejects the request"
         },
         {
           "id": "env-key-reference",
@@ -1168,9 +1280,9 @@
           "declared_severity": "low",
           "context": "inline-code",
           "file": "shared/managed-agents-self-hosted-sandboxes.md",
-          "line": 145,
+          "line": 252,
           "match": "ANTHROPIC_API_KEY",
-          "evidence": "These are **control-plane** calls — authenticate with `x-api-key` (not the environment key); `managed-agents-2026-04-01` beta header. **Call them from outside the worker host** — setting `ANTHROPIC_AP"
+          "evidence": "These are **control-plane** calls - authenticate with `x-api-key` (not the environment key); `managed-agents-2026-04-01` beta header. **Call them from outside the worker host** - setting `ANTHROPIC_AP"
         },
         {
           "id": "network-egress",
@@ -1200,9 +1312,9 @@
           "declared_severity": "low",
           "context": "inline-code",
           "file": "SKILL.md",
-          "line": 213,
+          "line": 215,
           "match": "ANTHROPIC_API_KEY",
-          "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` → `ANTHROPIC_AUTH_TOKEN` →"
+          "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` -> `ANTHROPIC_AUTH_TOKEN`"
         },
         {
           "id": "env-key-reference",
@@ -1210,9 +1322,9 @@
           "declared_severity": "low",
           "context": "inline-code",
           "file": "SKILL.md",
-          "line": 213,
+          "line": 215,
           "match": "ANTHROPIC_API_KEY",
-          "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` → `ANTHROPIC_AUTH_TOKEN` →"
+          "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` -> `ANTHROPIC_AUTH_TOKEN`"
         },
         {
           "id": "env-key-reference",
@@ -1220,9 +1332,9 @@
           "declared_severity": "low",
           "context": "inline-code",
           "file": "SKILL.md",
-          "line": 213,
+          "line": 215,
           "match": "ANTHROPIC_AUTH_TOKEN",
-          "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` → `ANTHROPIC_AUTH_TOKEN` →"
+          "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` -> `ANTHROPIC_AUTH_TOKEN`"
         },
         {
           "id": "env-key-reference",
@@ -1231,7 +1343,7 @@
           "context": "rollup",
           "file": "SKILL.md",
           "line": 0,
-          "match": "+4 more occurrence(s)",
+          "match": "+6 more occurrence(s)",
           "evidence": "",
           "rollup": true
         },
@@ -1242,12 +1354,12 @@
           "context": "rollup",
           "file": "SKILL.md",
           "line": 0,
-          "match": "+17 more occurrence(s)",
+          "match": "+19 more occurrence(s)",
           "evidence": "",
           "rollup": true
         }
       ],
-      "fingerprint": "0490d377983127fc"
+      "fingerprint": "154fb3c87d801845"
     },
     {
       "name": "mcp-builder",
@@ -1487,7 +1599,7 @@
       "tier_name": "write",
       "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 18424,
+      "bytes": 19537,
       "findings": [
         {
           "id": "network-egress",
@@ -1495,12 +1607,12 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "SKILL.md",
-          "line": 49,
+          "line": 65,
           "match": "webhook",
-          "evidence": "Write from the end user's side of the screen. Name things by what people control and recognize, never by how the system is built. A person manages notifications, not webhook config. Describe what some"
+          "evidence": "Write from the end user's perspective. Name things by what users will understand in simple language, not by how the system is built. A user manages notifications, not webhook config. Describe what som"
         }
       ],
-      "fingerprint": "ffd7ed812b649494"
+      "fingerprint": "0ee4f60f7acdfdb9"
     },
     {
       "name": "canvas-design",
