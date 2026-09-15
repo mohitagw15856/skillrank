@@ -2,9 +2,9 @@
 
 Source: https://github.com/anthropics/skills
 
-**20 skills · average 91.2/100 · scanned 2026-09-08 with scanner v1**
+**20 skills · average 90.2/100 · scanned 2026-09-15 with scanner v1**
 
-Grades: A 15 · B 3 · C 1 · D 1
+Grades: A 15 · B 3 · C 1 · F 1
 
 ## Capability profile
 
@@ -21,7 +21,7 @@ Grades: A 15 · B 3 · C 1 · D 1
 | Detector | Skills | Share |
 | --- | --: | --: |
 | `unpinned-install` | 6 | 30% |
-| `destructive` | 4 | 20% |
+| `destructive` | 5 | 25% |
 | `bundled-binary` | 3 | 15% |
 | `network-egress` | 3 | 15% |
 | `env-key-reference` | 3 | 15% |
@@ -31,7 +31,7 @@ Grades: A 15 · B 3 · C 1 · D 1
 
 ## Everything below an A (5)
 
-### D · 43/100 · `claude-api`
+### F · 23/100 · `claude-api`
 
 `skills/claude-api` — tier 3 (exec)
 
@@ -42,6 +42,7 @@ Grades: A 15 · B 3 · C 1 · D 1
 | **high** | `privilege-escalation` | `shared/anthropic-cli.md:25` | fence | `\| sudo tar -xz -C /usr/local/bin ant` |
 | **high** | `obfuscation` | `shared/cost-optimization.md:26` | plain | `- **From a baseline run, paid**: run the project's eval (or, with no eval, replay a representative sample of r` |
 | **high** | `privilege-escalation` | `shared/managed-agents-self-hosted-sandboxes.md:187` | fence | `sudo mkdir -p /mnt/memory && sudo chown "$USER" /mnt/memory` |
+| **high** | `destructive` | `shared/managed-agents-tools.md:145` | fence | `"input": { "command": "rm -rf /workspace/reports" },` |
 | **medium** | `network-egress` | `curl/examples.md:1` | plain | `# Claude API - cURL / Raw HTTP` |
 | **medium** | `network-egress` | `curl/managed-agents.md:1` | plain | `# Managed Agents - cURL / Raw HTTP` |
 | **medium** | `network-egress` | `go/managed-agents/README.md:3` | plain | `> **Bindings not shown here:** This README covers the most common managed-agents flows for Go. If you need a c` |
@@ -60,7 +61,7 @@ Grades: A 15 · B 3 · C 1 · D 1
 | **medium** | `network-egress` | `shared/managed-agents-overview.md:32` | plain | `**Which beta header goes where:** The SDK sets `managed-agents-2026-04-01` automatically on `client.beta.{agen` |
 | **medium** | `network-egress` | `shared/managed-agents-scheduled-deployments.md:16` | fence | `curl -fsSL https://api.anthropic.com/v1/deployments \` |
 | **medium** | `network-egress` | `shared/managed-agents-self-hosted-sandboxes.md:112` | plain | `## Webhook-driven wake (instead of always-on)` |
-| **medium** | `network-egress` | `shared/managed-agents-tools.md:258` | plain | `- **Environment-variable credentials** appear in the sandbox as an opaque placeholder; the real value replaces` |
+| **medium** | `network-egress` | `shared/managed-agents-tools.md:130` | plain | `Pass the same shape as an untyped dict / object literal / hash in Python, TypeScript, and Ruby. The typed SDKs` |
 | **medium** | `network-egress` | `shared/models.md:35` | fence | `curl https://api.anthropic.com/v1/models/claude-opus-4-8 \` |
 | **medium** | `network-egress` | `shared/tool-use-concepts.md:440` | plain | `\| Python / TypeScript / Ruby / cURL \| plain object `{"type": "bash_20250124", "name": "bash"}` \|` |
 | **medium** | `network-egress` | `SKILL.md:23` | plain | `2. **Raw HTTP** (`curl`, `requests`, `fetch`, `httpx`, etc.) - only when the user explicitly asks for cURL/RES` |
@@ -89,7 +90,7 @@ Grades: A 15 · B 3 · C 1 · D 1
 | **low** | `unpinned-install` | `shared/anthropic-cli.md:28` | fence | `go install github.com/anthropics/anthropic-cli/cmd/ant@latest` |
 | **low** | `env-key-reference` | `shared/managed-agents-environments.md:173` | fence | `authorization_token: process.env.GITHUB_TOKEN,  // repo clone token (!= MCP auth)` |
 | **low** | `env-key-reference` | `shared/managed-agents-scheduled-deployments.md:17` | fence | `-H "x-api-key: $ANTHROPIC_API_KEY" \` |
-| **low** | `dotenv-access` | `shared/managed-agents-tools.md:94` | fence | `{ "type": "user.tool_confirmation", "tool_use_id": "sevt_def456", "result": "deny", "message": "Read .env.exam` |
+| **low** | `dotenv-access` | `shared/managed-agents-tools.md:95` | fence | `{ "type": "user.tool_confirmation", "tool_use_id": "sevt_def456", "result": "deny", "deny_message": "Read .env` |
 | **low** | `network-egress` | `shared/managed-agents-webhooks.md:23` | inline-code | `Every delivery carries the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers. **Use the SDK's` |
 | **low** | `env-key-reference` | `shared/models.md:36` | fence | `-H "x-api-key: $ANTHROPIC_API_KEY" \` |
 | **low** | `env-key-reference` | `typescript/claude-api/README.md:21` | fence | `// ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile.` |

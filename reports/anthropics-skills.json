@@ -2,17 +2,17 @@
   "slug": "anthropics-skills",
   "name": "anthropics/skills",
   "url": "https://github.com/anthropics/skills",
-  "scanned_at": "2026-09-08",
+  "scanned_at": "2026-09-15",
   "scanner_version": 1,
   "skill_count": 20,
-  "average_score": 91.2,
-  "repo_grade": "A",
+  "average_score": 90.2,
+  "repo_grade": "review",
   "distribution": {
     "A": 15,
     "B": 3,
     "C": 1,
-    "D": 1,
-    "F": 0
+    "D": 0,
+    "F": 1
   },
   "tiers": {
     "0": 1,
@@ -23,7 +23,7 @@
   },
   "by_detector": {
     "unpinned-install": 6,
-    "destructive": 4,
+    "destructive": 5,
     "bundled-binary": 3,
     "network-egress": 3,
     "env-key-reference": 3,
@@ -37,13 +37,13 @@
       "name": "claude-api",
       "path": "skills/claude-api",
       "description": "Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.\nTRIGGER — read BEFORE opening the target file; do",
-      "grade": "D",
-      "score": 43,
+      "grade": "F",
+      "score": 23,
       "tier": 3,
       "tier_name": "exec",
       "file_count": 70,
       "unscanned_files": 0,
-      "bytes": 1164158,
+      "bytes": 1174591,
       "findings": [
         {
           "id": "privilege-escalation",
@@ -84,6 +84,16 @@
           "line": 187,
           "match": "sudo c",
           "evidence": "sudo mkdir -p /mnt/memory && sudo chown \"$USER\" /mnt/memory"
+        },
+        {
+          "id": "destructive",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "fence",
+          "file": "shared/managed-agents-tools.md",
+          "line": 145,
+          "match": "rm -rf /workspace/reports\" },",
+          "evidence": "\"input\": { \"command\": \"rm -rf /workspace/reports\" },"
         },
         {
           "id": "network-egress",
@@ -441,7 +451,17 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "shared/managed-agents-tools.md",
-          "line": 258,
+          "line": 130,
+          "match": "cURL",
+          "evidence": "Pass the same shape as an untyped dict / object literal / hash in Python, TypeScript, and Ruby. The typed SDKs (Go, Java, C#, PHP) need a generated type for the `auto` policy that ships with each SDK'"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/managed-agents-tools.md",
+          "line": 328,
           "match": "webhook",
           "evidence": "- **Environment-variable credentials** appear in the sandbox as an opaque placeholder; the real value replaces the placeholder at egress, on requests to the credential's allowed hosts only. Substituti"
         },
@@ -891,9 +911,9 @@
           "declared_severity": "low",
           "context": "fence",
           "file": "shared/managed-agents-tools.md",
-          "line": 94,
+          "line": 95,
           "match": ".env.example",
-          "evidence": "{ \"type\": \"user.tool_confirmation\", \"tool_use_id\": \"sevt_def456\", \"result\": \"deny\", \"message\": \"Read .env.example instead\" }"
+          "evidence": "{ \"type\": \"user.tool_confirmation\", \"tool_use_id\": \"sevt_def456\", \"result\": \"deny\", \"deny_message\": \"Read .env.example instead\" }"
         },
         {
           "id": "network-egress",
@@ -901,7 +921,7 @@
           "declared_severity": "medium",
           "context": "inline-code",
           "file": "shared/managed-agents-tools.md",
-          "line": 248,
+          "line": 318,
           "match": "curl",
           "evidence": "- **Environment variables** (`environment_variable`) - keyed by `secret_name` (the env var name). The sandbox sees only an **opaque placeholder**; the real secret is substituted into the outbound requ"
         },
@@ -1359,7 +1379,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "154fb3c87d801845"
+      "fingerprint": "bc02efc4067eb15e"
     },
     {
       "name": "mcp-builder",
