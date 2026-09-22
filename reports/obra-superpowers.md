@@ -2,25 +2,26 @@
 
 Source: https://github.com/obra/superpowers
 
-**14 skills · average 97.8/100 · scanned 2026-09-15 with scanner v1**
+**15 skills · average 97.4/100 · scanned 2026-09-22 with scanner v1**
 
-Grades: A 13 · B 1
+Grades: A 14 · B 1
 
 ## Capability profile
 
 | Tier | What it means | Skills |
 | :-: | --- | --: |
 | T0 text | Text in, text out. Touches nothing. | 0 |
-| T1 read | Reads files in the working directory. | 1 |
-| T2 write | Writes or edits files. | 3 |
-| T3 exec | Runs shell commands or bundled scripts. | 10 |
+| T1 read | Reads files in the working directory. | 0 |
+| T2 write | Writes or edits files. | 4 |
+| T3 exec | Runs shell commands or bundled scripts. | 11 |
 | T4 remote | Executes code or instructions fetched from the network. | 0 |
 
 ## What fired
 
 | Detector | Skills | Share |
 | --- | --: | --: |
-| `destructive` | 2 | 14% |
+| `destructive` | 2 | 13% |
+| `network-egress` | 1 | 7% |
 | `unpinned-install` | 1 | 7% |
 
 ## Everything below an A (1)

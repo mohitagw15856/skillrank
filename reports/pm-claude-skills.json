@@ -2,14 +2,14 @@
   "slug": "pm-claude-skills",
   "name": "pm-claude-skills",
   "url": "https://github.com/mohitagw15856/pm-claude-skills",
-  "scanned_at": "2026-09-15",
+  "scanned_at": "2026-09-22",
   "scanner_version": 1,
-  "skill_count": 3581,
+  "skill_count": 3608,
   "average_score": 99.7,
   "repo_grade": "A",
   "distribution": {
-    "A": 3564,
-    "B": 11,
+    "A": 3593,
+    "B": 9,
     "C": 6,
     "D": 0,
     "F": 0
@@ -17,8 +17,8 @@
   "tiers": {
     "0": 1163,
     "1": 628,
-    "2": 1475,
-    "3": 315,
+    "2": 1490,
+    "3": 327,
     "4": 0
   },
   "by_detector": {
@@ -31,8 +31,7 @@
     "conceal-from-user": 3,
     "privilege-escalation": 3,
     "persistence": 3,
-    "env-key-reference": 3,
-    "obfuscation": 2
+    "env-key-reference": 3
   },
   "suppressed_skills": [
     "skill-security-auditor",
@@ -54,7 +53,7 @@
       "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 16311,
+      "bytes": 16313,
       "findings": [
         {
           "id": "privilege-escalation",
@@ -108,7 +107,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "81737b56d5839b27"
+      "fingerprint": "689ecdc9709b7eef"
     },
     {
       "name": "load-testing-plan",
@@ -120,7 +119,7 @@
       "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 16171,
+      "bytes": 16173,
       "findings": [
         {
           "id": "privilege-escalation",
@@ -174,7 +173,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "ac3260f13c598320"
+      "fingerprint": "da48c745b75e9846"
     },
     {
       "name": "load-testing-plan",
@@ -186,7 +185,7 @@
       "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 16171,
+      "bytes": 16173,
       "findings": [
         {
           "id": "privilege-escalation",
@@ -240,7 +239,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "ac3260f13c598320"
+      "fingerprint": "da48c745b75e9846"
     },
     {
       "name": "thumbnail-creator",
@@ -252,7 +251,7 @@
       "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 25180,
+      "bytes": 25165,
       "findings": [
         {
           "id": "persistence",
@@ -262,7 +261,7 @@
           "file": "SKILL.md",
           "line": 36,
           "match": ".zshrc",
-          "evidence": "echo 'export GEMINI_API_KEY=\"your-key-here\"' >> ~/.zshrc"
+          "evidence": "echo 'export GEMINI_API_KEY=<your-key>' >> ~/.zshrc"
         },
         {
           "id": "persistence",
@@ -292,7 +291,7 @@
           "file": "SKILL.md",
           "line": 30,
           "match": "GEMINI_API_KEY",
-          "evidence": "export GEMINI_API_KEY=\"your-key-here\""
+          "evidence": "export GEMINI_API_KEY=<your-key>"
         },
         {
           "id": "env-key-reference",
@@ -302,7 +301,7 @@
           "file": "SKILL.md",
           "line": 36,
           "match": "GEMINI_API_KEY",
-          "evidence": "echo 'export GEMINI_API_KEY=\"your-key-here\"' >> ~/.zshrc"
+          "evidence": "echo 'export GEMINI_API_KEY=<your-key>' >> ~/.zshrc"
         },
         {
           "id": "env-key-reference",
@@ -378,7 +377,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "b4aa9eb9d7e25850"
+      "fingerprint": "3e8dc8e65836cc5c"
     },
     {
       "name": "thumbnail-creator",
@@ -390,7 +389,7 @@
       "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 25040,
+      "bytes": 25025,
       "findings": [
         {
           "id": "persistence",
@@ -400,7 +399,7 @@
           "file": "SKILL.md",
           "line": 31,
           "match": ".zshrc",
-          "evidence": "echo 'export GEMINI_API_KEY=\"your-key-here\"' >> ~/.zshrc"
+          "evidence": "echo 'export GEMINI_API_KEY=<your-key>' >> ~/.zshrc"
         },
         {
           "id": "persistence",
@@ -430,7 +429,7 @@
           "file": "SKILL.md",
           "line": 25,
           "match": "GEMINI_API_KEY",
-          "evidence": "export GEMINI_API_KEY=\"your-key-here\""
+          "evidence": "export GEMINI_API_KEY=<your-key>"
         },
         {
           "id": "env-key-reference",
@@ -440,7 +439,7 @@
           "file": "SKILL.md",
           "line": 31,
           "match": "GEMINI_API_KEY",
-          "evidence": "echo 'export GEMINI_API_KEY=\"your-key-here\"' >> ~/.zshrc"
+          "evidence": "echo 'export GEMINI_API_KEY=<your-key>' >> ~/.zshrc"
         },
         {
           "id": "env-key-reference",
@@ -516,7 +515,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "cb94c52cf5d3a36a"
+      "fingerprint": "f2247bf3114a5a17"
     },
     {
       "name": "thumbnail-creator",
@@ -528,7 +527,7 @@
       "tier_name": "exec",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 25040,
+      "bytes": 25025,
       "findings": [
         {
           "id": "persistence",
@@ -538,7 +537,7 @@
           "file": "SKILL.md",
           "line": 31,
           "match": ".zshrc",
-          "evidence": "echo 'export GEMINI_API_KEY=\"your-key-here\"' >> ~/.zshrc"
+          "evidence": "echo 'export GEMINI_API_KEY=<your-key>' >> ~/.zshrc"
         },
         {
           "id": "persistence",
@@ -568,7 +567,7 @@
           "file": "SKILL.md",
           "line": 25,
           "match": "GEMINI_API_KEY",
-          "evidence": "export GEMINI_API_KEY=\"your-key-here\""
+          "evidence": "export GEMINI_API_KEY=<your-key>"
         },
         {
           "id": "env-key-reference",
@@ -578,7 +577,7 @@
           "file": "SKILL.md",
           "line": 31,
           "match": "GEMINI_API_KEY",
-          "evidence": "echo 'export GEMINI_API_KEY=\"your-key-here\"' >> ~/.zshrc"
+          "evidence": "echo 'export GEMINI_API_KEY=<your-key>' >> ~/.zshrc"
         },
         {
           "id": "env-key-reference",
@@ -654,7 +653,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "cb94c52cf5d3a36a"
+      "fingerprint": "f2247bf3114a5a17"
     },
     {
       "name": "injection-spotter",
@@ -760,56 +759,6 @@
         }
       ],
       "fingerprint": "b3407577d0116005"
-    },
-    {
-      "name": "tornado-sensitivity",
-      "path": "plugins/pm-calculators/skills/tornado-sensitivity",
-      "description": "Which assumption actually moves the answer — one-at-a-time sensitivity, ranked into a tornado. Use when a model's output is being argued about (LTV, ROI, forecast) and the room is debating drivers tha",
-      "grade": "B",
-      "score": 80,
-      "tier": 3,
-      "tier_name": "exec",
-      "file_count": 2,
-      "unscanned_files": 0,
-      "bytes": 11109,
-      "findings": [
-        {
-          "id": "obfuscation",
-          "severity": "high",
-          "declared_severity": "high",
-          "context": "plain",
-          "file": "scripts/tornado.py",
-          "line": 97,
-          "match": "eval(",
-          "evidence": "return eval(formula, {\"__builtins__\": {}}, {**SAFE, **values})   # restricted: drivers + 6 math fns only"
-        }
-      ],
-      "fingerprint": "5a0a3439ab9a2189"
-    },
-    {
-      "name": "tornado-sensitivity",
-      "path": "skills/tornado-sensitivity",
-      "description": "Which assumption actually moves the answer — one-at-a-time sensitivity, ranked into a tornado. Use when a model's output is being argued about (LTV, ROI, forecast) and the room is debating drivers tha",
-      "grade": "B",
-      "score": 80,
-      "tier": 3,
-      "tier_name": "exec",
-      "file_count": 2,
-      "unscanned_files": 0,
-      "bytes": 11109,
-      "findings": [
-        {
-          "id": "obfuscation",
-          "severity": "high",
-          "declared_severity": "high",
-          "context": "plain",
-          "file": "scripts/tornado.py",
-          "line": 97,
-          "match": "eval(",
-          "evidence": "return eval(formula, {\"__builtins__\": {}}, {**SAFE, **values})   # restricted: drivers + 6 math fns only"
-        }
-      ],
-      "fingerprint": "5a0a3439ab9a2189"
     },
     {
       "name": "file-access-preflight",
@@ -8427,6 +8376,48 @@
       "fingerprint": "d17c7fa9a560a5c8"
     },
     {
+      "name": "annual-report-tutor",
+      "path": "exports/openclaw/annual-report-tutor",
+      "description": "Use when asked to walk me through an annual report, teach me to read this 10-K, explain a company's accounts to a beginner, or tutor me on the financial statements in an uploaded report. Walks a begin",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 11137,
+      "findings": [],
+      "fingerprint": "e8452d2a3e6c9eb0"
+    },
+    {
+      "name": "annual-report-tutor",
+      "path": "plugins/pm-investing-literacy/skills/annual-report-tutor",
+      "description": "Use when asked to walk me through an annual report, teach me to read this 10-K, explain a company's accounts to a beginner, or tutor me on the financial statements in an uploaded report. Walks a begin",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 10995,
+      "findings": [],
+      "fingerprint": "deb55cd1702e529a"
+    },
+    {
+      "name": "annual-report-tutor",
+      "path": "skills/annual-report-tutor",
+      "description": "Use when asked to walk me through an annual report, teach me to read this 10-K, explain a company's accounts to a beginner, or tutor me on the financial statements in an uploaded report. Walks a begin",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 10995,
+      "findings": [],
+      "fingerprint": "deb55cd1702e529a"
+    },
+    {
       "name": "api-for-yourself",
       "path": "exports/openclaw/api-for-yourself",
       "description": "Publish 'how to work with me' as a literal API spec — endpoints (what to ask me for and what you'll get back), rate limits (meeting and interrupt tolerance), error codes (what happens when you surpris",
@@ -9377,6 +9368,48 @@
       "bytes": 6700,
       "findings": [],
       "fingerprint": "25014421bf3ce81b"
+    },
+    {
+      "name": "audited-boundary-check",
+      "path": "exports/openclaw/audited-boundary-check",
+      "description": "Use when asked to check whether a figure is audited, which headline numbers sit outside the audited accounts, what 'adjusted' or 'underlying' means in this report, or who is vouching for the numbers i",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 7308,
+      "findings": [],
+      "fingerprint": "5a1038faed659125"
+    },
+    {
+      "name": "audited-boundary-check",
+      "path": "plugins/pm-investing-literacy/skills/audited-boundary-check",
+      "description": "Use when asked to check whether a figure is audited, which headline numbers sit outside the audited accounts, what 'adjusted' or 'underlying' means in this report, or who is vouching for the numbers i",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 7163,
+      "findings": [],
+      "fingerprint": "027a6ccffcce6f2c"
+    },
+    {
+      "name": "audited-boundary-check",
+      "path": "skills/audited-boundary-check",
+      "description": "Use when asked to check whether a figure is audited, which headline numbers sit outside the audited accounts, what 'adjusted' or 'underlying' means in this report, or who is vouching for the numbers i",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 7163,
+      "findings": [],
+      "fingerprint": "027a6ccffcce6f2c"
     },
     {
       "name": "auto-repair-estimate-decoder",
@@ -14534,6 +14567,48 @@
       "bytes": 3536,
       "findings": [],
       "fingerprint": "54aaa4544eb9f275"
+    },
+    {
+      "name": "company-compare-same-definitions",
+      "path": "exports/openclaw/company-compare-same-definitions",
+      "description": "Use when asked to compare two annual reports, put two companies from the same sector side by side, or check whether two companies' adjusted numbers mean the same thing. Takes two uploaded annual repor",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 7626,
+      "findings": [],
+      "fingerprint": "f6f9248bb057e791"
+    },
+    {
+      "name": "company-compare-same-definitions",
+      "path": "plugins/pm-investing-literacy/skills/company-compare-same-definitions",
+      "description": "Use when asked to compare two annual reports, put two companies from the same sector side by side, or check whether two companies' adjusted numbers mean the same thing. Takes two uploaded annual repor",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 7471,
+      "findings": [],
+      "fingerprint": "aec36e9238bd1f6a"
+    },
+    {
+      "name": "company-compare-same-definitions",
+      "path": "skills/company-compare-same-definitions",
+      "description": "Use when asked to compare two annual reports, put two companies from the same sector side by side, or check whether two companies' adjusted numbers mean the same thing. Takes two uploaded annual repor",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 7471,
+      "findings": [],
+      "fingerprint": "aec36e9238bd1f6a"
     },
     {
       "name": "company-event-ops",
@@ -21634,6 +21709,48 @@
       "fingerprint": "a3597ae56e4f5c89"
     },
     {
+      "name": "escalate-or-hold",
+      "path": "exports/openclaw/escalate-or-hold",
+      "description": "Decide whether an issue gets escalated now, held with a re-check time, or closed — as a typed decision with probabilities rather than a judgment call in a thread. Use when asked should I escalate this",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4788,
+      "findings": [],
+      "fingerprint": "47cd97ef82cf5985"
+    },
+    {
+      "name": "escalate-or-hold",
+      "path": "plugins/pm-decisions/skills/escalate-or-hold",
+      "description": "Decide whether an issue gets escalated now, held with a re-check time, or closed — as a typed decision with probabilities rather than a judgment call in a thread. Use when asked should I escalate this",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4664,
+      "findings": [],
+      "fingerprint": "69b32b0765b1c107"
+    },
+    {
+      "name": "escalate-or-hold",
+      "path": "skills/escalate-or-hold",
+      "description": "Decide whether an issue gets escalated now, held with a re-check time, or closed — as a typed decision with probabilities rather than a judgment call in a thread. Use when asked should I escalate this",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4664,
+      "findings": [],
+      "fingerprint": "69b32b0765b1c107"
+    },
+    {
       "name": "escalation-email",
       "path": "exports/openclaw/escalation-email",
       "description": "Escalate an issue up the chain without burning the person you're escalating past — the facts-first structure, the tried-already section that earns the escalation, and the specific ask that makes actio",
@@ -27220,6 +27337,48 @@
       "fingerprint": "cf9e6a643e9eb3a6"
     },
     {
+      "name": "hire-or-pass",
+      "path": "exports/openclaw/hire-or-pass",
+      "description": "Turn a hiring debrief into a typed decision — hire, hire at a different level, get more signal, or pass — from rubric evidence only, with probabilities and confidence. Use when asked should we hire th",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5632,
+      "findings": [],
+      "fingerprint": "5b4cca9624b8c034"
+    },
+    {
+      "name": "hire-or-pass",
+      "path": "plugins/pm-decisions/skills/hire-or-pass",
+      "description": "Turn a hiring debrief into a typed decision — hire, hire at a different level, get more signal, or pass — from rubric evidence only, with probabilities and confidence. Use when asked should we hire th",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5512,
+      "findings": [],
+      "fingerprint": "def44cc4adde0602"
+    },
+    {
+      "name": "hire-or-pass",
+      "path": "skills/hire-or-pass",
+      "description": "Turn a hiring debrief into a typed decision — hire, hire at a different level, get more signal, or pass — from rubric evidence only, with probabilities and confidence. Use when asked should we hire th",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5512,
+      "findings": [],
+      "fingerprint": "def44cc4adde0602"
+    },
+    {
       "name": "hiring-rubric",
       "path": "exports/openclaw/hiring-rubric",
       "description": "Generate a structured interview scorecard and interview guide for any role. Use when asked to create a hiring rubric, interview scorecard, structured interview guide, or assessment criteria for a job.",
@@ -29416,6 +29575,48 @@
       "bytes": 3572,
       "findings": [],
       "fingerprint": "4d445416d51e9419"
+    },
+    {
+      "name": "investing-vocabulary-explainer",
+      "path": "exports/openclaw/investing-vocabulary-explainer",
+      "description": "Use when asked what a term means in an annual report, to explain EBITDA, goodwill, free cash flow, working capital or diluted EPS, or to define any investing or accounting word in plain English, ideal",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 7175,
+      "findings": [],
+      "fingerprint": "d0b241df0bde1576"
+    },
+    {
+      "name": "investing-vocabulary-explainer",
+      "path": "plugins/pm-investing-literacy/skills/investing-vocabulary-explainer",
+      "description": "Use when asked what a term means in an annual report, to explain EBITDA, goodwill, free cash flow, working capital or diluted EPS, or to define any investing or accounting word in plain English, ideal",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 7022,
+      "findings": [],
+      "fingerprint": "4079f371a1d84a2e"
+    },
+    {
+      "name": "investing-vocabulary-explainer",
+      "path": "skills/investing-vocabulary-explainer",
+      "description": "Use when asked what a term means in an annual report, to explain EBITDA, goodwill, free cash flow, working capital or diluted EPS, or to define any investing or accounting word in plain English, ideal",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 7022,
+      "findings": [],
+      "fingerprint": "4079f371a1d84a2e"
     },
     {
       "name": "investment-account-picker",
@@ -39470,6 +39671,48 @@
       "fingerprint": "416f9503f0ec7afb"
     },
     {
+      "name": "profit-to-cash-walk",
+      "path": "exports/openclaw/profit-to-cash-walk",
+      "description": "Use when asked to reconcile operating profit to free cash flow, walk from EBIT to FCF, explain why profit and cash differ in this report, or show a company's cash conversion from its own accounts. Tak",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 6984,
+      "findings": [],
+      "fingerprint": "c7663026d061d190"
+    },
+    {
+      "name": "profit-to-cash-walk",
+      "path": "plugins/pm-investing-literacy/skills/profit-to-cash-walk",
+      "description": "Use when asked to reconcile operating profit to free cash flow, walk from EBIT to FCF, explain why profit and cash differ in this report, or show a company's cash conversion from its own accounts. Tak",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 6842,
+      "findings": [],
+      "fingerprint": "64aace9c4d5eead5"
+    },
+    {
+      "name": "profit-to-cash-walk",
+      "path": "skills/profit-to-cash-walk",
+      "description": "Use when asked to reconcile operating profit to free cash flow, walk from EBIT to FCF, explain why profit and cash differ in this report, or show a company's cash conversion from its own accounts. Tak",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 6842,
+      "findings": [],
+      "fingerprint": "64aace9c4d5eead5"
+    },
+    {
       "name": "programmatic-seo",
       "path": "exports/openclaw/programmatic-seo",
       "description": "Plan a programmatic SEO strategy — generate many ranking pages from a data set and a template. Use when asked about pSEO, scaling content with templates/data, building [X] for [Y] pages, or capturing ",
@@ -42002,6 +42245,48 @@
       "bytes": 4601,
       "findings": [],
       "fingerprint": "7b3b6f0cea969ed5"
+    },
+    {
+      "name": "renew-or-churn-call",
+      "path": "exports/openclaw/renew-or-churn-call",
+      "description": "Score an account's renewal likelihood on a five-level scale with probabilities, and name the next move for the account owner. Use when asked will this account renew, what's the churn risk on this acco",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5351,
+      "findings": [],
+      "fingerprint": "1d7197bd41adfc5f"
+    },
+    {
+      "name": "renew-or-churn-call",
+      "path": "plugins/pm-decisions/skills/renew-or-churn-call",
+      "description": "Score an account's renewal likelihood on a five-level scale with probabilities, and name the next move for the account owner. Use when asked will this account renew, what's the churn risk on this acco",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5224,
+      "findings": [],
+      "fingerprint": "5a8db46b26cdb854"
+    },
+    {
+      "name": "renew-or-churn-call",
+      "path": "skills/renew-or-churn-call",
+      "description": "Score an account's renewal likelihood on a five-level scale with probabilities, and name the next move for the account owner. Use when asked will this account renew, what's the churn risk on this acco",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5224,
+      "findings": [],
+      "fingerprint": "5a8db46b26cdb854"
     },
     {
       "name": "renewal-playbook",
@@ -45647,6 +45932,48 @@
       "bytes": 2778,
       "findings": [],
       "fingerprint": "74e859aee8f385ab"
+    },
+    {
+      "name": "ship-or-slip",
+      "path": "exports/openclaw/ship-or-slip",
+      "description": "Turn a release-readiness argument into one typed decision — ship, ship reduced, or slip — with a defined state, defined options, and a probability for each. Use when asked should we ship Friday, are w",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5348,
+      "findings": [],
+      "fingerprint": "196e6cf6979a67f8"
+    },
+    {
+      "name": "ship-or-slip",
+      "path": "plugins/pm-decisions/skills/ship-or-slip",
+      "description": "Turn a release-readiness argument into one typed decision — ship, ship reduced, or slip — with a defined state, defined options, and a probability for each. Use when asked should we ship Friday, are w",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5228,
+      "findings": [],
+      "fingerprint": "96df9384bae0a305"
+    },
+    {
+      "name": "ship-or-slip",
+      "path": "skills/ship-or-slip",
+      "description": "Turn a release-readiness argument into one typed decision — ship, ship reduced, or slip — with a defined state, defined options, and a probability for each. Use when asked should we ship Friday, are w",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5228,
+      "findings": [],
+      "fingerprint": "96df9384bae0a305"
     },
     {
       "name": "short-form-script",
@@ -52379,6 +52706,34 @@
       "bytes": 3600,
       "findings": [],
       "fingerprint": "873b1e85e1498eb8"
+    },
+    {
+      "name": "tornado-sensitivity",
+      "path": "plugins/pm-calculators/skills/tornado-sensitivity",
+      "description": "Which assumption actually moves the answer — one-at-a-time sensitivity, ranked into a tornado. Use when a model's output is being argued about (LTV, ROI, forecast) and the room is debating drivers tha",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 12428,
+      "findings": [],
+      "fingerprint": "beae82af31943339"
+    },
+    {
+      "name": "tornado-sensitivity",
+      "path": "skills/tornado-sensitivity",
+      "description": "Which assumption actually moves the answer — one-at-a-time sensitivity, ranked into a tornado. Use when a model's output is being argued about (LTV, ROI, forecast) and the room is debating drivers tha",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 12428,
+      "findings": [],
+      "fingerprint": "beae82af31943339"
     },
     {
       "name": "tos-decoder",

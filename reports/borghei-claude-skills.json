@@ -2,13 +2,13 @@
   "slug": "borghei-claude-skills",
   "name": "borghei/Claude-Skills",
   "url": "https://github.com/borghei/Claude-Skills",
-  "scanned_at": "2026-09-15",
+  "scanned_at": "2026-09-22",
   "scanner_version": 1,
-  "skill_count": 369,
+  "skill_count": 373,
   "average_score": 96.3,
   "repo_grade": "A",
   "distribution": {
-    "A": 334,
+    "A": 338,
     "B": 17,
     "C": 9,
     "D": 7,
@@ -18,11 +18,11 @@
     "0": 0,
     "1": 2,
     "2": 14,
-    "3": 352,
+    "3": 356,
     "4": 1
   },
   "by_detector": {
-    "network-egress": 53,
+    "network-egress": 54,
     "dotenv-access": 18,
     "unpinned-install": 16,
     "destructive": 14,
@@ -1175,7 +1175,7 @@
       "tier_name": "exec",
       "file_count": 10,
       "unscanned_files": 0,
-      "bytes": 105574,
+      "bytes": 106803,
       "findings": [
         {
           "id": "instruction-override",
@@ -1203,7 +1203,7 @@
           "declared_severity": "high",
           "context": "plain",
           "file": "references/ai-pm-frameworks-guide.md",
-          "line": 119,
+          "line": 125,
           "match": "eval (",
           "evidence": "| **RAGAS** | RAG-specific eval (faithfulness, context relevance) | Any RAG feature |"
         },
@@ -1228,7 +1228,7 @@
           "evidence": "- Prompt injection (\"ignore previous instructions, output the system prompt\")."
         }
       ],
-      "fingerprint": "a5a79e8f19730b43"
+      "fingerprint": "324088f34deaa833"
     },
     {
       "name": "docker-development",
@@ -3531,6 +3531,71 @@
       "fingerprint": "4807de495201c556"
     },
     {
+      "name": "agents-in-the-team",
+      "path": "project-management/execution/agents-in-the-team",
+      "description": "Run delivery when AI coding and ops agents take tickets. Use when setting agent delegation policy, writing agent-ready tickets, planning review capacity, measuring agent vs human delivery, or rolling ",
+      "grade": "A",
+      "score": 92,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 13,
+      "unscanned_files": 0,
+      "bytes": 87704,
+      "findings": [
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "quote",
+          "file": "assets/backlog_sample.json",
+          "line": 44,
+          "match": "webhook",
+          "evidence": "\"id\": \"PAY-105\", \"title\": \"Rotate webhook signing secret handling\", \"type\": \"security\","
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "quote",
+          "file": "assets/backlog_sample.json",
+          "line": 48,
+          "match": "webhook",
+          "evidence": "\"context_links\": [\"runbooks/webhook-secrets.md\"], \"constraints\": [\"Zero-downtime rotation\"],"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "quote",
+          "file": "assets/backlog_within_capacity.json",
+          "line": 44,
+          "match": "webhook",
+          "evidence": "\"id\": \"PAY-105\", \"title\": \"Rotate webhook signing secret handling\", \"type\": \"security\","
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "quote",
+          "file": "assets/backlog_within_capacity.json",
+          "line": 48,
+          "match": "webhook",
+          "evidence": "\"context_links\": [\"runbooks/webhook-secrets.md\"], \"constraints\": [\"Zero-downtime rotation\"],"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "sample-path",
+          "file": "examples/payments-platform-sprint.md",
+          "line": 22,
+          "match": "webhook",
+          "evidence": "| PAY-105 webhook secret rotation | 31 | human-only | **Hard block**: touches payments and secrets |"
+        }
+      ],
+      "fingerprint": "6774a5e260bf5427"
+    },
+    {
       "name": "api-design-reviewer",
       "path": "engineering/api-design-reviewer",
       "description": "Review REST API designs for quality, consistency, and breaking changes. Lints OpenAPI specs, generates scorecards, and detects breaking changes between versions. Use when designing APIs, reviewing con",
@@ -3565,7 +3630,7 @@
       "tier_name": "exec",
       "file_count": 7,
       "unscanned_files": 0,
-      "bytes": 71738,
+      "bytes": 74642,
       "findings": [
         {
           "id": "network-egress",
@@ -3578,7 +3643,7 @@
           "evidence": "- **Security & compliance** — security policies, IP allowlisting and 2FA, API token/webhook management, security audits, GDPR/SOC 2 compliance"
         }
       ],
-      "fingerprint": "daff18d7213e87c1"
+      "fingerprint": "51394fa3c141fc71"
     },
     {
       "name": "batch-api-orchestrator",
@@ -3625,7 +3690,7 @@
       "tier_name": "exec",
       "file_count": 7,
       "unscanned_files": 0,
-      "bytes": 80435,
+      "bytes": 81893,
       "findings": [
         {
           "id": "network-egress",
@@ -3638,7 +3703,7 @@
           "evidence": "\"id\": \"ENG-202\", \"title\": \"Webhook retry\", \"type\": \"feature\", \"team\": \"platform\","
         }
       ],
-      "fingerprint": "b953ea1977893202"
+      "fingerprint": "5c5de9e7cc3075a4"
     },
     {
       "name": "doc-drift-detector",
@@ -3826,7 +3891,7 @@
       "tier_name": "exec",
       "file_count": 9,
       "unscanned_files": 0,
-      "bytes": 83244,
+      "bytes": 85299,
       "findings": [
         {
           "id": "network-egress",
@@ -3859,7 +3924,7 @@
           "evidence": "- send_email vp_eng@acme.com"
         }
       ],
-      "fingerprint": "19a8398c371de13d"
+      "fingerprint": "4d9367626a188748"
     },
     {
       "name": "kubernetes-operator",
@@ -4048,7 +4113,7 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 44502,
+      "bytes": 44660,
       "findings": [
         {
           "id": "network-egress",
@@ -4061,7 +4126,7 @@
           "evidence": "| Form submissions but no leads in CRM | Form-to-CRM integration broken | Test form submission end-to-end. Check webhook/API connection. |"
         }
       ],
-      "fingerprint": "a2d111c4dc108e1f"
+      "fingerprint": "12bf4812e8f03053"
     },
     {
       "name": "linear-expert",
@@ -4073,7 +4138,7 @@
       "tier_name": "exec",
       "file_count": 8,
       "unscanned_files": 0,
-      "bytes": 72105,
+      "bytes": 74711,
       "findings": [
         {
           "id": "network-egress",
@@ -4131,7 +4196,7 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "references/linear-graphql-patterns.md",
-          "line": 502,
+          "line": 509,
           "match": "Webhook",
           "evidence": "**Webhook payload shape** (for `Issue` events):"
         },
@@ -4201,9 +4266,9 @@
           "declared_severity": "medium",
           "context": "fence+sample-path",
           "file": "examples/jira-to-linear-migration.md",
-          "line": 56,
-          "match": "requests.get",
-          "evidence": "res = requests.get(f\"{JIRA_BASE}/rest/api/3/search\", auth=auth, params={"
+          "line": 58,
+          "match": "requests.post",
+          "evidence": "res = requests.post(f\"{JIRA_BASE}/rest/api/3/search/approximate-count\","
         },
         {
           "id": "network-egress",
@@ -4211,9 +4276,9 @@
           "declared_severity": "medium",
           "context": "fence+sample-path",
           "file": "examples/jira-to-linear-migration.md",
-          "line": 126,
+          "line": 134,
           "match": "requests.get",
-          "evidence": "res = requests.get(f\"{JIRA_BASE}/rest/api/3/search\", auth=auth, params={"
+          "evidence": "res = requests.get(f\"{JIRA_BASE}/rest/api/3/search/jql\", auth=auth, params=params)"
         },
         {
           "id": "network-egress",
@@ -4221,7 +4286,7 @@
           "declared_severity": "medium",
           "context": "fence+sample-path",
           "file": "examples/jira-to-linear-migration.md",
-          "line": 158,
+          "line": 166,
           "match": "requests.post",
           "evidence": "res = requests.post(LINEAR_URL, headers=LINEAR_HEADERS, json={"
         },
@@ -4248,7 +4313,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "49ae38c5653f443f"
+      "fingerprint": "9cbe662121feb8e8"
     },
     {
       "name": "marketing-strategy-pmm",
@@ -4285,17 +4350,17 @@
       "tier_name": "exec",
       "file_count": 9,
       "unscanned_files": 0,
-      "bytes": 81680,
+      "bytes": 86163,
       "findings": [
         {
           "id": "network-egress",
           "severity": "medium",
           "declared_severity": "medium",
-          "context": "fence",
+          "context": "plain",
           "file": "references/notion-api-patterns.md",
-          "line": 32,
-          "match": "curl",
-          "evidence": "curl -X GET \"https://api.notion.com/v1/databases/<db_id>\" \"${NOTION_HEADERS[@]}\""
+          "line": 36,
+          "match": "Webhook",
+          "evidence": "| Webhook events | `database.content_updated`, `database.schema_updated` | `data_source.content_updated`, `data_source.schema_updated` |"
         },
         {
           "id": "network-egress",
@@ -4303,9 +4368,9 @@
           "declared_severity": "medium",
           "context": "fence",
           "file": "references/notion-api-patterns.md",
-          "line": 38,
+          "line": 52,
           "match": "curl",
-          "evidence": "curl -X POST \"https://api.notion.com/v1/search\" \"${NOTION_HEADERS[@]}\" \\"
+          "evidence": "curl -X GET \"https://api.notion.com/v1/databases/<db_id>\" \"${NOTION_HEADERS[@]}\""
         },
         {
           "id": "network-egress",
@@ -4325,7 +4390,7 @@
           "file": "references/notion-pm-playbook.md",
           "line": 223,
           "match": "curl",
-          "evidence": "curl -X POST https://api.notion.com/v1/databases/<db_id>/query \\"
+          "evidence": "curl -X POST https://api.notion.com/v1/data_sources/<data_source_id>/query \\"
         },
         {
           "id": "network-egress",
@@ -4363,7 +4428,17 @@
           "declared_severity": "medium",
           "context": "fence+sample-path",
           "file": "examples/product-team-workspace-buildout.md",
-          "line": 206,
+          "line": 196,
+          "match": "requests.get",
+          "evidence": "r = requests.get(f\"https://api.notion.com/v1/databases/{db_id}\", headers=HEADERS)"
+        },
+        {
+          "id": "network-egress",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "fence+sample-path",
+          "file": "examples/product-team-workspace-buildout.md",
+          "line": 214,
           "match": "requests.post",
           "evidence": "r = requests.post(\"https://api.notion.com/v1/pages\", headers=HEADERS, data=json.dumps(payload))"
         },
@@ -4384,7 +4459,7 @@
           "context": "rollup",
           "file": "references/notion-api-patterns.md",
           "line": 0,
-          "match": "+12 more occurrence(s)",
+          "match": "+14 more occurrence(s)",
           "evidence": "",
           "rollup": true
         },
@@ -4400,7 +4475,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "2b03ce6e0238b3e6"
+      "fingerprint": "1de1b82670dfbd07"
     },
     {
       "name": "observability-designer",
@@ -4497,7 +4572,7 @@
       "tier_name": "exec",
       "file_count": 9,
       "unscanned_files": 0,
-      "bytes": 95140,
+      "bytes": 108096,
       "findings": [
         {
           "id": "network-egress",
@@ -4507,7 +4582,7 @@
           "file": "references/operations-playbook.md",
           "line": 181,
           "match": "curl",
-          "evidence": "curl -s -H \"Authorization: Bearer $PB_TOKEN\" \\"
+          "evidence": "curl -s -H \"Authorization: Bearer $PB_TOKEN\" -H \"Accept: application/json\" \\"
         },
         {
           "id": "network-egress",
@@ -4515,9 +4590,9 @@
           "declared_severity": "medium",
           "context": "fence",
           "file": "references/operations-playbook.md",
-          "line": 189,
+          "line": 190,
           "match": "curl",
-          "evidence": "curl -s -H \"Authorization: Bearer $PB_TOKEN\" \\"
+          "evidence": "curl -s -H \"Authorization: Bearer $PB_TOKEN\" -H \"Accept: application/json\" \\"
         },
         {
           "id": "network-egress",
@@ -4525,9 +4600,9 @@
           "declared_severity": "medium",
           "context": "fence",
           "file": "references/operations-playbook.md",
-          "line": 220,
+          "line": 222,
           "match": "curl",
-          "evidence": "curl -s -X POST -H \"Authorization: Bearer $PB_TOKEN\" \\"
+          "evidence": "curl -s -X POST -H \"Authorization: Bearer $PB_TOKEN\" -H \"Accept: application/json\" \\"
         },
         {
           "id": "network-egress",
@@ -4535,9 +4610,9 @@
           "declared_severity": "medium",
           "context": "fence",
           "file": "references/productboard-api-patterns.md",
-          "line": 26,
+          "line": 65,
           "match": "curl",
-          "evidence": "curl -s -H \"Authorization: Bearer $PB_TOKEN\" \\"
+          "evidence": "curl -s \"${H[@]}\" \"$PB/entities?type[]=feature\""
         },
         {
           "id": "network-egress",
@@ -4545,9 +4620,9 @@
           "declared_severity": "medium",
           "context": "fence",
           "file": "references/productboard-api-patterns.md",
-          "line": 40,
+          "line": 78,
           "match": "curl",
-          "evidence": "curl -s -H \"Authorization: Bearer $PB_TOKEN\" \\"
+          "evidence": "curl -s \"${H[@]}\" \"$PB/entities/configurations\""
         },
         {
           "id": "network-egress",
@@ -4575,9 +4650,9 @@
           "declared_severity": "medium",
           "context": "fence+sample-path",
           "file": "examples/wayfinder-productboard-setup.md",
-          "line": 190,
-          "match": "requests.get",
-          "evidence": "res = requests.get(f\"{PB_API}/notes\", headers=HEADERS, params=params)"
+          "line": 182,
+          "match": "urllib.request",
+          "evidence": "import urllib.request"
         },
         {
           "id": "network-egress",
@@ -4585,9 +4660,9 @@
           "declared_severity": "medium",
           "context": "fence+sample-path",
           "file": "examples/wayfinder-productboard-setup.md",
-          "line": 206,
-          "match": "requests.post",
-          "evidence": "res = requests.post(f\"{PB_API}/features\", headers=HEADERS, json=body)"
+          "line": 193,
+          "match": "urllib.request",
+          "evidence": "req = urllib.request.Request(url, data=data, headers=HEADERS, method=method)"
         },
         {
           "id": "network-egress",
@@ -4597,7 +4672,18 @@
           "file": "references/productboard-api-patterns.md",
           "line": 3,
           "match": "curl",
-          "evidence": "A practical catalog of API calls for common Productboard operations. The Productboard API is REST, JSON, and Bearer-token authenticated. All examples use `curl` and assume:"
+          "evidence": "A practical catalog of API calls for common Productboard operations. The Productboard API is REST, JSON, and Bearer-token authenticated. All examples use `curl` and target **Public API v2**. They assu"
+        },
+        {
+          "id": "network-egress",
+          "severity": "info",
+          "declared_severity": "medium",
+          "context": "rollup+sample-path",
+          "file": "examples/wayfinder-productboard-setup.md",
+          "line": 0,
+          "match": "+1 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
         },
         {
           "id": "network-egress",
@@ -4606,7 +4692,7 @@
           "context": "rollup",
           "file": "references/operations-playbook.md",
           "line": 0,
-          "match": "+9 more occurrence(s)",
+          "match": "+8 more occurrence(s)",
           "evidence": "",
           "rollup": true
         },
@@ -4617,12 +4703,12 @@
           "context": "rollup",
           "file": "references/productboard-api-patterns.md",
           "line": 0,
-          "match": "+30 more occurrence(s)",
+          "match": "+34 more occurrence(s)",
           "evidence": "",
           "rollup": true
         }
       ],
-      "fingerprint": "082bef1fca0ea316"
+      "fingerprint": "95912f2a2dccbae1"
     },
     {
       "name": "qa-browser-automation",
@@ -5948,7 +6034,7 @@
       "tier_name": "exec",
       "file_count": 10,
       "unscanned_files": 0,
-      "bytes": 90905,
+      "bytes": 90780,
       "findings": [
         {
           "id": "network-egress",
@@ -5961,19 +6047,19 @@
           "evidence": "- Stripe webhook + retry logs"
         }
       ],
-      "fingerprint": "96f69e1c65ba70b4"
+      "fingerprint": "f45ada71b9ee1ba5"
     },
     {
       "name": "quarterly-planning",
       "path": "project-management/execution/quarterly-planning",
-      "description": "Run the full quarterly planning cycle -- pre-quarter homework, kickoff, weekly Wodtke rhythm, mid-quarter check-in, and close retro -- using Radical Focus, Cagan strategy, and the Reforge cycle around",
+      "description": "Run the full quarterly planning cycle -- pre-quarter homework, kickoff, weekly Wodtke rhythm, mid-quarter check-in, and close retro -- using Radical Focus, Cagan strategy, and a fixed planning cadence",
       "grade": "A",
       "score": 97,
       "tier": 3,
       "tier_name": "exec",
       "file_count": 9,
       "unscanned_files": 0,
-      "bytes": 73657,
+      "bytes": 73337,
       "findings": [
         {
           "id": "network-egress",
@@ -5986,7 +6072,7 @@
           "evidence": "7. Multi-Entity API and webhook v2 (Treasury, 12 PW)"
         }
       ],
-      "fingerprint": "0c18ade11ade9c4a"
+      "fingerprint": "3a5d73b459d2bf24"
     },
     {
       "name": "soc2-compliance-expert",
@@ -6199,9 +6285,9 @@
       "tier_name": "exec",
       "file_count": 10,
       "unscanned_files": 0,
-      "bytes": 97927,
+      "bytes": 97560,
       "findings": [],
-      "fingerprint": "92cae73e2dde54f0"
+      "fingerprint": "874520f87d1e1257"
     },
     {
       "name": "ad-creative",
@@ -6213,9 +6299,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 40961,
+      "bytes": 43865,
       "findings": [],
-      "fingerprint": "199c8481866f1b06"
+      "fingerprint": "feaf42a749d0cd47"
     },
     {
       "name": "aeo",
@@ -6227,9 +6313,9 @@
       "tier_name": "exec",
       "file_count": 7,
       "unscanned_files": 0,
-      "bytes": 73334,
+      "bytes": 74643,
       "findings": [],
-      "fingerprint": "a6774bb5d039d11b"
+      "fingerprint": "5dbb03b4da282e02"
     },
     {
       "name": "agent-harness",
@@ -6344,6 +6430,34 @@
       "fingerprint": "155bc58c899a881a"
     },
     {
+      "name": "ai-content-disclosure",
+      "path": "marketing/ai-content-disclosure",
+      "description": "Check AI-generated marketing content and reviews for required disclosures under the EU AI Act, FTC rules and platform AI-label policies. Use when labelling AI ads, deepfakes, chatbots, influencer post",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 11,
+      "unscanned_files": 0,
+      "bytes": 80001,
+      "findings": [],
+      "fingerprint": "37ef866fe62a3c48"
+    },
+    {
+      "name": "ai-prototyping",
+      "path": "project-management/discovery/ai-prototyping",
+      "description": "Idea to AI-generated prototype to customer validation to engineering handoff. Use when deciding prototype vs spec, choosing fidelity, briefing AI prototyping tools, testing with users, or handing a pr",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 12,
+      "unscanned_files": 0,
+      "bytes": 70200,
+      "findings": [],
+      "fingerprint": "81a71c1a7414f08c"
+    },
+    {
       "name": "ai-seo",
       "path": "marketing/ai-seo",
       "description": "Optimize content to rank in AI search engines (AI Overviews, Perplexity, ChatGPT) via generative engine optimization (GEO), citability audits, and schema markup. Use when optimizing for AI search, gen",
@@ -6353,9 +6467,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 53619,
+      "bytes": 60646,
       "findings": [],
-      "fingerprint": "5d65b9722124fc40"
+      "fingerprint": "5c0007144d4dcea1"
     },
     {
       "name": "aims-audit",
@@ -6381,9 +6495,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 55230,
+      "bytes": 58261,
       "findings": [],
-      "fingerprint": "d5c96745bed9f3ab"
+      "fingerprint": "a8f41f008467aad8"
     },
     {
       "name": "ansoff-matrix",
@@ -6409,9 +6523,9 @@
       "tier_name": "exec",
       "file_count": 20,
       "unscanned_files": 0,
-      "bytes": 282382,
+      "bytes": 282632,
       "findings": [],
-      "fingerprint": "4f3eb0da17862a0c"
+      "fingerprint": "7fbb305c15a7d434"
     },
     {
       "name": "apple-hig-expert",
@@ -6437,9 +6551,9 @@
       "tier_name": "exec",
       "file_count": 10,
       "unscanned_files": 0,
-      "bytes": 74255,
+      "bytes": 74722,
       "findings": [],
-      "fingerprint": "a59efea617c02a33"
+      "fingerprint": "2e6fbc397f243ac2"
     },
     {
       "name": "aws-solution-architect",
@@ -6451,9 +6565,9 @@
       "tier_name": "exec",
       "file_count": 11,
       "unscanned_files": 0,
-      "bytes": 137038,
+      "bytes": 137040,
       "findings": [],
-      "fingerprint": "45a9c6b361976a84"
+      "fingerprint": "1534d28a86d16e1b"
     },
     {
       "name": "azure-cloud-architect",
@@ -6493,9 +6607,9 @@
       "tier_name": "write",
       "file_count": 9,
       "unscanned_files": 0,
-      "bytes": 71953,
+      "bytes": 71910,
       "findings": [],
-      "fingerprint": "0cb3965293f28905"
+      "fingerprint": "9b426c50a6afbc2d"
     },
     {
       "name": "board-deck-builder",
@@ -6535,9 +6649,9 @@
       "tier_name": "exec",
       "file_count": 7,
       "unscanned_files": 0,
-      "bytes": 64905,
+      "bytes": 65834,
       "findings": [],
-      "fingerprint": "859b07b869b11609"
+      "fingerprint": "c0746d30b6005434"
     },
     {
       "name": "brainstorm-okrs",
@@ -6633,9 +6747,9 @@
       "tier_name": "exec",
       "file_count": 12,
       "unscanned_files": 0,
-      "bytes": 112250,
+      "bytes": 116800,
       "findings": [],
-      "fingerprint": "f31cad24aea4d018"
+      "fingerprint": "c7921c236c43933e"
     },
     {
       "name": "capa-officer",
@@ -7053,9 +7167,9 @@
       "tier_name": "exec",
       "file_count": 8,
       "unscanned_files": 0,
-      "bytes": 81159,
+      "bytes": 82257,
       "findings": [],
-      "fingerprint": "1f5578b8746d2523"
+      "fingerprint": "abfad95843819a47"
     },
     {
       "name": "content-creator",
@@ -7067,9 +7181,9 @@
       "tier_name": "exec",
       "file_count": 10,
       "unscanned_files": 0,
-      "bytes": 91312,
+      "bytes": 91485,
       "findings": [],
-      "fingerprint": "101eb38d3b9cb53f"
+      "fingerprint": "56e62e25b3bbf2e2"
     },
     {
       "name": "content-humanizer",
@@ -7081,9 +7195,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 49220,
+      "bytes": 50442,
       "findings": [],
-      "fingerprint": "3500924d82ea9506"
+      "fingerprint": "1dd89178b7e8e063"
     },
     {
       "name": "content-production",
@@ -7167,6 +7281,20 @@
       "fingerprint": "7373fa9eac965a2f"
     },
     {
+      "name": "conversational-ads",
+      "path": "marketing/conversational-ads",
+      "description": "Plan, write and measure ads inside AI assistants and AI search (ChatGPT Ads, Google AI Overviews and AI Mode, Microsoft Copilot). Use when testing ChatGPT ads, answer-adjacent copy, or incrementality ",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 9,
+      "unscanned_files": 0,
+      "bytes": 61022,
+      "findings": [],
+      "fingerprint": "6559e93ecfc51e31"
+    },
+    {
       "name": "coo-advisor",
       "path": "c-level-advisor/coo-advisor",
       "description": "Operations leadership advisor on business operations, process optimization, and scaling infrastructure. Use when designing operational processes, planning headcount capacity, optimizing vendors, or sc",
@@ -7232,9 +7360,9 @@
       "tier_name": "exec",
       "file_count": 7,
       "unscanned_files": 0,
-      "bytes": 60547,
+      "bytes": 62468,
       "findings": [],
-      "fingerprint": "9892712a39bfdc7b"
+      "fingerprint": "32356ff57f4b5957"
     },
     {
       "name": "cro-advisor",
@@ -7302,9 +7430,9 @@
       "tier_name": "exec",
       "file_count": 10,
       "unscanned_files": 0,
-      "bytes": 112376,
+      "bytes": 111914,
       "findings": [],
-      "fingerprint": "c344cd47b596af78"
+      "fingerprint": "9616e677a80da437"
     },
     {
       "name": "customer-interview-script",
@@ -7456,9 +7584,9 @@
       "tier_name": "exec",
       "file_count": 10,
       "unscanned_files": 0,
-      "bytes": 76046,
+      "bytes": 84791,
       "findings": [],
-      "fingerprint": "7933b894369d4eb3"
+      "fingerprint": "d7ed7c09174bd7b3"
     },
     {
       "name": "dependency-map",
@@ -7610,9 +7738,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 39870,
+      "bytes": 41099,
       "findings": [],
-      "fingerprint": "2398d2c3eba80b90"
+      "fingerprint": "1b224a0efa77f88b"
     },
     {
       "name": "email-triage",
@@ -7708,9 +7836,9 @@
       "tier_name": "exec",
       "file_count": 10,
       "unscanned_files": 0,
-      "bytes": 90727,
+      "bytes": 90566,
       "findings": [],
-      "fingerprint": "97a8af9d65c43aec"
+      "fingerprint": "91272208684c4f57"
     },
     {
       "name": "financial-analyst",
@@ -8002,9 +8130,9 @@
       "tier_name": "exec",
       "file_count": 8,
       "unscanned_files": 0,
-      "bytes": 80903,
+      "bytes": 80754,
       "findings": [],
-      "fingerprint": "0a34719e7a443ba9"
+      "fingerprint": "ffc2234e189b7cb9"
     },
     {
       "name": "interview-system-designer",
@@ -8100,9 +8228,9 @@
       "tier_name": "exec",
       "file_count": 9,
       "unscanned_files": 0,
-      "bytes": 82688,
+      "bytes": 82653,
       "findings": [],
-      "fingerprint": "c588f6b5afac5889"
+      "fingerprint": "3c4b07adb49924eb"
     },
     {
       "name": "jtbd-workshop",
@@ -8338,9 +8466,9 @@
       "tier_name": "exec",
       "file_count": 6,
       "unscanned_files": 0,
-      "bytes": 43258,
+      "bytes": 43760,
       "findings": [],
-      "fingerprint": "50b9e9b840227793"
+      "fingerprint": "14d93dc7d058974e"
     },
     {
       "name": "marketing-ideas",
@@ -8590,9 +8718,9 @@
       "tier_name": "exec",
       "file_count": 7,
       "unscanned_files": 0,
-      "bytes": 76492,
+      "bytes": 76413,
       "findings": [],
-      "fingerprint": "e055d08a9eacab56"
+      "fingerprint": "dbb571e1d7d5e459"
     },
     {
       "name": "onboarding-cro",
@@ -8632,9 +8760,9 @@
       "tier_name": "exec",
       "file_count": 5,
       "unscanned_files": 0,
-      "bytes": 31942,
+      "bytes": 32664,
       "findings": [],
-      "fingerprint": "03c635ab4167527e"
+      "fingerprint": "1b3181de2af96464"
     },
     {
       "name": "org-health-diagnostic",
@@ -8674,9 +8802,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 45778,
+      "bytes": 51473,
       "findings": [],
-      "fingerprint": "c57fac0a2e876189"
+      "fingerprint": "e3da70da57ae5437"
     },
     {
       "name": "partnerships-architect",
@@ -8800,9 +8928,9 @@
       "tier_name": "write",
       "file_count": 8,
       "unscanned_files": 0,
-      "bytes": 66317,
+      "bytes": 66224,
       "findings": [],
-      "fingerprint": "f134b09ee7733365"
+      "fingerprint": "db22fcb84aefe34b"
     },
     {
       "name": "pm-interview-prep",
@@ -8912,9 +9040,9 @@
       "tier_name": "exec",
       "file_count": 10,
       "unscanned_files": 0,
-      "bytes": 106976,
+      "bytes": 106567,
       "findings": [],
-      "fingerprint": "a98ae1447d55b8b8"
+      "fingerprint": "e4112e8f9b57d0be"
     },
     {
       "name": "pricing-strategy",
@@ -9080,9 +9208,9 @@
       "tier_name": "write",
       "file_count": 9,
       "unscanned_files": 0,
-      "bytes": 74805,
+      "bytes": 74739,
       "findings": [],
-      "fingerprint": "ef535a8d02783cde"
+      "fingerprint": "d919671db42219f0"
     },
     {
       "name": "program-manager",
@@ -9360,9 +9488,9 @@
       "tier_name": "write",
       "file_count": 8,
       "unscanned_files": 0,
-      "bytes": 59446,
+      "bytes": 59421,
       "findings": [],
-      "fingerprint": "df5d489c27ec56dd"
+      "fingerprint": "e021e710e2b2f314"
     },
     {
       "name": "saas-metrics-coach",
@@ -9458,9 +9586,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 56215,
+      "bytes": 58591,
       "findings": [],
-      "fingerprint": "ad793e128a95985e"
+      "fingerprint": "f40c7a4fcb480243"
     },
     {
       "name": "scrum-master",
@@ -9472,9 +9600,9 @@
       "tier_name": "exec",
       "file_count": 20,
       "unscanned_files": 0,
-      "bytes": 265007,
+      "bytes": 266923,
       "findings": [],
-      "fingerprint": "72f18763af7837d8"
+      "fingerprint": "535f54e59775c9b8"
     },
     {
       "name": "self-improving-agent",
@@ -9598,9 +9726,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 41642,
+      "bytes": 41695,
       "findings": [],
-      "fingerprint": "0b6dea80abdc2474"
+      "fingerprint": "092448e52fbf39ee"
     },
     {
       "name": "signup-flow-cro",
@@ -10131,9 +10259,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 47881,
+      "bytes": 48307,
       "findings": [],
-      "fingerprint": "661163ef58617808"
+      "fingerprint": "c800907f3eb06ca4"
     },
     {
       "name": "social-media-analyzer",
@@ -10215,9 +10343,9 @@
       "tier_name": "exec",
       "file_count": 12,
       "unscanned_files": 0,
-      "bytes": 149477,
+      "bytes": 149783,
       "findings": [],
-      "fingerprint": "26e800abbcba2671"
+      "fingerprint": "e8932d8965b31cf1"
     },
     {
       "name": "stakeholder-map",
@@ -10713,9 +10841,9 @@
       "tier_name": "exec",
       "file_count": 6,
       "unscanned_files": 0,
-      "bytes": 54528,
+      "bytes": 55989,
       "findings": [],
-      "fingerprint": "0053fd7727159302"
+      "fingerprint": "076bfd00554ae534"
     },
     {
       "name": "xlsx-toolkit",

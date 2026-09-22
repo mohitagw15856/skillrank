@@ -2,9 +2,9 @@
 
 Source: https://github.com/mohitagw15856/pm-claude-skills
 
-**3581 skills · average 99.7/100 · scanned 2026-09-15 with scanner v1**
+**3608 skills · average 99.7/100 · scanned 2026-09-22 with scanner v1**
 
-Grades: A 3564 · B 11 · C 6
+Grades: A 3593 · B 9 · C 6
 
 ## Capability profile
 
@@ -12,8 +12,8 @@ Grades: A 3564 · B 11 · C 6
 | :-: | --- | --: |
 | T0 text | Text in, text out. Touches nothing. | 1163 |
 | T1 read | Reads files in the working directory. | 628 |
-| T2 write | Writes or edits files. | 1475 |
-| T3 exec | Runs shell commands or bundled scripts. | 315 |
+| T2 write | Writes or edits files. | 1490 |
+| T3 exec | Runs shell commands or bundled scripts. | 327 |
 | T4 remote | Executes code or instructions fetched from the network. | 0 |
 
 ## What fired
@@ -30,9 +30,8 @@ Grades: A 3564 · B 11 · C 6
 | `privilege-escalation` | 3 | 0% |
 | `persistence` | 3 | 0% |
 | `env-key-reference` | 3 | 0% |
-| `obfuscation` | 2 | 0% |
 
-## Everything below an A (17)
+## Everything below an A (15)
 
 ### C · 72/100 · `load-testing-plan`
 
@@ -75,8 +74,8 @@ Grades: A 3564 · B 11 · C 6
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `persistence` | `SKILL.md:36` | fence | `echo 'export GEMINI_API_KEY="your-key-here"' >> ~/.zshrc` |
-| **low** | `env-key-reference` | `SKILL.md:30` | fence | `export GEMINI_API_KEY="your-key-here"` |
+| **high** | `persistence` | `SKILL.md:36` | fence | `echo 'export GEMINI_API_KEY=<your-key>' >> ~/.zshrc` |
+| **low** | `env-key-reference` | `SKILL.md:30` | fence | `export GEMINI_API_KEY=<your-key>` |
 | **low** | `unpinned-install` | `SKILL.md:53` | fence | `pip install google-generativeai Pillow requests` |
 
 ### C · 74/100 · `thumbnail-creator`
@@ -87,8 +86,8 @@ Grades: A 3564 · B 11 · C 6
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `persistence` | `SKILL.md:31` | fence | `echo 'export GEMINI_API_KEY="your-key-here"' >> ~/.zshrc` |
-| **low** | `env-key-reference` | `SKILL.md:25` | fence | `export GEMINI_API_KEY="your-key-here"` |
+| **high** | `persistence` | `SKILL.md:31` | fence | `echo 'export GEMINI_API_KEY=<your-key>' >> ~/.zshrc` |
+| **low** | `env-key-reference` | `SKILL.md:25` | fence | `export GEMINI_API_KEY=<your-key>` |
 | **low** | `unpinned-install` | `SKILL.md:48` | fence | `pip install google-generativeai Pillow requests` |
 
 ### C · 74/100 · `thumbnail-creator`
@@ -99,8 +98,8 @@ Grades: A 3564 · B 11 · C 6
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `persistence` | `SKILL.md:31` | fence | `echo 'export GEMINI_API_KEY="your-key-here"' >> ~/.zshrc` |
-| **low** | `env-key-reference` | `SKILL.md:25` | fence | `export GEMINI_API_KEY="your-key-here"` |
+| **high** | `persistence` | `SKILL.md:31` | fence | `echo 'export GEMINI_API_KEY=<your-key>' >> ~/.zshrc` |
+| **low** | `env-key-reference` | `SKILL.md:25` | fence | `export GEMINI_API_KEY=<your-key>` |
 | **low** | `unpinned-install` | `SKILL.md:48` | fence | `pip install google-generativeai Pillow requests` |
 
 ### B · 80/100 · `injection-spotter`
@@ -132,26 +131,6 @@ Grades: A 3564 · B 11 · C 6
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
 | **high** | `instruction-override` | `SKILL.md:8` | plain | `Prompt injection is the SQL injection of the agent era: untrusted content — an email body, a web page, a file,` |
-
-### B · 80/100 · `tornado-sensitivity`
-
-`plugins/pm-calculators/skills/tornado-sensitivity` — tier 3 (exec)
-
-> Which assumption actually moves the answer — one-at-a-time sensitivity, ranked into a tornado. Use when a model's output is being argued about (LTV, ROI, forecast) and the room is debating drivers tha
-
-| Severity | Detector | Where | Context | Evidence |
-| --- | --- | --- | --- | --- |
-| **high** | `obfuscation` | `scripts/tornado.py:97` | plain | `return eval(formula, {"__builtins__": {}}, {**SAFE, **values})   # restricted: drivers + 6 math fns only` |
-
-### B · 80/100 · `tornado-sensitivity`
-
-`skills/tornado-sensitivity` — tier 3 (exec)
-
-> Which assumption actually moves the answer — one-at-a-time sensitivity, ranked into a tornado. Use when a model's output is being argued about (LTV, ROI, forecast) and the room is debating drivers tha
-
-| Severity | Detector | Where | Context | Evidence |
-| --- | --- | --- | --- | --- |
-| **high** | `obfuscation` | `scripts/tornado.py:97` | plain | `return eval(formula, {"__builtins__": {}}, {**SAFE, **values})   # restricted: drivers + 6 math fns only` |
 
 ### B · 84/100 · `file-access-preflight`
 

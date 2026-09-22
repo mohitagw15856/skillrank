@@ -2,9 +2,9 @@
 
 Source: https://github.com/borghei/Claude-Skills
 
-**369 skills · average 96.3/100 · scanned 2026-09-15 with scanner v1**
+**373 skills · average 96.3/100 · scanned 2026-09-22 with scanner v1**
 
-Grades: A 334 · B 17 · C 9 · D 7 · F 2
+Grades: A 338 · B 17 · C 9 · D 7 · F 2
 
 ## Capability profile
 
@@ -13,14 +13,14 @@ Grades: A 334 · B 17 · C 9 · D 7 · F 2
 | T0 text | Text in, text out. Touches nothing. | 0 |
 | T1 read | Reads files in the working directory. | 2 |
 | T2 write | Writes or edits files. | 14 |
-| T3 exec | Runs shell commands or bundled scripts. | 352 |
+| T3 exec | Runs shell commands or bundled scripts. | 356 |
 | T4 remote | Executes code or instructions fetched from the network. | 1 |
 
 ## What fired
 
 | Detector | Skills | Share |
 | --- | --: | --: |
-| `network-egress` | 53 | 14% |
+| `network-egress` | 54 | 14% |
 | `dotenv-access` | 18 | 5% |
 | `unpinned-install` | 16 | 4% |
 | `destructive` | 14 | 4% |
@@ -171,7 +171,7 @@ Grades: A 334 · B 17 · C 9 · D 7 · F 2
 | --- | --- | --- | --- | --- |
 | **high** | `instruction-override` | `assets/failure_mode_taxonomy.md:62` | plain | `**What:** Untrusted input (e.g., a document, a webpage, a tool result) contains instructions that override the` |
 | **high** | `obfuscation` | `assets/failure_mode_taxonomy.md:14` | plain | `- Faithfulness eval (RAGAS or custom rubric) on golden + online samples.` |
-| **high** | `obfuscation` | `references/ai-pm-frameworks-guide.md:119` | plain | `\| **RAGAS** \| RAG-specific eval (faithfulness, context relevance) \| Any RAG feature \|` |
+| **high** | `obfuscation` | `references/ai-pm-frameworks-guide.md:125` | plain | `\| **RAGAS** \| RAG-specific eval (faithfulness, context relevance) \| Any RAG feature \|` |
 
 ### C · 69/100 · `docker-development`
 

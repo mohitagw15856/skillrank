@@ -2,13 +2,13 @@
   "slug": "obra-superpowers",
   "name": "obra/superpowers",
   "url": "https://github.com/obra/superpowers",
-  "scanned_at": "2026-09-15",
+  "scanned_at": "2026-09-22",
   "scanner_version": 1,
-  "skill_count": 14,
-  "average_score": 97.8,
+  "skill_count": 15,
+  "average_score": 97.4,
   "repo_grade": "A",
   "distribution": {
-    "A": 13,
+    "A": 14,
     "B": 1,
     "C": 0,
     "D": 0,
@@ -16,13 +16,14 @@
   },
   "tiers": {
     "0": 0,
-    "1": 1,
-    "2": 3,
-    "3": 10,
+    "1": 0,
+    "2": 4,
+    "3": 11,
     "4": 0
   },
   "by_detector": {
     "destructive": 2,
+    "network-egress": 1,
     "unpinned-install": 1
   },
   "suppressed_skills": [],
@@ -37,7 +38,7 @@
       "tier_name": "exec",
       "file_count": 8,
       "unscanned_files": 1,
-      "bytes": 79957,
+      "bytes": 82083,
       "findings": [
         {
           "id": "destructive",
@@ -91,7 +92,52 @@
           "rollup": true
         }
       ],
-      "fingerprint": "ef75957a5294ffda"
+      "fingerprint": "216cf388afb1b282"
+    },
+    {
+      "name": "diagnosing-superpowers",
+      "path": "skills/diagnosing-superpowers",
+      "description": "Use when a superpowers session went wrong and your human partner wants to know why — repeated work, ignored plans, stumbles, poor results, a skill that didn't fire, \"it took too long\", \"why is it so e",
+      "grade": "A",
+      "score": 92,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 20,
+      "unscanned_files": 0,
+      "bytes": 40748,
+      "findings": [
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "references/github-issues.md",
+          "line": 4,
+          "match": "curl",
+          "evidence": "limits, and JSON. Fall back to the public API with curl, then to a URL"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "references/github-issues.md",
+          "line": 17,
+          "match": "curl",
+          "evidence": "curl -s -H \"Accept: application/vnd.github+json\" \\"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "references/github-issues.md",
+          "line": 22,
+          "match": "curl",
+          "evidence": "Without curl, hand over `https://github.com/obra/superpowers/issues?q=<terms>`."
+        }
+      ],
+      "fingerprint": "3ad9865f7f901716"
     },
     {
       "name": "subagent-driven-development",
@@ -103,7 +149,7 @@
       "tier_name": "exec",
       "file_count": 7,
       "unscanned_files": 3,
-      "bytes": 56327,
+      "bytes": 58981,
       "findings": [
         {
           "id": "destructive",
@@ -116,7 +162,7 @@
           "evidence": "delete this plan's workspace (`rm -rf <workspace>`) — the git history is"
         }
       ],
-      "fingerprint": "80935e66c997c5f5"
+      "fingerprint": "e9d50181cd9c9169"
     },
     {
       "name": "writing-skills",
@@ -128,7 +174,7 @@
       "tier_name": "exec",
       "file_count": 7,
       "unscanned_files": 1,
-      "bytes": 107083,
+      "bytes": 107346,
       "findings": [
         {
           "id": "unpinned-install",
@@ -141,7 +187,7 @@
           "evidence": "\"Install required package: `pip install pypdf`"
         }
       ],
-      "fingerprint": "b229f01257dcd423"
+      "fingerprint": "7d80e24673989fe1"
     },
     {
       "name": "dispatching-parallel-agents",
@@ -160,16 +206,16 @@
     {
       "name": "executing-plans",
       "path": "skills/executing-plans",
-      "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+      "description": "Use when executing an implementation plan in the current session as the implementer yourself — your human partner chose inline execution, or no subagent tool is available",
       "grade": "A",
       "score": 100,
-      "tier": 1,
-      "tier_name": "read",
-      "file_count": 1,
-      "unscanned_files": 0,
-      "bytes": 2305,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 3,
+      "unscanned_files": 2,
+      "bytes": 22874,
       "findings": [],
-      "fingerprint": "9c19fbded68e58b3"
+      "fingerprint": "9a79bdc8768895b9"
     },
     {
       "name": "finishing-a-development-branch",
@@ -209,9 +255,9 @@
       "tier_name": "exec",
       "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 8609,
+      "bytes": 9410,
       "findings": [],
-      "fingerprint": "2573cde51c50e83e"
+      "fingerprint": "7e9ad5814a513135"
     },
     {
       "name": "systematic-debugging",
@@ -223,9 +269,9 @@
       "tier_name": "exec",
       "file_count": 11,
       "unscanned_files": 0,
-      "bytes": 40682,
+      "bytes": 40687,
       "findings": [],
-      "fingerprint": "f0a98bff4404e370"
+      "fingerprint": "0c9f291680fbf069"
     },
     {
       "name": "test-driven-development",
@@ -237,9 +283,9 @@
       "tier_name": "exec",
       "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 17211,
+      "bytes": 17768,
       "findings": [],
-      "fingerprint": "fecd39c8ff79ca8f"
+      "fingerprint": "dd602845c5dc0da4"
     },
     {
       "name": "using-git-worktrees",
@@ -263,11 +309,11 @@
       "score": 100,
       "tier": 3,
       "tier_name": "exec",
-      "file_count": 6,
+      "file_count": 8,
       "unscanned_files": 0,
-      "bytes": 17111,
+      "bytes": 20564,
       "findings": [],
-      "fingerprint": "bbd73f0651484755"
+      "fingerprint": "cb8e1fa64e6482f9"
     },
     {
       "name": "verification-before-completion",
@@ -293,9 +339,9 @@
       "tier_name": "exec",
       "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 8742,
+      "bytes": 10779,
       "findings": [],
-      "fingerprint": "b37304aa6208b77c"
+      "fingerprint": "48fb931b83ff4f29"
     }
   ]
 }
