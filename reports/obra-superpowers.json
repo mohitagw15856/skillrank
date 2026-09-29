@@ -2,7 +2,7 @@
   "slug": "obra-superpowers",
   "name": "obra/superpowers",
   "url": "https://github.com/obra/superpowers",
-  "scanned_at": "2026-09-22",
+  "scanned_at": "2026-09-29",
   "scanner_version": 1,
   "skill_count": 15,
   "average_score": 97.4,
@@ -337,11 +337,11 @@
       "score": 100,
       "tier": 3,
       "tier_name": "exec",
-      "file_count": 2,
+      "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 10779,
+      "bytes": 10317,
       "findings": [],
-      "fingerprint": "48fb931b83ff4f29"
+      "fingerprint": "55c6ba20633d25fd"
     }
   ]
 }

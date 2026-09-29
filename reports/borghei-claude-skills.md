@@ -2,7 +2,7 @@
 
 Source: https://github.com/borghei/Claude-Skills
 
-**373 skills · average 96.3/100 · scanned 2026-09-22 with scanner v1**
+**373 skills · average 96.3/100 · scanned 2026-09-29 with scanner v1**
 
 Grades: A 338 · B 17 · C 9 · D 7 · F 2
 
@@ -95,6 +95,8 @@ Grades: A 338 · B 17 · C 9 · D 7 · F 2
 
 `engineering/senior-mobile` — tier 3 (exec)
 
+> Use when the user asks to "build a mobile app", "scaffold React Native project", "create SwiftUI views", "set up Jetpack Compose", "optimize mobile performance", "configure Expo Router navigation", "i
+
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
 | **high** | `privilege-escalation` | `references/ios-android-patterns.md:682` | fence | `run: sudo xcode-select -s /Applications/Xcode_15.2.app` |
@@ -131,10 +133,13 @@ Grades: A 338 · B 17 · C 9 · D 7 · F 2
 
 `engineering/claude-code-mastery` — tier 3 (exec)
 
+> Use when the user asks to "optimize CLAUDE.md", "create a new skill", "write a custom agent", "configure hooks", "manage context window", "set up MCP servers", "scaffold a skill package", "analyze tok
+
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
 | **high** | `secret-access` | `references/hooks-cookbook.md:269` | fence | `"command": "if echo \"$CLAUDE_TOOL_ARG_FILE_PATH\" \| grep -qiE '(\\.env$\|\\.env\\.\|credentials\|secrets?\|privat` |
 | **high** | `destructive` | `references/hooks-cookbook.md:289` | fence | `"command": "if echo \"$CLAUDE_TOOL_ARG_COMMAND\" \| grep -qE '(rm -rf /\|rm -rf \\*\|DROP TABLE\|DROP DATABASE\|--f` |
+| **high** | `destructive` | `references/subagent-patterns.md:312` | fence | `"Bash(rm -rf *)",` |
 | **low** | `dotenv-access` | `scripts/context_analyzer.py:51` | quote | `"extensions": [".json", ".yaml", ".yml", ".toml", ".ini", ".cfg", ".env.example", ".gitignore"],` |
 
 ### D · 57/100 · `infrastructure-compliance-auditor`

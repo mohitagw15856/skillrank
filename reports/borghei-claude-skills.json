@@ -2,7 +2,7 @@
   "slug": "borghei-claude-skills",
   "name": "borghei/Claude-Skills",
   "url": "https://github.com/borghei/Claude-Skills",
-  "scanned_at": "2026-09-22",
+  "scanned_at": "2026-09-29",
   "scanner_version": 1,
   "skill_count": 373,
   "average_score": 96.3,
@@ -725,14 +725,14 @@
     {
       "name": "senior-mobile",
       "path": "engineering/senior-mobile",
-      "description": null,
+      "description": "Use when the user asks to \"build a mobile app\", \"scaffold React Native project\", \"create SwiftUI views\", \"set up Jetpack Compose\", \"optimize mobile performance\", \"configure Expo Router navigation\", \"i",
       "grade": "D",
       "score": 49,
       "tier": 3,
       "tier_name": "exec",
       "file_count": 11,
       "unscanned_files": 0,
-      "bytes": 196424,
+      "bytes": 196876,
       "findings": [
         {
           "id": "privilege-escalation",
@@ -795,7 +795,7 @@
           "evidence": "gem install fastlane"
         }
       ],
-      "fingerprint": "1379a042c8876a4c"
+      "fingerprint": "1395215fd9756866"
     },
     {
       "name": "codex-cli-specialist",
@@ -931,14 +931,14 @@
     {
       "name": "claude-code-mastery",
       "path": "engineering/claude-code-mastery",
-      "description": null,
+      "description": "Use when the user asks to \"optimize CLAUDE.md\", \"create a new skill\", \"write a custom agent\", \"configure hooks\", \"manage context window\", \"set up MCP servers\", \"scaffold a skill package\", \"analyze tok",
       "grade": "D",
       "score": 57,
       "tier": 3,
       "tier_name": "exec",
       "file_count": 12,
       "unscanned_files": 0,
-      "bytes": 127926,
+      "bytes": 130792,
       "findings": [
         {
           "id": "secret-access",
@@ -961,6 +961,16 @@
           "evidence": "\"command\": \"if echo \\\"$CLAUDE_TOOL_ARG_COMMAND\\\" | grep -qE '(rm -rf /|rm -rf \\\\*|DROP TABLE|DROP DATABASE|--force push|git push.*(--force|-f)|> /dev/sd|mkfs\\\\.|dd if=)'; then echo 'BLOCKE"
         },
         {
+          "id": "destructive",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "fence",
+          "file": "references/subagent-patterns.md",
+          "line": 312,
+          "match": "rm -rf *)\",",
+          "evidence": "\"Bash(rm -rf *)\","
+        },
+        {
           "id": "dotenv-access",
           "severity": "low",
           "declared_severity": "low",
@@ -971,7 +981,7 @@
           "evidence": "\"extensions\": [\".json\", \".yaml\", \".yml\", \".toml\", \".ini\", \".cfg\", \".env.example\", \".gitignore\"],"
         }
       ],
-      "fingerprint": "202d09e490276703"
+      "fingerprint": "404c4a99094498fe"
     },
     {
       "name": "infrastructure-compliance-auditor",
@@ -3505,7 +3515,7 @@
       "tier_name": "exec",
       "file_count": 16,
       "unscanned_files": 0,
-      "bytes": 288066,
+      "bytes": 288159,
       "findings": [
         {
           "id": "network-egress",
@@ -3528,7 +3538,7 @@
           "evidence": "\"enum\": [\"email\", \"sms\", \"webhook\", \"push\"]"
         }
       ],
-      "fingerprint": "4807de495201c556"
+      "fingerprint": "9a0814ebe722e1d8"
     },
     {
       "name": "agents-in-the-team",
@@ -5328,7 +5338,7 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 57359,
+      "bytes": 57032,
       "findings": [
         {
           "id": "network-egress",
@@ -5341,7 +5351,7 @@
           "evidence": "| [System] | Outbound | Webhook | API Key |"
         }
       ],
-      "fingerprint": "82cee8d30dfd2f4d"
+      "fingerprint": "f768b07acb3a3323"
     },
     {
       "name": "story-splitting",
@@ -6271,9 +6281,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 43118,
+      "bytes": 42945,
       "findings": [],
-      "fingerprint": "2221651fd581ebc5"
+      "fingerprint": "ff5f49b8b736b6ce"
     },
     {
       "name": "activation-funnel",
@@ -6355,9 +6365,9 @@
       "tier_name": "exec",
       "file_count": 9,
       "unscanned_files": 0,
-      "bytes": 95278,
+      "bytes": 95720,
       "findings": [],
-      "fingerprint": "f888ffd51f52f9a8"
+      "fingerprint": "538414100f7e8f7a"
     },
     {
       "name": "agenthub",
@@ -6397,9 +6407,9 @@
       "tier_name": "exec",
       "file_count": 10,
       "unscanned_files": 0,
-      "bytes": 67583,
+      "bytes": 67541,
       "findings": [],
-      "fingerprint": "d46d0c3d1b5592c1"
+      "fingerprint": "26d2c192a464bfb6"
     },
     {
       "name": "agile-product-owner",
@@ -6691,9 +6701,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 42284,
+      "bytes": 41668,
       "findings": [],
-      "fingerprint": "187464e92a95b0fa"
+      "fingerprint": "e44275d8e62fbbe6"
     },
     {
       "name": "business-intelligence",
@@ -6705,9 +6715,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 37786,
+      "bytes": 37511,
       "findings": [],
-      "fingerprint": "97c2973e63cbc617"
+      "fingerprint": "89b9bac7e6c95e20"
     },
     {
       "name": "business-model-canvas",
@@ -6831,9 +6841,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 49893,
+      "bytes": 49268,
       "findings": [],
-      "fingerprint": "cfeabb60e81f7082"
+      "fingerprint": "666cfc15b1b1ad04"
     },
     {
       "name": "change-management",
@@ -7041,9 +7051,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 41740,
+      "bytes": 41122,
       "findings": [],
-      "fingerprint": "5152f45c177fc739"
+      "fingerprint": "22adc57d01e0fa37"
     },
     {
       "name": "cold-email",
@@ -7304,9 +7314,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 41891,
+      "bytes": 41234,
       "findings": [],
-      "fingerprint": "d7a4969ff0609e97"
+      "fingerprint": "1e45e08ac00ab931"
     },
     {
       "name": "copy-editing",
@@ -7472,9 +7482,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 47689,
+      "bytes": 47391,
       "findings": [],
-      "fingerprint": "99b4a490486be0f0"
+      "fingerprint": "1dd646a0298b2704"
     },
     {
       "name": "daci-framework",
@@ -7500,9 +7510,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 36608,
+      "bytes": 36357,
       "findings": [],
-      "fingerprint": "8e9342fef1f79250"
+      "fingerprint": "6c215ee2d7f1f283"
     },
     {
       "name": "data-breach-response",
@@ -7528,9 +7538,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 42837,
+      "bytes": 42579,
       "findings": [],
-      "fingerprint": "9cf87fbe3cbba192"
+      "fingerprint": "210f4527942bbd5c"
     },
     {
       "name": "deal-desk",
@@ -7584,9 +7594,9 @@
       "tier_name": "exec",
       "file_count": 10,
       "unscanned_files": 0,
-      "bytes": 84791,
+      "bytes": 84510,
       "findings": [],
-      "fingerprint": "d7ed7c09174bd7b3"
+      "fingerprint": "39bee097d8981275"
     },
     {
       "name": "dependency-map",
@@ -7626,9 +7636,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 54877,
+      "bytes": 54227,
       "findings": [],
-      "fingerprint": "7b0f60e48150a643"
+      "fingerprint": "918e8dce032d3231"
     },
     {
       "name": "docx-toolkit",
@@ -7794,9 +7804,9 @@
       "tier_name": "exec",
       "file_count": 5,
       "unscanned_files": 0,
-      "bytes": 38681,
+      "bytes": 38876,
       "findings": [],
-      "fingerprint": "dd35ff0b1f15a096"
+      "fingerprint": "7b18b5fd324984e4"
     },
     {
       "name": "fda-consultant-specialist",
@@ -7976,9 +7986,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 39289,
+      "bytes": 38668,
       "findings": [],
-      "fingerprint": "972686a6bcbf0eba"
+      "fingerprint": "f06e57ff21f7eaee"
     },
     {
       "name": "gtm-strategy",
@@ -8046,9 +8056,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 64741,
+      "bytes": 64479,
       "findings": [],
-      "fingerprint": "88f67f604ea689cd"
+      "fingerprint": "d11466b5d5d5ab27"
     },
     {
       "name": "ideal-customer-profile",
@@ -8396,9 +8406,9 @@
       "tier_name": "exec",
       "file_count": 6,
       "unscanned_files": 0,
-      "bytes": 50360,
+      "bytes": 50668,
       "findings": [],
-      "fingerprint": "f79fe80ea5c95480"
+      "fingerprint": "7a9968560611d4eb"
     },
     {
       "name": "ma-playbook",
@@ -8438,9 +8448,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 36670,
+      "bytes": 36036,
       "findings": [],
-      "fingerprint": "b39b0e3d67d430cf"
+      "fingerprint": "cf1a1e89f7b7db8f"
     },
     {
       "name": "marketing-context",
@@ -8634,9 +8644,9 @@
       "tier_name": "exec",
       "file_count": 5,
       "unscanned_files": 0,
-      "bytes": 48458,
+      "bytes": 48202,
       "findings": [],
-      "fingerprint": "a341e351f7ce7400"
+      "fingerprint": "018012027ffca268"
     },
     {
       "name": "ms365-tenant-manager",
@@ -8746,9 +8756,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 61105,
+      "bytes": 60840,
       "findings": [],
-      "fingerprint": "d0a2edcd352fe4b9"
+      "fingerprint": "b0bc01e99ef9fc6b"
     },
     {
       "name": "opportunity-solution-tree",
@@ -8886,9 +8896,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 59664,
+      "bytes": 59400,
       "findings": [],
-      "fingerprint": "0435bfb0e134f4f5"
+      "fingerprint": "67f2552c7ce53ece"
     },
     {
       "name": "pitch-deck-reviewer",
@@ -9152,9 +9162,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 55778,
+      "bytes": 55129,
       "findings": [],
-      "fingerprint": "6c1a472f189bf820"
+      "fingerprint": "100a981254aee8b5"
     },
     {
       "name": "product-manager-toolkit",
@@ -9222,9 +9232,9 @@
       "tier_name": "exec",
       "file_count": 7,
       "unscanned_files": 0,
-      "bytes": 64803,
+      "bytes": 64692,
       "findings": [],
-      "fingerprint": "cce857dd20c159b9"
+      "fingerprint": "e6ff40afcae14d0a"
     },
     {
       "name": "programmatic-seo",
@@ -9250,9 +9260,9 @@
       "tier_name": "exec",
       "file_count": 7,
       "unscanned_files": 0,
-      "bytes": 59022,
+      "bytes": 59714,
       "findings": [],
-      "fingerprint": "08345fbf5cc7a5bc"
+      "fingerprint": "0ea8bc7e0a723e6a"
     },
     {
       "name": "prompt-governance",
@@ -9516,9 +9526,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 50160,
+      "bytes": 49821,
       "findings": [],
-      "fingerprint": "2c9d9168be8ced8d"
+      "fingerprint": "e81cc0e265d2b4b0"
     },
     {
       "name": "sales-operations",
@@ -9530,9 +9540,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 51569,
+      "bytes": 51250,
       "findings": [],
-      "fingerprint": "8b619a320443848e"
+      "fingerprint": "2a320d657f58a967"
     },
     {
       "name": "sample-text-processor",
@@ -9635,30 +9645,30 @@
     {
       "name": "senior-cloud-architect",
       "path": "engineering/senior-cloud-architect",
-      "description": null,
+      "description": "Use when the user asks to \"design cloud architecture\", \"set up Terraform infrastructure\", \"optimize cloud costs\", \"plan disaster recovery\", \"configure multi-region failover\", \"audit IAM policies\", \"mi",
       "grade": "A",
       "score": 100,
       "tier": 3,
       "tier_name": "exec",
       "file_count": 3,
       "unscanned_files": 0,
-      "bytes": 14221,
+      "bytes": 14674,
       "findings": [],
-      "fingerprint": "24fd04a4f2c98330"
+      "fingerprint": "06640c1e6ad7ec3e"
     },
     {
       "name": "senior-data-scientist",
       "path": "engineering/senior-data-scientist",
-      "description": null,
+      "description": "Use when the user asks to \"design an experiment\", \"build a predictive model\", \"run A/B test analysis\", \"perform causal inference\", \"engineer features\", \"evaluate model performance\", \"set up MLOps pipe",
       "grade": "A",
       "score": 100,
       "tier": 3,
       "tier_name": "exec",
       "file_count": 9,
       "unscanned_files": 0,
-      "bytes": 32043,
+      "bytes": 32414,
       "findings": [],
-      "fingerprint": "236911ecb838c70f"
+      "fingerprint": "a7a5a6240a3225a2"
     },
     {
       "name": "senior-devops",
@@ -9684,9 +9694,9 @@
       "tier_name": "exec",
       "file_count": 9,
       "unscanned_files": 0,
-      "bytes": 53344,
+      "bytes": 53401,
       "findings": [],
-      "fingerprint": "26e9340033565e85"
+      "fingerprint": "f5469bfb6cdae4e7"
     },
     {
       "name": "senior-pm",
@@ -9712,9 +9722,9 @@
       "tier_name": "exec",
       "file_count": 8,
       "unscanned_files": 0,
-      "bytes": 126877,
+      "bytes": 127495,
       "findings": [],
-      "fingerprint": "0ace5f71d10d4abc"
+      "fingerprint": "48f6a78171f6ae1b"
     },
     {
       "name": "seo-specialist",
@@ -9726,9 +9736,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 41695,
+      "bytes": 41033,
       "findings": [],
-      "fingerprint": "092448e52fbf39ee"
+      "fingerprint": "2878e5801021cea8"
     },
     {
       "name": "signup-flow-cro",
@@ -10483,9 +10493,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 63648,
+      "bytes": 63399,
       "findings": [],
-      "fingerprint": "60468a1043e1eba5"
+      "fingerprint": "a64b574e19259947"
     },
     {
       "name": "team-communications",

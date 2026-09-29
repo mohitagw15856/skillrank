@@ -2,7 +2,7 @@
 
 Source: https://github.com/anthropics/skills
 
-**20 skills · average 90.2/100 · scanned 2026-09-22 with scanner v1**
+**20 skills · average 89/100 · scanned 2026-09-29 with scanner v1**
 
 Grades: A 15 · B 3 · C 1 · F 1
 
@@ -27,11 +27,13 @@ Grades: A 15 · B 3 · C 1 · F 1
 | `env-key-reference` | 3 | 15% |
 | `privilege-escalation` | 1 | 5% |
 | `obfuscation` | 1 | 5% |
+| `secret-access` | 1 | 5% |
+| `persistence` | 1 | 5% |
 | `dotenv-access` | 1 | 5% |
 
 ## Everything below an A (5)
 
-### F · 23/100 · `claude-api`
+### F · 0/100 · `claude-api`
 
 `skills/claude-api` — tier 3 (exec)
 
@@ -41,8 +43,12 @@ Grades: A 15 · B 3 · C 1 · F 1
 | --- | --- | --- | --- | --- |
 | **high** | `privilege-escalation` | `shared/anthropic-cli.md:25` | fence | `\| sudo tar -xz -C /usr/local/bin ant` |
 | **high** | `obfuscation` | `shared/cost-optimization.md:26` | plain | `- **From a baseline run, paid**: run the project's eval (or, with no eval, replay a representative sample of r` |
+| **high** | `obfuscation` | `shared/evals/build-eval.md:213` | plain | `- **Commit the eval (Recommended)** - runner, inputs, grader, and `.claude/hillclimb/<flow>/` minus `traces/`.` |
+| **high** | `obfuscation` | `shared/evals/eval-hillclimb.md:33` | plain | `A runnable eval (Step 0) is not yet a *trustworthy* one. Before you spend a round, rule out the possibility th` |
+| **high** | `secret-access` | `shared/evals/report/runner-scaffold.mjs:112` | plain | `// ~/.ssh/id_rsa` planted after the startup preflight must not be read into` |
 | **high** | `privilege-escalation` | `shared/managed-agents-self-hosted-sandboxes.md:187` | fence | `sudo mkdir -p /mnt/memory && sudo chown "$USER" /mnt/memory` |
 | **high** | `destructive` | `shared/managed-agents-tools.md:145` | fence | `"input": { "command": "rm -rf /workspace/reports" },` |
+| **high** | `obfuscation` | `SKILL.md:517` | plain | `**Iteratively improving an app against an eval (prompt tuning, hill-climbing):**` |
 | **medium** | `network-egress` | `curl/examples.md:1` | plain | `# Claude API - cURL / Raw HTTP` |
 | **medium** | `network-egress` | `curl/managed-agents.md:1` | plain | `# Managed Agents - cURL / Raw HTTP` |
 | **medium** | `network-egress` | `go/managed-agents/README.md:3` | plain | `> **Bindings not shown here:** This README covers the most common managed-agents flows for Go. If you need a c` |
@@ -52,22 +58,25 @@ Grades: A 15 · B 3 · C 1 · F 1
 | **medium** | `network-egress` | `ruby/managed-agents/README.md:3` | plain | `> **Bindings not shown here:** This README covers the most common managed-agents flows for Ruby. If you need a` |
 | **medium** | `network-egress` | `shared/admin-api.md:39` | plain | `**curl** also needs `anthropic-version: 2023-06-01` on every request.` |
 | **medium** | `network-egress` | `shared/anthropic-cli.md:24` | fence | `curl -fsSL "https://github.com/anthropics/anthropic-cli/releases/download/v${VERSION}/ant_${VERSION}_$(uname -` |
+| **medium** | `secret-access` | `shared/evals/report/build-report-lite.mjs:28` | inline-code | `// `summary.json -> ~/.ssh/id_rsa`; the user later runs this builder (outside` |
+| **medium** | `persistence` | `shared/evals/report/build-report-lite.mjs:62` | inline-code | `// model-influenced, so `report.html -> ~/.bashrc` planted there must not be` |
+| **medium** | `persistence` | `shared/evals/report/runner-scaffold.mjs:35` | inline-code | `// prompt-injected round can plant `results.jsonl -> ~/.bashrc` where the next` |
 | **medium** | `network-egress` | `shared/live-sources.md:65` | quote | `\| Usage & Cost Reports \| `https://platform.claude.com/docs/en/manage-claude/usage-cost-api.md`   \| "Extract us` |
 | **medium** | `network-egress` | `shared/managed-agents-api-reference.md:140` | plain | `\| `GET`    \| `/v1/deployment_runs/{deployment_run_id}`        \| GetDeploymentRun   \| Retrieve a single run by ` |
 | **medium** | `network-egress` | `shared/managed-agents-client-patterns.md:5` | plain | `Code samples are TypeScript - other languages follow the same shape; see `{lang}/managed-agents/README.md` (cU` |
-| **medium** | `network-egress` | `shared/managed-agents-environments.md:112` | plain | `- The filter parameter is **`scope_id`** (REST query param `?scope_id=<session_id>`). The SDK's files resource` |
 | **medium** | `network-egress` | `shared/managed-agents-memory.md:201` | plain | `For cURL examples and the CLI (`ant beta:memory-stores ...`), WebFetch the Memory URL in `shared/live-sources.` |
-| **medium** | `network-egress` | `shared/managed-agents-onboarding.md:73` | plain | `**Block 2 - Runtime (every invocation; conversational and Outcome shapes).** SDK code in the detected language` |
-| **medium** | `network-egress` | `shared/managed-agents-overview.md:32` | plain | `**Which beta header goes where:** The SDK sets `managed-agents-2026-04-01` automatically on `client.beta.{agen` |
+| **medium** | `network-egress` | `shared/managed-agents-onboarding.md:76` | plain | `**Block 2 - Runtime (every invocation; conversational and Outcome shapes).** SDK code in the detected language` |
+| **medium** | `network-egress` | `shared/managed-agents-overview.md:43` | plain | `\| Create a session                       \| `shared/managed-agents-core.md` + `{lang}/managed-agents/README.md`` |
 | **medium** | `network-egress` | `shared/managed-agents-scheduled-deployments.md:16` | fence | `curl -fsSL https://api.anthropic.com/v1/deployments \` |
 | **medium** | `network-egress` | `shared/managed-agents-self-hosted-sandboxes.md:112` | plain | `## Webhook-driven wake (instead of always-on)` |
 | **medium** | `network-egress` | `shared/managed-agents-tools.md:130` | plain | `Pass the same shape as an untyped dict / object literal / hash in Python, TypeScript, and Ruby. The typed SDKs` |
 | **medium** | `network-egress` | `shared/models.md:35` | fence | `curl https://api.anthropic.com/v1/models/claude-opus-4-8 \` |
-| **medium** | `network-egress` | `shared/tool-use-concepts.md:440` | plain | `\| Python / TypeScript / Ruby / cURL \| plain object `{"type": "bash_20250124", "name": "bash"}` \|` |
+| **medium** | `network-egress` | `shared/preserved-thinking-migration/drop_block_probe.py:94` | plain | `import http.client` |
+| **medium** | `network-egress` | `shared/tool-use-concepts.md:71` | plain | `1. **Validate the parsed input against the tool's schema before running the tool.** The typed runner helpers d` |
 | **medium** | `network-egress` | `SKILL.md:23` | plain | `2. **Raw HTTP** (`curl`, `requests`, `fetch`, `httpx`, etc.) - only when the user explicitly asks for cURL/RES` |
 | **medium** | `network-egress` | `typescript/managed-agents/README.md:3` | plain | `> **Bindings not shown here:** This README covers the most common managed-agents flows for TypeScript. If you ` |
 | **low** | `env-key-reference` | `csharp/claude-api/README.md:108` | fence | `// Default (uses ANTHROPIC_API_KEY env var)` |
-| **low** | `network-egress` | `csharp/claude-api/README.md:362` | inline-code | `The C# SDK supports Managed Agents via `client.Beta.Agents`, `client.Beta.Sessions`, `client.Beta.Environments` |
+| **low** | `network-egress` | `csharp/claude-api/README.md:363` | inline-code | `The C# SDK supports Managed Agents via `client.Beta.Agents`, `client.Beta.Sessions`, `client.Beta.Environments` |
 | **low** | `env-key-reference` | `curl/examples.md:8` | fence | `export ANTHROPIC_API_KEY="your-api-key"` |
 | **low** | `env-key-reference` | `curl/managed-agents.md:8` | fence | `export ANTHROPIC_API_KEY="your-api-key"` |
 | **low** | `env-key-reference` | `go/claude-api/README.md:19` | fence | `// Default (uses ANTHROPIC_API_KEY env var)` |
@@ -93,6 +102,7 @@ Grades: A 15 · B 3 · C 1 · F 1
 | **low** | `dotenv-access` | `shared/managed-agents-tools.md:95` | fence | `{ "type": "user.tool_confirmation", "tool_use_id": "sevt_def456", "result": "deny", "deny_message": "Read .env` |
 | **low** | `network-egress` | `shared/managed-agents-webhooks.md:23` | inline-code | `Every delivery carries the `webhook-id`, `webhook-timestamp`, and `webhook-signature` headers. **Use the SDK's` |
 | **low** | `env-key-reference` | `shared/models.md:36` | fence | `-H "x-api-key: $ANTHROPIC_API_KEY" \` |
+| **low** | `env-key-reference` | `shared/preserved-thinking-migration/drop_block_probe.py:6` | plain | `printed: ANTHROPIC_API_KEY (sent as x-api-key) or ANTHROPIC_AUTH_TOKEN (sent as` |
 | **low** | `env-key-reference` | `typescript/claude-api/README.md:21` | fence | `// ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile.` |
 | **low** | `unpinned-install` | `typescript/claude-api/README.md:10` | fence | `npm install @anthropic-ai/sdk` |
 | **low** | `env-key-reference` | `typescript/managed-agents/README.md:19` | fence | `// ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile.` |

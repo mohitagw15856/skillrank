@@ -2,10 +2,10 @@
   "slug": "anthropics-skills",
   "name": "anthropics/skills",
   "url": "https://github.com/anthropics/skills",
-  "scanned_at": "2026-09-22",
+  "scanned_at": "2026-09-29",
   "scanner_version": 1,
   "skill_count": 20,
-  "average_score": 90.2,
+  "average_score": 89,
   "repo_grade": "review",
   "distribution": {
     "A": 15,
@@ -29,6 +29,8 @@
     "env-key-reference": 3,
     "privilege-escalation": 1,
     "obfuscation": 1,
+    "secret-access": 1,
+    "persistence": 1,
     "dotenv-access": 1
   },
   "suppressed_skills": [],
@@ -38,12 +40,12 @@
       "path": "skills/claude-api",
       "description": "Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration.\nTRIGGER — read BEFORE opening the target file; do",
       "grade": "F",
-      "score": 23,
+      "score": 0,
       "tier": 3,
       "tier_name": "exec",
-      "file_count": 70,
+      "file_count": 81,
       "unscanned_files": 0,
-      "bytes": 1174591,
+      "bytes": 1857306,
       "findings": [
         {
           "id": "privilege-escalation",
@@ -64,6 +66,56 @@
           "line": 26,
           "match": "eval (",
           "evidence": "- **From a baseline run, paid**: run the project's eval (or, with no eval, replay a representative sample of real requests) and roll up the same way. This spends real API money: state the expected"
+        },
+        {
+          "id": "obfuscation",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "plain",
+          "file": "shared/evals/build-eval.md",
+          "line": 213,
+          "match": "eval (",
+          "evidence": "- **Commit the eval (Recommended)** - runner, inputs, grader, and `.claude/hillclimb/<flow>/` minus `traces/`. Quote the actual count: \"N files, ~X MB\". Add `**/traces/`, `report.html`, `state.json`,"
+        },
+        {
+          "id": "obfuscation",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "plain",
+          "file": "shared/evals/eval-hillclimb.md",
+          "line": 33,
+          "match": "eval (",
+          "evidence": "A runnable eval (Step 0) is not yet a *trustworthy* one. Before you spend a round, rule out the possibility that the harness is lying to you - a hill-climb on a broken measurement is worse than none,"
+        },
+        {
+          "id": "obfuscation",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "plain",
+          "file": "shared/evals/eval-hillclimb.md",
+          "line": 78,
+          "match": "eval (",
+          "evidence": "Record the answer. This defines what you'll be editing each round; the off-limits list is a hard constraint. Also have the user name the **harness paths** - the runner script, grader, and any file the"
+        },
+        {
+          "id": "secret-access",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "plain",
+          "file": "shared/evals/report/runner-scaffold.mjs",
+          "line": 112,
+          "match": "~/.ssh",
+          "evidence": "// ~/.ssh/id_rsa` planted after the startup preflight must not be read into"
+        },
+        {
+          "id": "secret-access",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "plain",
+          "file": "shared/evals/report/runner-scaffold.mjs",
+          "line": 112,
+          "match": "id_rsa",
+          "evidence": "// ~/.ssh/id_rsa` planted after the startup preflight must not be read into"
         },
         {
           "id": "privilege-escalation",
@@ -94,6 +146,16 @@
           "line": 145,
           "match": "rm -rf /workspace/reports\" },",
           "evidence": "\"input\": { \"command\": \"rm -rf /workspace/reports\" },"
+        },
+        {
+          "id": "obfuscation",
+          "severity": "high",
+          "declared_severity": "high",
+          "context": "plain",
+          "file": "SKILL.md",
+          "line": 517,
+          "match": "eval (",
+          "evidence": "**Iteratively improving an app against an eval (prompt tuning, hill-climbing):**"
         },
         {
           "id": "network-egress",
@@ -276,6 +338,46 @@
           "evidence": "# Bare access token - for curl's Authorization header"
         },
         {
+          "id": "secret-access",
+          "severity": "medium",
+          "declared_severity": "high",
+          "context": "inline-code",
+          "file": "shared/evals/report/build-report-lite.mjs",
+          "line": 28,
+          "match": "~/.ssh",
+          "evidence": "// `summary.json -> ~/.ssh/id_rsa`; the user later runs this builder (outside"
+        },
+        {
+          "id": "secret-access",
+          "severity": "medium",
+          "declared_severity": "high",
+          "context": "inline-code",
+          "file": "shared/evals/report/build-report-lite.mjs",
+          "line": 28,
+          "match": "id_rsa",
+          "evidence": "// `summary.json -> ~/.ssh/id_rsa`; the user later runs this builder (outside"
+        },
+        {
+          "id": "persistence",
+          "severity": "medium",
+          "declared_severity": "high",
+          "context": "inline-code",
+          "file": "shared/evals/report/build-report-lite.mjs",
+          "line": 62,
+          "match": ".bashrc",
+          "evidence": "// model-influenced, so `report.html -> ~/.bashrc` planted there must not be"
+        },
+        {
+          "id": "persistence",
+          "severity": "medium",
+          "declared_severity": "high",
+          "context": "inline-code",
+          "file": "shared/evals/report/runner-scaffold.mjs",
+          "line": 35,
+          "match": ".bashrc",
+          "evidence": "// prompt-injected round can plant `results.jsonl -> ~/.bashrc` where the next"
+        },
+        {
           "id": "network-egress",
           "severity": "medium",
           "declared_severity": "medium",
@@ -330,16 +432,6 @@
           "severity": "medium",
           "declared_severity": "medium",
           "context": "plain",
-          "file": "shared/managed-agents-environments.md",
-          "line": 112,
-          "match": "curl",
-          "evidence": "- The filter parameter is **`scope_id`** (REST query param `?scope_id=<session_id>`). The SDK's files resource auto-adds only the `files-api-2025-04-14` header, so pass `betas: [\"managed-agents-2026-0"
-        },
-        {
-          "id": "network-egress",
-          "severity": "medium",
-          "declared_severity": "medium",
-          "context": "plain",
           "file": "shared/managed-agents-memory.md",
           "line": 201,
           "match": "cURL",
@@ -351,7 +443,7 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "shared/managed-agents-onboarding.md",
-          "line": 73,
+          "line": 76,
           "match": "cURL",
           "evidence": "**Block 2 - Runtime (every invocation; conversational and Outcome shapes).** SDK code in the detected language (Python/TS/cURL - SKILL.md -> Language Detection); don't emit shell loops here:"
         },
@@ -361,7 +453,7 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "shared/managed-agents-onboarding.md",
-          "line": 82,
+          "line": 85,
           "match": "cURL",
           "evidence": "Pull exact syntax from `{lang}/managed-agents/README.md` for your detected language (cURL and C#: use `curl/managed-agents.md` as the wire-level reference). Don't invent field names."
         },
@@ -371,9 +463,9 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "shared/managed-agents-overview.md",
-          "line": 32,
+          "line": 43,
           "match": "cURL",
-          "evidence": "**Which beta header goes where:** The SDK sets `managed-agents-2026-04-01` automatically on `client.beta.{agents,environments,sessions,vaults,memory_stores,deployments,deployment_runs}.*` calls, and `"
+          "evidence": "| Create a session                       | `shared/managed-agents-core.md` + `{lang}/managed-agents/README.md` (cURL/C#: `curl/managed-agents.md`) |"
         },
         {
           "id": "network-egress",
@@ -381,9 +473,9 @@
           "declared_severity": "medium",
           "context": "plain",
           "file": "shared/managed-agents-overview.md",
-          "line": 44,
-          "match": "cURL",
-          "evidence": "| Create a session                       | `shared/managed-agents-core.md` + `{lang}/managed-agents/README.md` (cURL/C#: `curl/managed-agents.md`) |"
+          "line": 48,
+          "match": "webhook",
+          "evidence": "| Get notified of session state changes via webhook (no polling) | `shared/managed-agents-webhooks.md` - Console-registered endpoint, HMAC verify, thin payload + fetch |"
         },
         {
           "id": "network-egress",
@@ -480,8 +572,48 @@
           "severity": "medium",
           "declared_severity": "medium",
           "context": "plain",
+          "file": "shared/preserved-thinking-migration/drop_block_probe.py",
+          "line": 94,
+          "match": "http.client",
+          "evidence": "import http.client"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/preserved-thinking-migration/drop_block_probe.py",
+          "line": 102,
+          "match": "urllib.request",
+          "evidence": "import urllib.request"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/preserved-thinking-migration/drop_block_probe.py",
+          "line": 420,
+          "match": "urllib.request",
+          "evidence": "req = urllib.request.Request(base_url.rstrip(\"/\") + path, data=data, method=\"POST\")"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
           "file": "shared/tool-use-concepts.md",
-          "line": 440,
+          "line": 71,
+          "match": "cURL",
+          "evidence": "1. **Validate the parsed input against the tool's schema before running the tool.** The typed runner helpers do this for you and never call `run` on input that fails: TS `betaZodTool` (Zod), Python `@"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "plain",
+          "file": "shared/tool-use-concepts.md",
+          "line": 491,
           "match": "cURL",
           "evidence": "| Python / TypeScript / Ruby / cURL | plain object `{\"type\": \"bash_20250124\", \"name\": \"bash\"}` |"
         },
@@ -541,7 +673,7 @@
           "declared_severity": "medium",
           "context": "inline-code",
           "file": "csharp/claude-api/README.md",
-          "line": 362,
+          "line": 363,
           "match": "curl",
           "evidence": "The C# SDK supports Managed Agents via `client.Beta.Agents`, `client.Beta.Sessions`, `client.Beta.Environments`, and related namespaces. See `shared/managed-agents-overview.md` for the architecture an"
         },
@@ -881,7 +1013,7 @@
           "declared_severity": "medium",
           "context": "inline-code",
           "file": "shared/managed-agents-onboarding.md",
-          "line": 82,
+          "line": 85,
           "match": "curl",
           "evidence": "Pull exact syntax from `{lang}/managed-agents/README.md` for your detected language (cURL and C#: use `curl/managed-agents.md` as the wire-level reference). Don't invent field names."
         },
@@ -891,7 +1023,7 @@
           "declared_severity": "medium",
           "context": "inline-code",
           "file": "shared/managed-agents-overview.md",
-          "line": 44,
+          "line": 43,
           "match": "curl",
           "evidence": "| Create a session                       | `shared/managed-agents-core.md` + `{lang}/managed-agents/README.md` (cURL/C#: `curl/managed-agents.md`) |"
         },
@@ -964,6 +1096,36 @@
           "line": 36,
           "match": "ANTHROPIC_API_KEY",
           "evidence": "-H \"x-api-key: $ANTHROPIC_API_KEY\" \\"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "plain",
+          "file": "shared/preserved-thinking-migration/drop_block_probe.py",
+          "line": 6,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "printed: ANTHROPIC_API_KEY (sent as x-api-key) or ANTHROPIC_AUTH_TOKEN (sent as"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "plain",
+          "file": "shared/preserved-thinking-migration/drop_block_probe.py",
+          "line": 6,
+          "match": "ANTHROPIC_AUTH_TOKEN",
+          "evidence": "printed: ANTHROPIC_API_KEY (sent as x-api-key) or ANTHROPIC_AUTH_TOKEN (sent as"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "quote",
+          "file": "shared/preserved-thinking-migration/drop_block_probe.py",
+          "line": 403,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "key = os.environ.get(\"ANTHROPIC_API_KEY\")"
         },
         {
           "id": "network-egress",
@@ -1248,18 +1410,8 @@
           "declared_severity": "low",
           "context": "inline-code",
           "file": "shared/error-codes.md",
-          "line": 59,
+          "line": 61,
           "match": "ANTHROPIC_API_KEY",
-          "evidence": "- Both `ANTHROPIC_API_KEY` and `ANTHROPIC_AUTH_TOKEN` set - the SDK sends both headers and the API rejects the request"
-        },
-        {
-          "id": "env-key-reference",
-          "severity": "info",
-          "declared_severity": "low",
-          "context": "inline-code",
-          "file": "shared/error-codes.md",
-          "line": 59,
-          "match": "ANTHROPIC_AUTH_TOKEN",
           "evidence": "- Both `ANTHROPIC_API_KEY` and `ANTHROPIC_AUTH_TOKEN` set - the SDK sends both headers and the API rejects the request"
         },
         {
@@ -1269,19 +1421,18 @@
           "context": "inline-code",
           "file": "shared/error-codes.md",
           "line": 61,
-          "match": "ANTHROPIC_API_KEY",
-          "evidence": "**Fix:** Set `ANTHROPIC_API_KEY`, or run `ant auth login` and leave the client constructor empty. For raw HTTP with an OAuth token, use `Authorization: Bearer <token>` (not `x-api-key:`)."
+          "match": "ANTHROPIC_AUTH_TOKEN",
+          "evidence": "- Both `ANTHROPIC_API_KEY` and `ANTHROPIC_AUTH_TOKEN` set - the SDK sends both headers and the API rejects the request"
         },
         {
-          "id": "network-egress",
+          "id": "env-key-reference",
           "severity": "info",
-          "declared_severity": "medium",
-          "context": "rollup",
-          "file": "shared/managed-agents-overview.md",
-          "line": 0,
-          "match": "+1 more occurrence(s)",
-          "evidence": "",
-          "rollup": true
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/error-codes.md",
+          "line": 63,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "**Fix:** Set `ANTHROPIC_API_KEY`, or run `ant auth login` and leave the client constructor empty. For raw HTTP with an OAuth token, use `Authorization: Bearer <token>` (not `x-api-key:`)."
         },
         {
           "id": "network-egress",
@@ -1331,8 +1482,50 @@
           "severity": "info",
           "declared_severity": "low",
           "context": "inline-code",
+          "file": "shared/preserved-thinking-migration.md",
+          "line": 53,
+          "match": "ANTHROPIC_API_KEY",
+          "evidence": "The probe always sends the `thinking-binding-controls-2026-08-01` beta value; add `--beta <value>` for any other beta your production requests carry (the bare command is enough on the Claude API). The"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
+          "file": "shared/preserved-thinking-migration.md",
+          "line": 53,
+          "match": "ANTHROPIC_AUTH_TOKEN",
+          "evidence": "The probe always sends the `thinking-binding-controls-2026-08-01` beta value; add `--beta <value>` for any other beta your production requests carry (the bare command is enough on the Claude API). The"
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "rollup",
+          "file": "shared/preserved-thinking-migration/drop_block_probe.py",
+          "line": 0,
+          "match": "+5 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "network-egress",
+          "severity": "info",
+          "declared_severity": "medium",
+          "context": "rollup",
+          "file": "shared/preserved-thinking-migration/drop_block_probe.py",
+          "line": 0,
+          "match": "+2 more occurrence(s)",
+          "evidence": "",
+          "rollup": true
+        },
+        {
+          "id": "env-key-reference",
+          "severity": "info",
+          "declared_severity": "low",
+          "context": "inline-code",
           "file": "SKILL.md",
-          "line": 215,
+          "line": 229,
           "match": "ANTHROPIC_API_KEY",
           "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` -> `ANTHROPIC_AUTH_TOKEN`"
         },
@@ -1342,7 +1535,7 @@
           "declared_severity": "low",
           "context": "inline-code",
           "file": "SKILL.md",
-          "line": 215,
+          "line": 229,
           "match": "ANTHROPIC_API_KEY",
           "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` -> `ANTHROPIC_AUTH_TOKEN`"
         },
@@ -1352,7 +1545,7 @@
           "declared_severity": "low",
           "context": "inline-code",
           "file": "SKILL.md",
-          "line": 215,
+          "line": 229,
           "match": "ANTHROPIC_AUTH_TOKEN",
           "evidence": "**An unset `ANTHROPIC_API_KEY` does NOT mean there are no credentials.** The SDKs and the `ant` CLI resolve credentials in this order (first match wins): `ANTHROPIC_API_KEY` -> `ANTHROPIC_AUTH_TOKEN`"
         },
@@ -1379,7 +1572,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "bc02efc4067eb15e"
+      "fingerprint": "b5f20f3480aabdfe"
     },
     {
       "name": "mcp-builder",

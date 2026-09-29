@@ -2,9 +2,9 @@
 
 Source: https://github.com/mohitagw15856/pm-claude-skills
 
-**3608 skills · average 99.7/100 · scanned 2026-09-22 with scanner v1**
+**3644 skills · average 99.7/100 · scanned 2026-09-29 with scanner v1**
 
-Grades: A 3593 · B 9 · C 6
+Grades: A 3629 · B 9 · C 6
 
 ## Capability profile
 
@@ -12,15 +12,15 @@ Grades: A 3593 · B 9 · C 6
 | :-: | --- | --: |
 | T0 text | Text in, text out. Touches nothing. | 1163 |
 | T1 read | Reads files in the working directory. | 628 |
-| T2 write | Writes or edits files. | 1490 |
-| T3 exec | Runs shell commands or bundled scripts. | 327 |
+| T2 write | Writes or edits files. | 1497 |
+| T3 exec | Runs shell commands or bundled scripts. | 356 |
 | T4 remote | Executes code or instructions fetched from the network. | 0 |
 
 ## What fired
 
 | Detector | Skills | Share |
 | --- | --: | --: |
-| `network-egress` | 98 | 3% |
+| `network-egress` | 99 | 3% |
 | `dotenv-access` | 17 | 0% |
 | `unpinned-install` | 12 | 0% |
 | `destructive` | 6 | 0% |

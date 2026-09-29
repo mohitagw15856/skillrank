@@ -2,13 +2,13 @@
   "slug": "pm-claude-skills",
   "name": "pm-claude-skills",
   "url": "https://github.com/mohitagw15856/pm-claude-skills",
-  "scanned_at": "2026-09-22",
+  "scanned_at": "2026-09-29",
   "scanner_version": 1,
-  "skill_count": 3608,
+  "skill_count": 3644,
   "average_score": 99.7,
   "repo_grade": "A",
   "distribution": {
-    "A": 3593,
+    "A": 3629,
     "B": 9,
     "C": 6,
     "D": 0,
@@ -17,12 +17,12 @@
   "tiers": {
     "0": 1163,
     "1": 628,
-    "2": 1490,
-    "3": 327,
+    "2": 1497,
+    "3": 356,
     "4": 0
   },
   "by_detector": {
-    "network-egress": 98,
+    "network-egress": 99,
     "dotenv-access": 17,
     "unpinned-install": 12,
     "destructive": 6,
@@ -4124,7 +4124,7 @@
     },
     {
       "name": "prd-template",
-      "path": "skills/prd-template",
+      "path": "skill-releases/prd-template/1.0.0",
       "description": "Create a Product Requirements Document following proven PM template structure. Use when asked to write a PRD, product spec, feature specification, or requirements document for a new feature or product",
       "grade": "A",
       "score": 92,
@@ -4132,7 +4132,7 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 29929,
+      "bytes": 29944,
       "findings": [
         {
           "id": "network-egress",
@@ -4165,7 +4165,52 @@
           "evidence": "- Risk: payments-provider webhook delivery is at-least-once with occasional 10-min"
         }
       ],
-      "fingerprint": "a056286037d72773"
+      "fingerprint": "b69e41e07cee078d"
+    },
+    {
+      "name": "prd-template",
+      "path": "skills/prd-template",
+      "description": "Create a Product Requirements Document following proven PM template structure. Use when asked to write a PRD, product spec, feature specification, or requirements document for a new feature or product",
+      "grade": "A",
+      "score": 92,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 4,
+      "unscanned_files": 0,
+      "bytes": 29944,
+      "findings": [
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "references/worked-example.md",
+          "line": 120,
+          "match": "webhook",
+          "evidence": "- Performance: portal page interactive <2s at p95; payment-status webhook processed"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "references/worked-example.md",
+          "line": 135,
+          "match": "webhook",
+          "evidence": "404); payment initiated but webhook delayed (>60s → \"processing\" state + email"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "references/worked-example.md",
+          "line": 146,
+          "match": "webhook",
+          "evidence": "- Risk: payments-provider webhook delivery is at-least-once with occasional 10-min"
+        }
+      ],
+      "fingerprint": "b69e41e07cee078d"
     },
     {
       "name": "product-launch-checklist",
@@ -14732,9 +14777,23 @@
       "tier_name": "exec",
       "file_count": 3,
       "unscanned_files": 0,
-      "bytes": 9975,
+      "bytes": 9990,
       "findings": [],
-      "fingerprint": "909b0e3940d80764"
+      "fingerprint": "f63bdf2a16305878"
+    },
+    {
+      "name": "competitive-analysis",
+      "path": "skill-releases/competitive-analysis/1.0.0",
+      "description": "Analyze competitors and create competitive landscape documentation with feature matrices, positioning maps, and strategic recommendations. Use when asked to analyze competitors, create competitive ana",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 4,
+      "unscanned_files": 0,
+      "bytes": 20504,
+      "findings": [],
+      "fingerprint": "b77d5b64140ba256"
     },
     {
       "name": "competitive-analysis",
@@ -14746,9 +14805,9 @@
       "tier_name": "exec",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 20489,
+      "bytes": 20504,
       "findings": [],
-      "fingerprint": "4d25a3be5490cf00"
+      "fingerprint": "b77d5b64140ba256"
     },
     {
       "name": "competitive-intelligence-monitor",
@@ -21247,6 +21306,48 @@
       "fingerprint": "c368efb50b017f8f"
     },
     {
+      "name": "emil-design-eng-pointer",
+      "path": "exports/openclaw/emil-design-eng-pointer",
+      "description": "Point to Emil Kowalski's emil-design-eng skill and explain when to use it. Use when asked how to install emil-design-eng, which skill covers UI animation and interaction polish, or what handles the mo",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4052,
+      "findings": [],
+      "fingerprint": "c7b9f8cbbbf45e25"
+    },
+    {
+      "name": "emil-design-eng-pointer",
+      "path": "plugins/pm-design-taste/skills/emil-design-eng-pointer",
+      "description": "Point to Emil Kowalski's emil-design-eng skill and explain when to use it. Use when asked how to install emil-design-eng, which skill covers UI animation and interaction polish, or what handles the mo",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3921,
+      "findings": [],
+      "fingerprint": "dfcc97ee884503d0"
+    },
+    {
+      "name": "emil-design-eng-pointer",
+      "path": "skills/emil-design-eng-pointer",
+      "description": "Point to Emil Kowalski's emil-design-eng skill and explain when to use it. Use when asked how to install emil-design-eng, which skill covers UI animation and interaction polish, or what handles the mo",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3921,
+      "findings": [],
+      "fingerprint": "dfcc97ee884503d0"
+    },
+    {
       "name": "employee-engagement-survey",
       "path": "exports/openclaw/employee-engagement-survey",
       "description": "Design an employee engagement survey and analyse results. Use when asked to create an employee survey, engagement questionnaire, pulse survey, or eNPS survey. Also use when asked to analyse survey res",
@@ -25825,6 +25926,48 @@
       "fingerprint": "fa9fa1ac0e26d73c"
     },
     {
+      "name": "frontend-design-pointer",
+      "path": "exports/openclaw/frontend-design-pointer",
+      "description": "Point to Anthropic's frontend-design skill and explain when to use it. Use when asked how to install frontend-design, which skill sets aesthetic direction for a UI, or what handles the direction stage",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4308,
+      "findings": [],
+      "fingerprint": "48f929251ba3e7ea"
+    },
+    {
+      "name": "frontend-design-pointer",
+      "path": "plugins/pm-design-taste/skills/frontend-design-pointer",
+      "description": "Point to Anthropic's frontend-design skill and explain when to use it. Use when asked how to install frontend-design, which skill sets aesthetic direction for a UI, or what handles the direction stage",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4177,
+      "findings": [],
+      "fingerprint": "9210ee9b9500e0ca"
+    },
+    {
+      "name": "frontend-design-pointer",
+      "path": "skills/frontend-design-pointer",
+      "description": "Point to Anthropic's frontend-design skill and explain when to use it. Use when asked how to install frontend-design, which skill sets aesthetic direction for a UI, or what handles the direction stage",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4177,
+      "findings": [],
+      "fingerprint": "9210ee9b9500e0ca"
+    },
+    {
       "name": "fundraising-faq",
       "path": "exports/openclaw/fundraising-faq",
       "description": "Pressure-test a fundraise by anticipating the hard investor questions and arming the founder with crisp answers. Use when asked to prep for investor Q&A, anticipate due-diligence questions, handle pus",
@@ -28553,6 +28696,48 @@
       "bytes": 3598,
       "findings": [],
       "fingerprint": "d1a3f816483282c0"
+    },
+    {
+      "name": "impeccable-pointer",
+      "path": "exports/openclaw/impeccable-pointer",
+      "description": "Point to Paul Bakaus's Impeccable design skill and explain when to use it. Use when asked how to install impeccable, which skill critiques and audits a built UI, or what handles the critique stage of ",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4009,
+      "findings": [],
+      "fingerprint": "95e74ef5361d0c83"
+    },
+    {
+      "name": "impeccable-pointer",
+      "path": "plugins/pm-design-taste/skills/impeccable-pointer",
+      "description": "Point to Paul Bakaus's Impeccable design skill and explain when to use it. Use when asked how to install impeccable, which skill critiques and audits a built UI, or what handles the critique stage of ",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3883,
+      "findings": [],
+      "fingerprint": "37c5fc69cf02a93e"
+    },
+    {
+      "name": "impeccable-pointer",
+      "path": "skills/impeccable-pointer",
+      "description": "Point to Paul Bakaus's Impeccable design skill and explain when to use it. Use when asked how to install impeccable, which skill critiques and audits a built UI, or what handles the critique stage of ",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3883,
+      "findings": [],
+      "fingerprint": "37c5fc69cf02a93e"
     },
     {
       "name": "in-law-boundary-scripts",
@@ -33156,9 +33341,23 @@
       "tier_name": "write",
       "file_count": 3,
       "unscanned_files": 0,
-      "bytes": 16679,
+      "bytes": 16694,
       "findings": [],
-      "fingerprint": "fa1c0eafaa5a40ed"
+      "fingerprint": "99d0055c6418521d"
+    },
+    {
+      "name": "meeting-notes",
+      "path": "skill-releases/meeting-notes/1.0.0",
+      "description": "Structure and format meeting notes following PM best practices. Use when asked to create meeting notes, format discussion notes, capture action items, or document decisions from any meeting type. Prod",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 4,
+      "unscanned_files": 0,
+      "bytes": 25003,
+      "findings": [],
+      "fingerprint": "c59e39f3694f30fc"
     },
     {
       "name": "meeting-notes",
@@ -33184,9 +33383,9 @@
       "tier_name": "write",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 24988,
+      "bytes": 25003,
       "findings": [],
-      "fingerprint": "428ad7457bdef7e1"
+      "fingerprint": "c59e39f3694f30fc"
     },
     {
       "name": "meeting-prep-live",
@@ -37865,6 +38064,48 @@
       "fingerprint": "f53d15bff1ed772d"
     },
     {
+      "name": "playwright-cli-pointer",
+      "path": "exports/openclaw/playwright-cli-pointer",
+      "description": "Point to Microsoft's playwright-cli and its skill, and explain when to use it. Use when asked how to install playwright-cli, how to verify a page in a real browser at mobile and desktop widths, or wha",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4945,
+      "findings": [],
+      "fingerprint": "937fc5fbd754f9a3"
+    },
+    {
+      "name": "playwright-cli-pointer",
+      "path": "plugins/pm-design-taste/skills/playwright-cli-pointer",
+      "description": "Point to Microsoft's playwright-cli and its skill, and explain when to use it. Use when asked how to install playwright-cli, how to verify a page in a real browser at mobile and desktop widths, or wha",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4815,
+      "findings": [],
+      "fingerprint": "09cb5fdaeb488716"
+    },
+    {
+      "name": "playwright-cli-pointer",
+      "path": "skills/playwright-cli-pointer",
+      "description": "Point to Microsoft's playwright-cli and its skill, and explain when to use it. Use when asked how to install playwright-cli, how to verify a page in a real browser at mobile and desktop widths, or wha",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4815,
+      "findings": [],
+      "fingerprint": "09cb5fdaeb488716"
+    },
+    {
       "name": "pm-weekly-review",
       "path": "exports/openclaw/pm-weekly-review",
       "description": "Structure a PM's weekly review and planning session. Use when doing a weekly PM review, writing a weekly update, preparing for Monday planning, or reviewing sprint health. Produces a shareable weekly ",
@@ -38560,9 +38801,9 @@
       "tier_name": "exec",
       "file_count": 3,
       "unscanned_files": 0,
-      "bytes": 14809,
+      "bytes": 14824,
       "findings": [],
-      "fingerprint": "f21468de5a629a31"
+      "fingerprint": "ce138107538f8007"
     },
     {
       "name": "prd-template",
@@ -39795,6 +40036,174 @@
       "bytes": 3816,
       "findings": [],
       "fingerprint": "717981d12f0fa9e9"
+    },
+    {
+      "name": "promoter-draft",
+      "path": "exports/openclaw/promoter-draft",
+      "description": "Turn one recurring pattern from a promoter scan into a complete, reusable skill in this library's format: a SKILL.md with a strong trigger description, required inputs, a framework, an output template",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5380,
+      "findings": [],
+      "fingerprint": "b9b99cee2ac4c522"
+    },
+    {
+      "name": "promoter-draft",
+      "path": "plugins/pm-skill-promoter/skills/promoter-draft",
+      "description": "Turn one recurring pattern from a promoter scan into a complete, reusable skill in this library's format: a SKILL.md with a strong trigger description, required inputs, a framework, an output template",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 6369,
+      "findings": [],
+      "fingerprint": "519a4ccf53714c7b"
+    },
+    {
+      "name": "promoter-draft",
+      "path": "skills/promoter-draft",
+      "description": "Turn one recurring pattern from a promoter scan into a complete, reusable skill in this library's format: a SKILL.md with a strong trigger description, required inputs, a framework, an output template",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 6369,
+      "findings": [],
+      "fingerprint": "519a4ccf53714c7b"
+    },
+    {
+      "name": "promoter-publish",
+      "path": "exports/openclaw/promoter-publish",
+      "description": "Register a finished skill in this library and produce the complete release package: the bundle wiring and marketplace entry, the regenerated catalogue and exports, the headline count in every living d",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4938,
+      "findings": [],
+      "fingerprint": "58c3b4b4a1e444f8"
+    },
+    {
+      "name": "promoter-publish",
+      "path": "plugins/pm-skill-promoter/skills/promoter-publish",
+      "description": "Register a finished skill in this library and produce the complete release package: the bundle wiring and marketplace entry, the regenerated catalogue and exports, the headline count in every living d",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 9652,
+      "findings": [],
+      "fingerprint": "e0ee41ee3afd5dad"
+    },
+    {
+      "name": "promoter-publish",
+      "path": "skills/promoter-publish",
+      "description": "Register a finished skill in this library and produce the complete release package: the bundle wiring and marketplace entry, the regenerated catalogue and exports, the headline count in every living d",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 9652,
+      "findings": [],
+      "fingerprint": "e0ee41ee3afd5dad"
+    },
+    {
+      "name": "promoter-scan",
+      "path": "exports/openclaw/promoter-scan",
+      "description": "Find the requests you keep making to your AI assistant by scanning Claude Code transcripts and claude.ai exports, clustering them by intent, and ranking each recurring pattern by how promotable it is ",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5388,
+      "findings": [],
+      "fingerprint": "2e35ad5330e6b45e"
+    },
+    {
+      "name": "promoter-scan",
+      "path": "plugins/pm-skill-promoter/skills/promoter-scan",
+      "description": "Find the requests you keep making to your AI assistant by scanning Claude Code transcripts and claude.ai exports, clustering them by intent, and ranking each recurring pattern by how promotable it is ",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 15440,
+      "findings": [],
+      "fingerprint": "ea100f77cfe955bd"
+    },
+    {
+      "name": "promoter-scan",
+      "path": "skills/promoter-scan",
+      "description": "Find the requests you keep making to your AI assistant by scanning Claude Code transcripts and claude.ai exports, clustering them by intent, and ranking each recurring pattern by how promotable it is ",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 15440,
+      "findings": [],
+      "fingerprint": "ea100f77cfe955bd"
+    },
+    {
+      "name": "promoter-test",
+      "path": "exports/openclaw/promoter-test",
+      "description": "Generate an evals file for a drafted skill and measure whether its trigger description fires on the right requests: five to eight phrases that should trigger it, five that should not, three golden inp",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4752,
+      "findings": [],
+      "fingerprint": "fa088ca350daff96"
+    },
+    {
+      "name": "promoter-test",
+      "path": "plugins/pm-skill-promoter/skills/promoter-test",
+      "description": "Generate an evals file for a drafted skill and measure whether its trigger description fires on the right requests: five to eight phrases that should trigger it, five that should not, three golden inp",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 10328,
+      "findings": [],
+      "fingerprint": "173cb54ec1822ee8"
+    },
+    {
+      "name": "promoter-test",
+      "path": "skills/promoter-test",
+      "description": "Generate an evals file for a drafted skill and measure whether its trigger description fires on the right requests: five to eight phrases that should trigger it, five that should not, three golden inp",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 10328,
+      "findings": [],
+      "fingerprint": "173cb54ec1822ee8"
     },
     {
       "name": "promotion-packet",
@@ -42203,6 +42612,20 @@
       "bytes": 6460,
       "findings": [],
       "fingerprint": "b2514c125c3348cb"
+    },
+    {
+      "name": "release-notes-from-git-log",
+      "path": "examples/promoter/drafted-skill",
+      "description": "Turn a git log into user-facing release notes grouped by feature and fix. Use when asked for release notes from this git log, a changelog entry from these commits, or to turn commits into release note",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 2,
+      "unscanned_files": 0,
+      "bytes": 3379,
+      "findings": [],
+      "fingerprint": "36eabe4d54d04291"
     },
     {
       "name": "relocation-planner",
@@ -48433,9 +48856,23 @@
       "tier_name": "write",
       "file_count": 3,
       "unscanned_files": 0,
-      "bytes": 17372,
+      "bytes": 17387,
       "findings": [],
-      "fingerprint": "fde73723d9c0f7ac"
+      "fingerprint": "5c6146d35ab8272e"
+    },
+    {
+      "name": "stakeholder-update",
+      "path": "skill-releases/stakeholder-update/1.0.0",
+      "description": "Create concise executive stakeholder updates using the BLUF (Bottom Line Up Front) framework. Use when asked to write a status update, progress report, project communication, or executive briefing for",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 4,
+      "unscanned_files": 0,
+      "bytes": 24157,
+      "findings": [],
+      "fingerprint": "efa4e364d8e4b39f"
     },
     {
       "name": "stakeholder-update",
@@ -48447,9 +48884,9 @@
       "tier_name": "write",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 24142,
+      "bytes": 24157,
       "findings": [],
-      "fingerprint": "1f43bbdb9e88dfb9"
+      "fingerprint": "efa4e364d8e4b39f"
     },
     {
       "name": "standing-meeting-audit",
@@ -53156,6 +53593,90 @@
       "fingerprint": "f69c77e6131e3236"
     },
     {
+      "name": "ui-design-pipeline",
+      "path": "exports/openclaw/ui-design-pipeline",
+      "description": "Run a five-stage UI design pipeline (direction, system, motion, critique, verification) so the result does not look like generic AI output. Use when asked to design or restyle a page, landing page, da",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 11914,
+      "findings": [],
+      "fingerprint": "03d6f2c5646a5a43"
+    },
+    {
+      "name": "ui-design-pipeline",
+      "path": "plugins/pm-design-taste/skills/ui-design-pipeline",
+      "description": "Run a five-stage UI design pipeline (direction, system, motion, critique, verification) so the result does not look like generic AI output. Use when asked to design or restyle a page, landing page, da",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 11788,
+      "findings": [],
+      "fingerprint": "614c47ccffb21e10"
+    },
+    {
+      "name": "ui-design-pipeline",
+      "path": "skills/ui-design-pipeline",
+      "description": "Run a five-stage UI design pipeline (direction, system, motion, critique, verification) so the result does not look like generic AI output. Use when asked to design or restyle a page, landing page, da",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 11788,
+      "findings": [],
+      "fingerprint": "614c47ccffb21e10"
+    },
+    {
+      "name": "ui-ux-pro-max-pointer",
+      "path": "exports/openclaw/ui-ux-pro-max-pointer",
+      "description": "Point to the ui-ux-pro-max skill by nextlevelbuilder and explain when to use it. Use when asked how to install ui-ux-pro-max, which skill generates and persists a design system, or what handles the sy",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4206,
+      "findings": [],
+      "fingerprint": "4dc921258cd59ded"
+    },
+    {
+      "name": "ui-ux-pro-max-pointer",
+      "path": "plugins/pm-design-taste/skills/ui-ux-pro-max-pointer",
+      "description": "Point to the ui-ux-pro-max skill by nextlevelbuilder and explain when to use it. Use when asked how to install ui-ux-pro-max, which skill generates and persists a design system, or what handles the sy",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4077,
+      "findings": [],
+      "fingerprint": "7e6e876dbe2ad066"
+    },
+    {
+      "name": "ui-ux-pro-max-pointer",
+      "path": "skills/ui-ux-pro-max-pointer",
+      "description": "Point to the ui-ux-pro-max skill by nextlevelbuilder and explain when to use it. Use when asked how to install ui-ux-pro-max, which skill generates and persists a design system, or what handles the sy",
+      "grade": "A",
+      "score": 100,
+      "tier": 3,
+      "tier_name": "exec",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4077,
+      "findings": [],
+      "fingerprint": "7e6e876dbe2ad066"
+    },
+    {
       "name": "unblock-protocol",
       "path": "exports/openclaw/unblock-protocol",
       "description": "Get unstuck on purpose — the stuck-type diagnosis (don't-know-how, can't-decide, waiting, avoiding, too-big), the matched unblock move for each, and the timebox that stops noble struggling before it e",
@@ -53515,9 +54036,23 @@
       "tier_name": "write",
       "file_count": 3,
       "unscanned_files": 0,
-      "bytes": 13408,
+      "bytes": 13423,
       "findings": [],
-      "fingerprint": "17bf9e169ffbbfb6"
+      "fingerprint": "0c309d661f76058b"
+    },
+    {
+      "name": "user-research-synthesis",
+      "path": "skill-releases/user-research-synthesis/1.0.0",
+      "description": "Analyze and synthesize user research findings into structured, actionable insights. Use when given user research data, interview transcripts, survey results, or user feedback that needs to be analyzed",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 4,
+      "unscanned_files": 0,
+      "bytes": 27159,
+      "findings": [],
+      "fingerprint": "0df23db61a5558ee"
     },
     {
       "name": "user-research-synthesis",
@@ -53529,9 +54064,9 @@
       "tier_name": "write",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 27144,
+      "bytes": 27159,
       "findings": [],
-      "fingerprint": "03271591d3ea1d52"
+      "fingerprint": "0df23db61a5558ee"
     },
     {
       "name": "user-story-writer",
