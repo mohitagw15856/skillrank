@@ -2,9 +2,9 @@
 
 Source: https://github.com/borghei/Claude-Skills
 
-**373 skills · average 96.3/100 · scanned 2026-10-06 with scanner v1**
+**386 skills · average 96.2/100 · scanned 2026-10-13 with scanner v1**
 
-Grades: A 338 · B 17 · C 9 · D 7 · F 2
+Grades: A 349 · B 17 · C 10 · D 8 · F 2
 
 ## Capability profile
 
@@ -13,27 +13,28 @@ Grades: A 338 · B 17 · C 9 · D 7 · F 2
 | T0 text | Text in, text out. Touches nothing. | 0 |
 | T1 read | Reads files in the working directory. | 2 |
 | T2 write | Writes or edits files. | 14 |
-| T3 exec | Runs shell commands or bundled scripts. | 356 |
+| T3 exec | Runs shell commands or bundled scripts. | 369 |
 | T4 remote | Executes code or instructions fetched from the network. | 1 |
 
 ## What fired
 
 | Detector | Skills | Share |
 | --- | --: | --: |
-| `network-egress` | 54 | 14% |
+| `network-egress` | 55 | 14% |
 | `dotenv-access` | 18 | 5% |
 | `unpinned-install` | 16 | 4% |
 | `destructive` | 14 | 4% |
-| `persistence` | 9 | 2% |
+| `persistence` | 10 | 3% |
 | `env-key-reference` | 8 | 2% |
+| `instruction-override` | 7 | 2% |
 | `secret-access` | 7 | 2% |
 | `obfuscation` | 5 | 1% |
-| `instruction-override` | 3 | 1% |
 | `privilege-escalation` | 3 | 1% |
 | `conceal-from-user` | 1 | 0% |
 | `ip-literal-url` | 1 | 0% |
+| `zero-width` | 1 | 0% |
 
-## Everything below an A (35)
+## Everything below an A (37)
 
 ### F · 0/100 · `devops-workflow-engineer`
 
@@ -128,6 +129,16 @@ Grades: A 338 · B 17 · C 9 · D 7 · F 2
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
 | **critical** | `conceal-from-user` | `references/design_audit_methodology.md:196` | plain | `- **Silent failures** — Actions fail without informing the user` |
+
+### D · 55/100 · `linkedin-humanizer`
+
+`tools/linkedin/linkedin-humanizer` — tier 3 (exec)
+
+> Audits and rewrites LinkedIn drafts to remove machine-sounding patterns: tiered tell catalogue, emoji-pattern scoring, rule explanations, and a voice fingerprint built from the author's own posts. Use
+
+| Severity | Detector | Where | Context | Evidence |
+| --- | --- | --- | --- | --- |
+| **critical** | `zero-width` | `scripts/emoji_audit.py:32` | quote | `EMOJI_RE = re.compile(f"{_BASE}{_MOD}(?:·{_BASE}{_MOD})*")` |
 
 ### D · 57/100 · `claude-code-mastery`
 
@@ -272,6 +283,19 @@ Grades: A 338 · B 17 · C 9 · D 7 · F 2
 | **high** | `destructive` | `scripts/rollback_generator.py:133` | quote | `"drop_table": "DROP TABLE IF EXISTS {table_name};",` |
 | **medium** | `network-egress` | `references/zero_downtime_techniques.md:331` | fence | `if curl -f http://$TARGET_IP/health; then` |
 | **medium** | `network-egress` | `scripts/rollback_generator.py:156` | quote | `"revert_feature_flags": "curl -X PUT {feature_flag_api}/flags/{flag_name} -d '{\"enabled\": false}'",` |
+
+### C · 72/100 · `security-audit`
+
+`engineering/security-audit` — tier 3 (exec)
+
+> Multi-agent source security audit with a coverage ledger, independently verified findings, and machine-checked records. Use when asked to audit a codebase, find vulnerabilities, or run a source-level 
+
+| Severity | Detector | Where | Context | Evidence |
+| --- | --- | --- | --- | --- |
+| **high** | `persistence` | `scripts/audit_run.py:96` | plain | `gate = plan_budget(args.budget, args.profile, 0, None)` |
+| **medium** | `network-egress` | `assets/sample_coverage_ledger.json:274` | quote | `"label": "Webhook test: server-side fetch of a caller-supplied URL",` |
+| **medium** | `network-egress` | `references/attack-classes.md:104` | plain | `- **Server-side fetches** — a URL, host, or webhook target the caller` |
+| **medium** | `network-egress` | `references/protocols-rpc-and-messaging.md:126` | plain | `- Check webhook receivers for signature verification, replay windows, and` |
 
 ### C · 72/100 · `senior-backend`
 

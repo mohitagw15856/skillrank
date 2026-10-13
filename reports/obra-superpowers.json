@@ -2,7 +2,7 @@
   "slug": "obra-superpowers",
   "name": "obra/superpowers",
   "url": "https://github.com/obra/superpowers",
-  "scanned_at": "2026-10-06",
+  "scanned_at": "2026-10-13",
   "scanner_version": 1,
   "skill_count": 15,
   "average_score": 97.4,
@@ -31,14 +31,14 @@
     {
       "name": "brainstorming",
       "path": "skills/brainstorming",
-      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, or planning anything new, in software or out of it (a talk, a business, a",
       "grade": "B",
       "score": 80,
       "tier": 3,
       "tier_name": "exec",
       "file_count": 8,
       "unscanned_files": 1,
-      "bytes": 82083,
+      "bytes": 73842,
       "findings": [
         {
           "id": "destructive",
@@ -92,7 +92,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "216cf388afb1b282"
+      "fingerprint": "d81fac31aa693b32"
     },
     {
       "name": "diagnosing-superpowers",
@@ -149,7 +149,7 @@
       "tier_name": "exec",
       "file_count": 7,
       "unscanned_files": 3,
-      "bytes": 58981,
+      "bytes": 59400,
       "findings": [
         {
           "id": "destructive",
@@ -213,7 +213,7 @@
       "tier_name": "write",
       "file_count": 3,
       "unscanned_files": 2,
-      "bytes": 22874,
+      "bytes": 22896,
       "findings": [],
       "fingerprint": "9a79bdc8768895b9"
     },
@@ -255,9 +255,9 @@
       "tier_name": "exec",
       "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 9410,
+      "bytes": 9407,
       "findings": [],
-      "fingerprint": "7e9ad5814a513135"
+      "fingerprint": "ddbf86572e3c326c"
     },
     {
       "name": "systematic-debugging",
@@ -269,9 +269,9 @@
       "tier_name": "exec",
       "file_count": 11,
       "unscanned_files": 0,
-      "bytes": 40687,
+      "bytes": 40752,
       "findings": [],
-      "fingerprint": "0c9f291680fbf069"
+      "fingerprint": "1997375555f708a3"
     },
     {
       "name": "test-driven-development",

@@ -2,7 +2,7 @@
 
 Source: https://github.com/obra/superpowers
 
-**15 skills · average 97.4/100 · scanned 2026-10-06 with scanner v1**
+**15 skills · average 97.4/100 · scanned 2026-10-13 with scanner v1**
 
 Grades: A 14 · B 1
 
@@ -30,7 +30,7 @@ Grades: A 14 · B 1
 
 `skills/brainstorming` — tier 3 (exec)
 
-> You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
+> You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, or planning anything new, in software or out of it (a talk, a business, a
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
