@@ -2,7 +2,7 @@
 
 Source: https://github.com/anthropics/skills
 
-**20 skills · average 89/100 · scanned 2026-10-13 with scanner v1**
+**20 skills · average 89/100 · scanned 2026-10-20 with scanner v1**
 
 Grades: A 15 · B 3 · C 1 · F 1
 

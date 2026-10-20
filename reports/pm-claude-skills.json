@@ -2,22 +2,22 @@
   "slug": "pm-claude-skills",
   "name": "pm-claude-skills",
   "url": "https://github.com/mohitagw15856/pm-claude-skills",
-  "scanned_at": "2026-10-13",
+  "scanned_at": "2026-10-20",
   "scanner_version": 1,
-  "skill_count": 2821,
+  "skill_count": 2841,
   "average_score": 99.7,
   "repo_grade": "A",
   "distribution": {
-    "A": 2811,
+    "A": 2831,
     "B": 6,
     "C": 4,
     "D": 0,
     "F": 0
   },
   "tiers": {
-    "0": 864,
-    "1": 406,
-    "2": 1244,
+    "0": 858,
+    "1": 405,
+    "2": 1271,
     "3": 307,
     "4": 0
   },
@@ -6118,9 +6118,9 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3268,
+      "bytes": 3561,
       "findings": [],
-      "fingerprint": "e9ed743bf40d77d8"
+      "fingerprint": "e0538b4d06bc9f7b"
     },
     {
       "name": "application-tracker",
@@ -6132,9 +6132,9 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3268,
+      "bytes": 3561,
       "findings": [],
-      "fingerprint": "e9ed743bf40d77d8"
+      "fingerprint": "e0538b4d06bc9f7b"
     },
     {
       "name": "apprentice-first-week",
@@ -6811,16 +6811,16 @@
     {
       "name": "band-agreement",
       "path": "plugins/pm-musician/skills/band-agreement",
-      "description": "Summarise what Band Agreement does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact].",
+      "description": "Write the band agreement before the money or the breakup arrives — who owns the songs, how money splits (writing vs performing distinguished), who owns the name, what happens when someone quits, and t",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 2,
+      "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 942,
+      "bytes": 7304,
       "findings": [],
-      "fingerprint": "5202a15dcba27017"
+      "fingerprint": "753b59a93999cb90"
     },
     {
       "name": "band-agreement",
@@ -6832,9 +6832,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6957,
+      "bytes": 7304,
       "findings": [],
-      "fingerprint": "45081d9e557d754c"
+      "fingerprint": "753b59a93999cb90"
     },
     {
       "name": "bank-fee-refund",
@@ -7164,13 +7164,13 @@
       "description": "Produce a matched Chinese and English CV (中英文简历) from one set of facts: each version follows its own conventions rather than a literal translation, with names, titles, dates, education and company nam",
       "grade": "A",
       "score": 100,
-      "tier": 1,
-      "tier_name": "read",
+      "tier": 2,
+      "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4274,
+      "bytes": 4692,
       "findings": [],
-      "fingerprint": "68ea8a02f9aa3c89"
+      "fingerprint": "09bd2281b30ae5e5"
     },
     {
       "name": "bilingual-cv-zh-en",
@@ -7182,9 +7182,9 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 1897,
+      "bytes": 2073,
       "findings": [],
-      "fingerprint": "a8c604f9c0138f2e"
+      "fingerprint": "f14b35e032be5370"
     },
     {
       "name": "bilingual-cv-zh-en",
@@ -7196,9 +7196,9 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 1887,
+      "bytes": 2062,
       "findings": [],
-      "fingerprint": "2528d26d3bd93f5c"
+      "fingerprint": "94d07a46c293c77b"
     },
     {
       "name": "bilingual-cv-zh-en",
@@ -7206,13 +7206,13 @@
       "description": "Produce a matched Chinese and English CV (中英文简历) from one set of facts: each version follows its own conventions rather than a literal translation, with names, titles, dates, education and company nam",
       "grade": "A",
       "score": 100,
-      "tier": 1,
-      "tier_name": "read",
+      "tier": 2,
+      "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4274,
+      "bytes": 4692,
       "findings": [],
-      "fingerprint": "68ea8a02f9aa3c89"
+      "fingerprint": "09bd2281b30ae5e5"
     },
     {
       "name": "birdwatching-log",
@@ -8414,9 +8414,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3409,
+      "bytes": 3830,
       "findings": [],
-      "fingerprint": "15e88f5e4438817a"
+      "fingerprint": "0e402188a262e637"
     },
     {
       "name": "career-changer-cv",
@@ -8428,9 +8428,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3409,
+      "bytes": 3830,
       "findings": [],
-      "fingerprint": "15e88f5e4438817a"
+      "fingerprint": "0e402188a262e637"
     },
     {
       "name": "career-inventory",
@@ -9170,9 +9170,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4693,
+      "bytes": 5020,
       "findings": [],
-      "fingerprint": "08f7f54bde6a0e53"
+      "fingerprint": "f19f83b61f7b31cf"
     },
     {
       "name": "chuhai-market-entry",
@@ -9184,9 +9184,9 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 2108,
+      "bytes": 2225,
       "findings": [],
-      "fingerprint": "c9f945ee865b0e09"
+      "fingerprint": "d7965790f495f105"
     },
     {
       "name": "chuhai-market-entry",
@@ -9198,9 +9198,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4693,
+      "bytes": 5020,
       "findings": [],
-      "fingerprint": "08f7f54bde6a0e53"
+      "fingerprint": "f19f83b61f7b31cf"
     },
     {
       "name": "churn-analysis",
@@ -9332,9 +9332,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3766,
+      "bytes": 4023,
       "findings": [],
-      "fingerprint": "4a604e545e8ae504"
+      "fingerprint": "1e8f9a9783f76aba"
     },
     {
       "name": "civil-service-application",
@@ -9346,9 +9346,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3766,
+      "bytes": 4023,
       "findings": [],
-      "fingerprint": "4a604e545e8ae504"
+      "fingerprint": "1e8f9a9783f76aba"
     },
     {
       "name": "claim-denial-decoder",
@@ -9920,9 +9920,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5390,
+      "bytes": 5668,
       "findings": [],
-      "fingerprint": "f37fe11b12fa8283"
+      "fingerprint": "31f29e01376112fe"
     },
     {
       "name": "cn-8d-report",
@@ -9934,9 +9934,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5390,
+      "bytes": 5668,
       "findings": [],
-      "fingerprint": "f37fe11b12fa8283"
+      "fingerprint": "31f29e01376112fe"
     },
     {
       "name": "cn-campus-recruitment",
@@ -11110,9 +11110,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3888,
+      "bytes": 4179,
       "findings": [],
-      "fingerprint": "b8870cdffa47ff4c"
+      "fingerprint": "1e3590438af4aaf7"
     },
     {
       "name": "cn-promotion-defence",
@@ -11124,9 +11124,9 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 1789,
+      "bytes": 1891,
       "findings": [],
-      "fingerprint": "f0acdf0f52d6b6e6"
+      "fingerprint": "013517e3fbfd00c5"
     },
     {
       "name": "cn-promotion-defence",
@@ -11138,9 +11138,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3888,
+      "bytes": 4179,
       "findings": [],
-      "fingerprint": "b8870cdffa47ff4c"
+      "fingerprint": "1e3590438af4aaf7"
     },
     {
       "name": "cn-quality-traceability",
@@ -11502,9 +11502,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3658,
+      "bytes": 3930,
       "findings": [],
-      "fingerprint": "9833f8c9ea3d39fe"
+      "fingerprint": "399750ba8e7653a5"
     },
     {
       "name": "cn-thesis-proposal",
@@ -11516,9 +11516,9 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 1639,
+      "bytes": 1741,
       "findings": [],
-      "fingerprint": "5b9b44d764b4dfe9"
+      "fingerprint": "61d5b873f95b9ade"
     },
     {
       "name": "cn-thesis-proposal",
@@ -11530,9 +11530,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3658,
+      "bytes": 3930,
       "findings": [],
-      "fingerprint": "9833f8c9ea3d39fe"
+      "fingerprint": "399750ba8e7653a5"
     },
     {
       "name": "cn-trade-quotation",
@@ -11880,9 +11880,9 @@
       "tier_name": "read",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5195,
+      "bytes": 5523,
       "findings": [],
-      "fingerprint": "d1b233b9a2e03924"
+      "fingerprint": "c95db00892c23140"
     },
     {
       "name": "code-simplification",
@@ -11894,9 +11894,9 @@
       "tier_name": "read",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5195,
+      "bytes": 5523,
       "findings": [],
-      "fingerprint": "d1b233b9a2e03924"
+      "fingerprint": "c95db00892c23140"
     },
     {
       "name": "cohort-analysis",
@@ -13035,16 +13035,16 @@
     {
       "name": "context-bankruptcy",
       "path": "plugins/pm-2027/skills/context-bankruptcy",
-      "description": "Summarise what Context Bankruptcy does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact].",
+      "description": "Declare bankruptcy on a long-lived AI agent's accumulated memory — audit what it currently believes, separate ground truth from stale and wrong, purge deliberately, restate the truths that survive, an",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 2,
+      "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 1035,
+      "bytes": 6064,
       "findings": [],
-      "fingerprint": "b1bcaed860240f85"
+      "fingerprint": "f4303a89e83e80b5"
     },
     {
       "name": "context-bankruptcy",
@@ -13056,9 +13056,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5790,
+      "bytes": 6064,
       "findings": [],
-      "fingerprint": "46957cded6b5dea5"
+      "fingerprint": "f4303a89e83e80b5"
     },
     {
       "name": "context-budget",
@@ -13803,6 +13803,34 @@
       "fingerprint": "678bd6a99d723871"
     },
     {
+      "name": "crop-insurance-claim",
+      "path": "plugins/pm-insurance/skills/crop-insurance-claim",
+      "description": "Make a crop or livestock insurance claim after drought, flood, pests, disease or hail: report it in time, record the loss properly, and follow up or appeal if the payout is too low or refused. Use whe",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5434,
+      "findings": [],
+      "fingerprint": "9fd4f3de69adaf8f"
+    },
+    {
+      "name": "crop-insurance-claim",
+      "path": "skills/crop-insurance-claim",
+      "description": "Make a crop or livestock insurance claim after drought, flood, pests, disease or hail: report it in time, record the loss properly, and follow up or appeal if the payout is too low or refused. Use whe",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5434,
+      "findings": [],
+      "fingerprint": "9fd4f3de69adaf8f"
+    },
+    {
       "name": "cross-border-listing",
       "path": "plugins/pm-chuhai/skills/cross-border-listing",
       "description": "Write a product listing for an overseas marketplace or store, localised for the buyer rather than translated from Chinese: title, bullet points, description, search terms and the compliance claims tha",
@@ -14232,9 +14260,9 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3247,
+      "bytes": 3556,
       "findings": [],
-      "fingerprint": "3063499976619b9f"
+      "fingerprint": "f8561cdd00fca72d"
     },
     {
       "name": "cv-honesty-check",
@@ -14246,9 +14274,37 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3247,
+      "bytes": 3556,
       "findings": [],
-      "fingerprint": "3063499976619b9f"
+      "fingerprint": "f8561cdd00fca72d"
+    },
+    {
+      "name": "daily-cash-book",
+      "path": "plugins/pm-sidehustle/skills/daily-cash-book",
+      "description": "Keep simple daily money records for a small trader, stall or home business with no accounting software: a cash book, stock count and weekly summary that show whether the business makes money and keep ",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4415,
+      "findings": [],
+      "fingerprint": "09361be7d884accf"
+    },
+    {
+      "name": "daily-cash-book",
+      "path": "skills/daily-cash-book",
+      "description": "Keep simple daily money records for a small trader, stall or home business with no accounting software: a cash book, stock count and weekly summary that show whether the business makes money and keep ",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4415,
+      "findings": [],
+      "fingerprint": "09361be7d884accf"
     },
     {
       "name": "dashboard-brief",
@@ -15618,9 +15674,9 @@
       "tier_name": "exec",
       "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 8919,
+      "bytes": 9207,
       "findings": [],
-      "fingerprint": "6b3aa0cc2db46a92"
+      "fingerprint": "97d4801d23b4b180"
     },
     {
       "name": "demo-data-generator",
@@ -15632,9 +15688,9 @@
       "tier_name": "exec",
       "file_count": 2,
       "unscanned_files": 0,
-      "bytes": 8919,
+      "bytes": 9207,
       "findings": [],
-      "fingerprint": "6b3aa0cc2db46a92"
+      "fingerprint": "97d4801d23b4b180"
     },
     {
       "name": "demo-script",
@@ -16178,9 +16234,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6889,
+      "bytes": 7206,
       "findings": [],
-      "fingerprint": "223f69177b0cbc53"
+      "fingerprint": "b4c176a7f09e0da3"
     },
     {
       "name": "digital-legacy-planner",
@@ -17289,6 +17345,34 @@
       "fingerprint": "297dcc63da935c13"
     },
     {
+      "name": "emergency-grant-application",
+      "path": "plugins/pm-emergency/skills/emergency-grant-application",
+      "description": "Apply for emergency money after a disaster, crisis or sudden hardship: government disaster assistance, local hardship and welfare funds, charity crisis grants, and employer or union funds. Use when so",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5307,
+      "findings": [],
+      "fingerprint": "b909c0094ce0194b"
+    },
+    {
+      "name": "emergency-grant-application",
+      "path": "skills/emergency-grant-application",
+      "description": "Apply for emergency money after a disaster, crisis or sudden hardship: government disaster assistance, local hardship and welfare funds, charity crisis grants, and employer or union funds. Use when so",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5307,
+      "findings": [],
+      "fingerprint": "b909c0094ce0194b"
+    },
+    {
       "name": "emil-design-eng-pointer",
       "path": "plugins/pm-design-taste/skills/emil-design-eng-pointer",
       "description": "Point to Emil Kowalski's emil-design-eng skill and explain when to use it. Use when asked how to install emil-design-eng, which skill covers UI animation and interaction polish, or what handles the mo",
@@ -17830,9 +17914,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3574,
+      "bytes": 3958,
       "findings": [],
-      "fingerprint": "f1715603ab909d50"
+      "fingerprint": "270aaa9dbf3686ed"
     },
     {
       "name": "eulogy-writer",
@@ -17844,9 +17928,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3638,
+      "bytes": 3958,
       "findings": [],
-      "fingerprint": "c672fab43e0e4178"
+      "fingerprint": "270aaa9dbf3686ed"
     },
     {
       "name": "euthanasia-conversation",
@@ -18292,9 +18376,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3356,
+      "bytes": 3613,
       "findings": [],
-      "fingerprint": "5539a87fd43c52bb"
+      "fingerprint": "118f37cde9811192"
     },
     {
       "name": "executive-cv",
@@ -18306,9 +18390,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3356,
+      "bytes": 3613,
       "findings": [],
-      "fingerprint": "5539a87fd43c52bb"
+      "fingerprint": "118f37cde9811192"
     },
     {
       "name": "executive-presence",
@@ -18908,9 +18992,9 @@
       "tier_name": "exec",
       "file_count": 2,
       "unscanned_files": 1,
-      "bytes": 15406,
+      "bytes": 15697,
       "findings": [],
-      "fingerprint": "eb35dbac658a2072"
+      "fingerprint": "b36e91c9b82c71ae"
     },
     {
       "name": "explorer-viewer-builder",
@@ -18922,9 +19006,9 @@
       "tier_name": "exec",
       "file_count": 2,
       "unscanned_files": 1,
-      "bytes": 15406,
+      "bytes": 15697,
       "findings": [],
-      "fingerprint": "eb35dbac658a2072"
+      "fingerprint": "b36e91c9b82c71ae"
     },
     {
       "name": "expungement-navigator",
@@ -20021,16 +20105,16 @@
     {
       "name": "first-maintainer-month",
       "path": "plugins/pm-maintainer/skills/first-maintainer-month",
-      "description": "Summarise what First Maintainer Month does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact].",
+      "description": "Set up a new open-source project's first month so it can grow without eating its maintainer — the README that routes people correctly, CONTRIBUTING boundaries written before there are contributors, is",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 2,
+      "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 972,
+      "bytes": 6428,
       "findings": [],
-      "fingerprint": "ea5667a5c85dddb7"
+      "fingerprint": "07e200dc15223b16"
     },
     {
       "name": "first-maintainer-month",
@@ -20042,9 +20126,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6139,
+      "bytes": 6428,
       "findings": [],
-      "fingerprint": "495caf74790a55c1"
+      "fingerprint": "07e200dc15223b16"
     },
     {
       "name": "five-minds",
@@ -20077,16 +20161,16 @@
     {
       "name": "flare-day-planner",
       "path": "plugins/pm-invisible-illness/skills/flare-day-planner",
-      "description": "Summarise what Flare Day Planner does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact].",
+      "description": "Plan around flare days before they ambush you — spot your early warning signs, pre-build the reduced 'flare mode' version of your life, prepare the cancellation and support scripts in advance, and set",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 2,
+      "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 988,
+      "bytes": 6598,
       "findings": [],
-      "fingerprint": "fc779d3a44b46c0f"
+      "fingerprint": "2780956a0371844d"
     },
     {
       "name": "flare-day-planner",
@@ -20098,9 +20182,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6312,
+      "bytes": 6598,
       "findings": [],
-      "fingerprint": "527e921560fcb45e"
+      "fingerprint": "2780956a0371844d"
     },
     {
       "name": "fleet-compliance-audit-prep",
@@ -20381,6 +20465,34 @@
       "bytes": 4045,
       "findings": [],
       "fingerprint": "c90dc0a5c897151a"
+    },
+    {
+      "name": "form-explainer",
+      "path": "plugins/pm-decoders/skills/form-explainer",
+      "description": "Explain an official form field by field (tax, benefits, immigration, employment, school, health, vehicle or court forms) from a photo, PDF, pasted text or just its name and number: what it is for, wha",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5029,
+      "findings": [],
+      "fingerprint": "6065857f3b938195"
+    },
+    {
+      "name": "form-explainer",
+      "path": "skills/form-explainer",
+      "description": "Explain an official form field by field (tax, benefits, immigration, employment, school, health, vehicle or court forms) from a photo, PDF, pasted text or just its name and number: what it is for, wha",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5029,
+      "findings": [],
+      "fingerprint": "6065857f3b938195"
     },
     {
       "name": "form-filler-operator",
@@ -20689,6 +20801,34 @@
       "bytes": 4177,
       "findings": [],
       "fingerprint": "9210ee9b9500e0ca"
+    },
+    {
+      "name": "functional-assessment-prep",
+      "path": "plugins/pm-accessibility/skills/functional-assessment-prep",
+      "description": "Prepare for a disability or illness benefit assessment (a functional or work capability assessment, a medical review, a disability evaluation interview): describe how the condition affects daily life ",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5596,
+      "findings": [],
+      "fingerprint": "6780dc9d2df3799b"
+    },
+    {
+      "name": "functional-assessment-prep",
+      "path": "skills/functional-assessment-prep",
+      "description": "Prepare for a disability or illness benefit assessment (a functional or work capability assessment, a medical review, a disability evaluation interview): describe how the condition affects daily life ",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5596,
+      "findings": [],
+      "fingerprint": "6780dc9d2df3799b"
     },
     {
       "name": "fundraising-faq",
@@ -21218,9 +21358,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3283,
+      "bytes": 3561,
       "findings": [],
-      "fingerprint": "0cdb78b0e07f3e28"
+      "fingerprint": "e70e7976ef8aadb9"
     },
     {
       "name": "graduate-cv",
@@ -21232,9 +21372,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3283,
+      "bytes": 3561,
       "findings": [],
-      "fingerprint": "0cdb78b0e07f3e28"
+      "fingerprint": "e70e7976ef8aadb9"
     },
     {
       "name": "grant-proposal",
@@ -23122,9 +23262,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4245,
+      "bytes": 4305,
       "findings": [],
-      "fingerprint": "6799ae486139ad3a"
+      "fingerprint": "f3ff17fd553727e5"
     },
     {
       "name": "insurance-claim",
@@ -23136,9 +23276,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4245,
+      "bytes": 4305,
       "findings": [],
-      "fingerprint": "6799ae486139ad3a"
+      "fingerprint": "f3ff17fd553727e5"
     },
     {
       "name": "insurance-claim-appeal",
@@ -24032,9 +24172,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3008,
+      "bytes": 3274,
       "findings": [],
-      "fingerprint": "c4fcf4c404603646"
+      "fingerprint": "cb36382b03ea4dd1"
     },
     {
       "name": "jp-ringisho",
@@ -24046,9 +24186,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3008,
+      "bytes": 3274,
       "findings": [],
-      "fingerprint": "c4fcf4c404603646"
+      "fingerprint": "cb36382b03ea4dd1"
     },
     {
       "name": "jp-tax-return",
@@ -24340,9 +24480,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3928,
+      "bytes": 4210,
       "findings": [],
-      "fingerprint": "97b45828d3b4b837"
+      "fingerprint": "174ca647499b367f"
     },
     {
       "name": "kr-cover-letter",
@@ -24354,9 +24494,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3928,
+      "bytes": 4210,
       "findings": [],
-      "fingerprint": "97b45828d3b4b837"
+      "fingerprint": "174ca647499b367f"
     },
     {
       "name": "kr-severance-pay",
@@ -24998,9 +25138,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6218,
+      "bytes": 6527,
       "findings": [],
-      "fingerprint": "faf5cdf87b1d2383"
+      "fingerprint": "24a9649c28f0ef6a"
     },
     {
       "name": "legal-brief",
@@ -25675,6 +25815,34 @@
       "fingerprint": "58cadeb5400416ea"
     },
     {
+      "name": "lost-documents-replacement",
+      "path": "plugins/pm-emergency/skills/lost-documents-replacement",
+      "description": "Replace identity and important documents lost or destroyed in a fire, flood, theft or move, in the order that unlocks the rest: ID and birth records first, then bank, benefits, property, medical and e",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5213,
+      "findings": [],
+      "fingerprint": "74213ffea3e44590"
+    },
+    {
+      "name": "lost-documents-replacement",
+      "path": "skills/lost-documents-replacement",
+      "description": "Replace identity and important documents lost or destroyed in a fire, flood, theft or move, in the order that unlocks the rest: ID and birth records first, then bank, benefits, property, medical and e",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5213,
+      "findings": [],
+      "fingerprint": "74213ffea3e44590"
+    },
+    {
       "name": "love-letter-helper",
       "path": "plugins/pm-family/skills/love-letter-helper",
       "description": "Help you write a heartfelt letter to someone you love — for an anniversary, a hard time, a birthday, or just because — that sounds like you and says what you actually mean. Use when asked to help me w",
@@ -25913,6 +26081,34 @@
       "fingerprint": "2215fa214c1bf15b"
     },
     {
+      "name": "market-stall-pricing",
+      "path": "plugins/pm-sidehustle/skills/market-stall-pricing",
+      "description": "Price goods for a market stall, street stall or small shop so every sale covers its costs, and hold your price when customers bargain. Use when someone says 'how much should I sell this for', 'custome",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4579,
+      "findings": [],
+      "fingerprint": "2c58a75389e45ccd"
+    },
+    {
+      "name": "market-stall-pricing",
+      "path": "skills/market-stall-pricing",
+      "description": "Price goods for a market stall, street stall or small shop so every sale covers its costs, and hold your price when customers bargain. Use when someone says 'how much should I sell this for', 'custome",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4579,
+      "findings": [],
+      "fingerprint": "2c58a75389e45ccd"
+    },
+    {
       "name": "marketing-funnel-plan",
       "path": "plugins/pm-growth/skills/marketing-funnel-plan",
       "description": "Plan a full-funnel marketing strategy from awareness to retention. Use when asked to build a marketing funnel, map the customer journey to tactics, plan demand generation, or diagnose where a funnel l",
@@ -25999,16 +26195,16 @@
     {
       "name": "masking-budget",
       "path": "plugins/pm-neurodivergent/skills/masking-budget",
-      "description": "Summarise what Masking Budget does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact].",
+      "description": "Treat neurodivergent masking as a daily energy budget — audit what passing as neurotypical actually costs you, where the spend is worth it, where you can safely drop the mask, and how to plan a heavy-",
       "grade": "A",
       "score": 100,
       "tier": 0,
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 998,
+      "bytes": 6115,
       "findings": [],
-      "fingerprint": "0f920079ca5f3f9a"
+      "fingerprint": "7560a27722a9501f"
     },
     {
       "name": "masking-budget",
@@ -26020,9 +26216,9 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5826,
+      "bytes": 6115,
       "findings": [],
-      "fingerprint": "49efd3d13d238b74"
+      "fingerprint": "7560a27722a9501f"
     },
     {
       "name": "mcp-server-spec",
@@ -26601,16 +26797,16 @@
     {
       "name": "meltdown-map",
       "path": "plugins/pm-neurodivergent/skills/meltdown-map",
-      "description": "Summarise what Meltdown Map does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact].",
+      "description": "Build your personal early-warning system for meltdowns or shutdowns — your specific rising signs, the triggers that stack, what actually helps at each stage, and a plain plan you can hand to the peopl",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 2,
+      "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 966,
+      "bytes": 6320,
       "findings": [],
-      "fingerprint": "73ff15a89c917ec2"
+      "fingerprint": "de0b51e579849246"
     },
     {
       "name": "meltdown-map",
@@ -26622,9 +26818,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6014,
+      "bytes": 6320,
       "findings": [],
-      "fingerprint": "17fbe78a48b2597c"
+      "fingerprint": "de0b51e579849246"
     },
     {
       "name": "memoir-story-capture",
@@ -26975,6 +27171,34 @@
       "bytes": 3671,
       "findings": [],
       "fingerprint": "da8a599244096974"
+    },
+    {
+      "name": "microloan-comparison",
+      "path": "plugins/pm-money/skills/microloan-comparison",
+      "description": "Compare small loans from microfinance institutions, lending apps, savings groups and moneylenders by what they really cost, including flat versus reducing-balance interest, fees, compulsory savings an",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5124,
+      "findings": [],
+      "fingerprint": "3ca0bcd5eee69a40"
+    },
+    {
+      "name": "microloan-comparison",
+      "path": "skills/microloan-comparison",
+      "description": "Compare small loans from microfinance institutions, lending apps, savings groups and moneylenders by what they really cost, including flat versus reducing-balance interest, fees, compulsory savings an",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5124,
+      "findings": [],
+      "fingerprint": "3ca0bcd5eee69a40"
     },
     {
       "name": "microservices-decomposition",
@@ -27759,6 +27983,34 @@
       "bytes": 4567,
       "findings": [],
       "fingerprint": "74389747a39bc503"
+    },
+    {
+      "name": "newcomer-school-enrolment",
+      "path": "plugins/pm-newcomer/skills/newcomer-school-enrolment",
+      "description": "Get a child into school after moving to a new country: who to contact, the documents schools ask for, what to do when papers are missing, language support, and the right to a place. Use when someone s",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5283,
+      "findings": [],
+      "fingerprint": "7a7dc41fb60ec584"
+    },
+    {
+      "name": "newcomer-school-enrolment",
+      "path": "skills/newcomer-school-enrolment",
+      "description": "Get a child into school after moving to a new country: who to contact, the documents schools ask for, what to do when papers are missing, language support, and the right to a place. Use when someone s",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5283,
+      "findings": [],
+      "fingerprint": "7a7dc41fb60ec584"
     },
     {
       "name": "newsletter-digest-brief",
@@ -30605,16 +30857,16 @@
     {
       "name": "press-kit-epk",
       "path": "plugins/pm-musician/skills/press-kit-epk",
-      "description": "Summarise what Press Kit Epk does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact].",
+      "description": "Build an electronic press kit that bookers and blogs actually read — the three-sentence bio that isn't 'genre-defying', a one-page layout with streaming numbers presented honestly, the photo and live-",
       "grade": "A",
       "score": 100,
       "tier": 2,
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 916,
+      "bytes": 6553,
       "findings": [],
-      "fingerprint": "dd00ac990f12d055"
+      "fingerprint": "d64bb97ee2087603"
     },
     {
       "name": "press-kit-epk",
@@ -30626,9 +30878,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6233,
+      "bytes": 6553,
       "findings": [],
-      "fingerprint": "28b710bf596db63c"
+      "fingerprint": "d64bb97ee2087603"
     },
     {
       "name": "press-release",
@@ -32348,9 +32600,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4046,
+      "bytes": 4385,
       "findings": [],
-      "fingerprint": "ece3775007559ad8"
+      "fingerprint": "07db915d0d540891"
     },
     {
       "name": "readme-benefit-writer",
@@ -32362,9 +32614,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4046,
+      "bytes": 4385,
       "findings": [],
-      "fingerprint": "ece3775007559ad8"
+      "fingerprint": "07db915d0d540891"
     },
     {
       "name": "readme-writer",
@@ -32888,9 +33140,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3036,
+      "bytes": 3338,
       "findings": [],
-      "fingerprint": "1e5935b0826a432d"
+      "fingerprint": "ac3963f89dfbb4f6"
     },
     {
       "name": "referral-request",
@@ -32902,9 +33154,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3036,
+      "bytes": 3338,
       "findings": [],
-      "fingerprint": "1e5935b0826a432d"
+      "fingerprint": "ac3963f89dfbb4f6"
     },
     {
       "name": "refinance-breakeven",
@@ -33409,6 +33661,34 @@
       "bytes": 3838,
       "findings": [],
       "fingerprint": "bdbe9a287f14fc9e"
+    },
+    {
+      "name": "renting-after-disaster-damage",
+      "path": "plugins/pm-renters/skills/renting-after-disaster-damage",
+      "description": "Know your position as a tenant when a fire, flood, storm or other disaster damages your rented home: whether rent is still due, who repairs what, what your landlord's and your own insurance cover, mov",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5357,
+      "findings": [],
+      "fingerprint": "82b89028a7d4bd91"
+    },
+    {
+      "name": "renting-after-disaster-damage",
+      "path": "skills/renting-after-disaster-damage",
+      "description": "Know your position as a tenant when a fire, flood, storm or other disaster damages your rented home: whether rent is still due, who repairs what, what your landlord's and your own insurance cover, mov",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5357,
+      "findings": [],
+      "fingerprint": "82b89028a7d4bd91"
     },
     {
       "name": "repair-after-a-fight",
@@ -34036,9 +34316,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3557,
+      "bytes": 3884,
       "findings": [],
-      "fingerprint": "403873c90a57ea87"
+      "fingerprint": "a2fe2a54f4618b54"
     },
     {
       "name": "returner-cv",
@@ -34050,9 +34330,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 3557,
+      "bytes": 3884,
       "findings": [],
-      "fingerprint": "403873c90a57ea87"
+      "fingerprint": "a2fe2a54f4618b54"
     },
     {
       "name": "review-comments-resolver",
@@ -35282,9 +35562,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4537,
+      "bytes": 4865,
       "findings": [],
-      "fingerprint": "15a0f496281b81c7"
+      "fingerprint": "7ea518d7c54aea30"
     },
     {
       "name": "schedule-recipe",
@@ -35296,9 +35576,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4537,
+      "bytes": 4865,
       "findings": [],
-      "fingerprint": "15a0f496281b81c7"
+      "fingerprint": "7ea518d7c54aea30"
     },
     {
       "name": "schema-markup",
@@ -37409,16 +37689,16 @@
     {
       "name": "speak-at-the-council",
       "path": "plugins/pm-committee/skills/speak-at-the-council",
-      "description": "Summarise what Speak At The Council does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact].",
+      "description": "Turn three minutes at a council or community meeting into the version that actually moves the decision — a public comment built as ask-story-evidence-ask, timed to the real decision process, with a ne",
       "grade": "A",
       "score": 100,
       "tier": 2,
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 972,
+      "bytes": 6304,
       "findings": [],
-      "fingerprint": "ce269df2679da6e3"
+      "fingerprint": "4371a7ab2a17f079"
     },
     {
       "name": "speak-at-the-council",
@@ -37430,9 +37710,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5971,
+      "bytes": 6304,
       "findings": [],
-      "fingerprint": "0713f0a35918a723"
+      "fingerprint": "4371a7ab2a17f079"
     },
     {
       "name": "spoon-planner",
@@ -38963,16 +39243,16 @@
     {
       "name": "tabletop-negotiator",
       "path": "plugins/pm-tabletop/skills/tabletop-negotiator",
-      "description": "Summarise what Tabletop Negotiator does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact].",
+      "description": "Practice the table-talk that wins negotiation board games — play out a Catan-style trade, a Diplomacy-style alliance, or a Monopoly-style deal against an opponent with a hidden agenda, then get an out",
       "grade": "A",
       "score": 100,
-      "tier": 0,
-      "tier_name": "text",
+      "tier": 1,
+      "tier_name": "read",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 1001,
+      "bytes": 5517,
       "findings": [],
-      "fingerprint": "52cc16df1b5469d5"
+      "fingerprint": "3de8dd76e52245ce"
     },
     {
       "name": "tabletop-negotiator",
@@ -38984,9 +39264,9 @@
       "tier_name": "read",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 5159,
+      "bytes": 5517,
       "findings": [],
-      "fingerprint": "c2735528f985852d"
+      "fingerprint": "3de8dd76e52245ce"
     },
     {
       "name": "task-to-first-step",
@@ -40174,9 +40454,9 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6883,
+      "bytes": 7163,
       "findings": [],
-      "fingerprint": "e079df7a727ace91"
+      "fingerprint": "f3b74253225d7da2"
     },
     {
       "name": "the-school-appeal",
@@ -40188,9 +40468,9 @@
       "tier_name": "text",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 6883,
+      "bytes": 7163,
       "findings": [],
-      "fingerprint": "e079df7a727ace91"
+      "fingerprint": "f3b74253225d7da2"
     },
     {
       "name": "the-second-opinion",
