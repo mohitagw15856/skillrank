@@ -2,7 +2,7 @@
   "slug": "obra-superpowers",
   "name": "obra/superpowers",
   "url": "https://github.com/obra/superpowers",
-  "scanned_at": "2026-10-20",
+  "scanned_at": "2026-10-27",
   "scanner_version": 1,
   "skill_count": 15,
   "average_score": 97.4,
@@ -38,7 +38,7 @@
       "tier_name": "exec",
       "file_count": 8,
       "unscanned_files": 1,
-      "bytes": 73842,
+      "bytes": 77371,
       "findings": [
         {
           "id": "destructive",
@@ -92,7 +92,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "d81fac31aa693b32"
+      "fingerprint": "5c502001c3ca901e"
     },
     {
       "name": "diagnosing-superpowers",
@@ -104,7 +104,7 @@
       "tier_name": "exec",
       "file_count": 20,
       "unscanned_files": 0,
-      "bytes": 40748,
+      "bytes": 41606,
       "findings": [
         {
           "id": "network-egress",
@@ -137,7 +137,7 @@
           "evidence": "Without curl, hand over `https://github.com/obra/superpowers/issues?q=<terms>`."
         }
       ],
-      "fingerprint": "3ad9865f7f901716"
+      "fingerprint": "191579eed93017c8"
     },
     {
       "name": "subagent-driven-development",
@@ -147,22 +147,22 @@
       "score": 92,
       "tier": 3,
       "tier_name": "exec",
-      "file_count": 7,
+      "file_count": 14,
       "unscanned_files": 3,
-      "bytes": 59400,
+      "bytes": 57174,
       "findings": [
         {
           "id": "destructive",
           "severity": "medium",
           "declared_severity": "high",
           "context": "inline-code",
-          "file": "SKILL.md",
-          "line": 483,
+          "file": "references/final-review.md",
+          "line": 43,
           "match": "rm -rf <workspace>`) — the git history is",
           "evidence": "delete this plan's workspace (`rm -rf <workspace>`) — the git history is"
         }
       ],
-      "fingerprint": "e9d50181cd9c9169"
+      "fingerprint": "5badea686eb87de3"
     },
     {
       "name": "writing-skills",
@@ -172,22 +172,22 @@
       "score": 97,
       "tier": 3,
       "tier_name": "exec",
-      "file_count": 7,
+      "file_count": 10,
       "unscanned_files": 1,
-      "bytes": 107346,
+      "bytes": 108915,
       "findings": [
         {
           "id": "unpinned-install",
           "severity": "low",
           "declared_severity": "low",
           "context": "fence",
-          "file": "anthropic-best-practices.md",
+          "file": "references/anthropic-best-practices.md",
           "line": 1082,
           "match": "pip install pypdf`",
           "evidence": "\"Install required package: `pip install pypdf`"
         }
       ],
-      "fingerprint": "7d80e24673989fe1"
+      "fingerprint": "35bb58ede1cbfdfb"
     },
     {
       "name": "dispatching-parallel-agents",
@@ -213,9 +213,9 @@
       "tier_name": "write",
       "file_count": 3,
       "unscanned_files": 2,
-      "bytes": 22896,
+      "bytes": 20644,
       "findings": [],
-      "fingerprint": "9a79bdc8768895b9"
+      "fingerprint": "fa8ff6b2dbd7d06a"
     },
     {
       "name": "finishing-a-development-branch",

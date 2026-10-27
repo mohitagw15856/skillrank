@@ -2,22 +2,22 @@
   "slug": "pm-claude-skills",
   "name": "pm-claude-skills",
   "url": "https://github.com/mohitagw15856/pm-claude-skills",
-  "scanned_at": "2026-10-20",
+  "scanned_at": "2026-10-27",
   "scanner_version": 1,
-  "skill_count": 2841,
+  "skill_count": 2879,
   "average_score": 99.7,
   "repo_grade": "A",
   "distribution": {
-    "A": 2831,
+    "A": 2869,
     "B": 6,
     "C": 4,
     "D": 0,
     "F": 0
   },
   "tiers": {
-    "0": 858,
-    "1": 405,
-    "2": 1271,
+    "0": 862,
+    "1": 407,
+    "2": 1303,
     "3": 307,
     "4": 0
   },
@@ -5213,6 +5213,62 @@
       "fingerprint": "91d6a380a24c081b"
     },
     {
+      "name": "agent-kill-switch-plan",
+      "path": "plugins/pm-duet/skills/agent-kill-switch-plan",
+      "description": "Prepare, before you need it, the runbook for stopping a proactive agent that is misbehaving: how to pause it in seconds, which connections to revoke in what order, how to check what it did, who to tel",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5185,
+      "findings": [],
+      "fingerprint": "04856f069bdc2246"
+    },
+    {
+      "name": "agent-kill-switch-plan",
+      "path": "skills/agent-kill-switch-plan",
+      "description": "Prepare, before you need it, the runbook for stopping a proactive agent that is misbehaving: how to pause it in seconds, which connections to revoke in what order, how to check what it did, who to tel",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5185,
+      "findings": [],
+      "fingerprint": "04856f069bdc2246"
+    },
+    {
+      "name": "agent-negotiation-brief",
+      "path": "plugins/pm-agentnative/skills/agent-negotiation-brief",
+      "description": "Brief an AI agent that will negotiate for you with another party's agent or a person (a refund, a price, a meeting time, a contract term): your goal, your opening, your limits, your walk-away point, w",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4007,
+      "findings": [],
+      "fingerprint": "d7c4377cdbef135f"
+    },
+    {
+      "name": "agent-negotiation-brief",
+      "path": "skills/agent-negotiation-brief",
+      "description": "Brief an AI agent that will negotiate for you with another party's agent or a person (a refund, a price, a meeting time, a contract term): your goal, your opening, your limits, your walk-away point, w",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4007,
+      "findings": [],
+      "fingerprint": "d7c4377cdbef135f"
+    },
+    {
       "name": "agent-observability-spec",
       "path": "plugins/pm-agentops/skills/agent-observability-spec",
       "description": "Specify the tracing, metrics, and alerting for an AI agent or LLM feature in production. Use when asked what to log for an LLM app, design agent tracing or spans, define quality and cost monitors, or ",
@@ -5239,6 +5295,34 @@
       "bytes": 5812,
       "findings": [],
       "fingerprint": "f604a564e167a788"
+    },
+    {
+      "name": "agent-project-file",
+      "path": "plugins/pm-agentnative/skills/agent-project-file",
+      "description": "Set up the project file an AI agent keeps for work that runs over days or weeks: the goal, the definition of done, milestones, the current state, decisions made, open questions, and the exact point to",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3631,
+      "findings": [],
+      "fingerprint": "0b575b5a88b379df"
+    },
+    {
+      "name": "agent-project-file",
+      "path": "skills/agent-project-file",
+      "description": "Set up the project file an AI agent keeps for work that runs over days or weeks: the goal, the definition of done, milestones, the current state, decisions made, open questions, and the exact point to",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3631,
+      "findings": [],
+      "fingerprint": "0b575b5a88b379df"
     },
     {
       "name": "agent-readiness-audit",
@@ -5281,6 +5365,34 @@
       "bytes": 930,
       "findings": [],
       "fingerprint": "c5663a58a969fde5"
+    },
+    {
+      "name": "agent-spending-mandate",
+      "path": "plugins/pm-agentnative/skills/agent-spending-mandate",
+      "description": "Write a spending mandate that lets an AI agent buy things for you within strict limits: what it may buy, from whom, up to how much per purchase and in total, until when, and what needs your yes. Use w",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3816,
+      "findings": [],
+      "fingerprint": "368baef32286ef0a"
+    },
+    {
+      "name": "agent-spending-mandate",
+      "path": "skills/agent-spending-mandate",
+      "description": "Write a spending mandate that lets an AI agent buy things for you within strict limits: what it may buy, from whom, up to how much per purchase and in total, until when, and what needs your yes. Use w",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3816,
+      "findings": [],
+      "fingerprint": "368baef32286ef0a"
     },
     {
       "name": "aging-in-place-assessment",
@@ -6163,6 +6275,34 @@
       "bytes": 5505,
       "findings": [],
       "fingerprint": "25e80c7820ea2947"
+    },
+    {
+      "name": "approval-policy-designer",
+      "path": "plugins/pm-duet/skills/approval-policy-designer",
+      "description": "Design the approval policy for a proactive agent across every connected app: for each kind of action, whether it may act alone, must ask first, or must never do it, with money limits, recipient rules ",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4936,
+      "findings": [],
+      "fingerprint": "fea69e845e432156"
+    },
+    {
+      "name": "approval-policy-designer",
+      "path": "skills/approval-policy-designer",
+      "description": "Design the approval policy for a proactive agent across every connected app: for each kind of action, whether it may act alone, must ask first, or must never do it, with money limits, recipient rules ",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4936,
+      "findings": [],
+      "fingerprint": "fea69e845e432156"
     },
     {
       "name": "architectural-programme-brief",
@@ -8713,6 +8853,34 @@
       "fingerprint": "05fffb29218ad549"
     },
     {
+      "name": "cash-watch",
+      "path": "plugins/pm-duet/skills/cash-watch",
+      "description": "Set up a proactive agent to watch a small business's cash every day across Stripe, QuickBooks or Xero and the bank feed: today's cash position, money due in and out this week, failed payments, new dis",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4131,
+      "findings": [],
+      "fingerprint": "570f18738d23802e"
+    },
+    {
+      "name": "cash-watch",
+      "path": "skills/cash-watch",
+      "description": "Set up a proactive agent to watch a small business's cash every day across Stripe, QuickBooks or Xero and the bank feed: today's cash position, money due in and out this week, failed payments, new dis",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4131,
+      "findings": [],
+      "fingerprint": "570f18738d23802e"
+    },
+    {
       "name": "category-page-brief",
       "path": "plugins/pm-ecommerce/skills/category-page-brief",
       "description": "Plan an e-commerce category / collection page that ranks and merchandises well. Use when asked to design a category page, a PLP (product listing page), a collection page, or to improve category SEO an",
@@ -8902,11 +9070,11 @@
       "score": 100,
       "tier": 2,
       "tier_name": "write",
-      "file_count": 3,
+      "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 9316,
+      "bytes": 15712,
       "findings": [],
-      "fingerprint": "7fe8e3212c557330"
+      "fingerprint": "1ef796d3da5287f6"
     },
     {
       "name": "changelog-generator",
@@ -8918,9 +9086,9 @@
       "tier_name": "write",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 15242,
+      "bytes": 15712,
       "findings": [],
-      "fingerprint": "eee9a8404ca6e2a8"
+      "fingerprint": "1ef796d3da5287f6"
     },
     {
       "name": "changelog-writer",
@@ -12538,9 +12706,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4162,
+      "bytes": 4475,
       "findings": [],
-      "fingerprint": "84f74ecda033318b"
+      "fingerprint": "17beeaac550fb835"
     },
     {
       "name": "competitive-intelligence-monitor",
@@ -12552,9 +12720,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4162,
+      "bytes": 4475,
       "findings": [],
-      "fingerprint": "84f74ecda033318b"
+      "fingerprint": "17beeaac550fb835"
     },
     {
       "name": "competitive-intelligence-monitor",
@@ -12566,9 +12734,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4162,
+      "bytes": 4475,
       "findings": [],
-      "fingerprint": "84f74ecda033318b"
+      "fingerprint": "17beeaac550fb835"
     },
     {
       "name": "competitive-scan-lite",
@@ -12779,6 +12947,34 @@
       "bytes": 6209,
       "findings": [],
       "fingerprint": "f1ec4bd1f727a586"
+    },
+    {
+      "name": "computer-use-runbook",
+      "path": "plugins/pm-agentnative/skills/computer-use-runbook",
+      "description": "Write the step-by-step runbook a computer-use or browser agent follows to finish a real online task, such as cancelling a subscription or changing an energy supplier: what to look for on screen, one a",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4675,
+      "findings": [],
+      "fingerprint": "47bb7cc86049f8a0"
+    },
+    {
+      "name": "computer-use-runbook",
+      "path": "skills/computer-use-runbook",
+      "description": "Write the step-by-step runbook a computer-use or browser agent follows to finish a real online task, such as cancelling a subscription or changing an energy supplier: what to look for on screen, one a",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 4675,
+      "findings": [],
+      "fingerprint": "47bb7cc86049f8a0"
     },
     {
       "name": "condolence-message-helper",
@@ -13801,6 +13997,34 @@
       "bytes": 5789,
       "findings": [],
       "fingerprint": "678bd6a99d723871"
+    },
+    {
+      "name": "crm-hygiene-sweep",
+      "path": "plugins/pm-duet/skills/crm-hygiene-sweep",
+      "description": "Have a proactive agent sweep a CRM (HubSpot, Salesforce, Pipedrive) on a schedule for the things that quietly rot a pipeline: deals with no next step, close dates in the past, deals untouched for week",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3489,
+      "findings": [],
+      "fingerprint": "978f3873a24d1d7d"
+    },
+    {
+      "name": "crm-hygiene-sweep",
+      "path": "skills/crm-hygiene-sweep",
+      "description": "Have a proactive agent sweep a CRM (HubSpot, Salesforce, Pipedrive) on a schedule for the things that quietly rot a pipeline: deals with no next step, close dates in the past, deals untouched for week",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3489,
+      "findings": [],
+      "fingerprint": "978f3873a24d1d7d"
     },
     {
       "name": "crop-insurance-claim",
@@ -15562,9 +15786,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4189,
+      "bytes": 4502,
       "findings": [],
-      "fingerprint": "369daa9408e8b243"
+      "fingerprint": "2e7963b3db6cda9b"
     },
     {
       "name": "delta-briefing",
@@ -15576,9 +15800,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4189,
+      "bytes": 4502,
       "findings": [],
-      "fingerprint": "369daa9408e8b243"
+      "fingerprint": "2e7963b3db6cda9b"
     },
     {
       "name": "demand-forecast-review",
@@ -16526,11 +16750,11 @@
       "score": 100,
       "tier": 2,
       "tier_name": "write",
-      "file_count": 3,
+      "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 11495,
+      "bytes": 20004,
       "findings": [],
-      "fingerprint": "ed9a5f80d83102b4"
+      "fingerprint": "02142f2848a2a3f6"
     },
     {
       "name": "discovery-interview-guide",
@@ -16542,9 +16766,9 @@
       "tier_name": "write",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 19513,
+      "bytes": 20004,
       "findings": [],
-      "fingerprint": "4b65d8a6461bf692"
+      "fingerprint": "02142f2848a2a3f6"
     },
     {
       "name": "dispute-letter",
@@ -17455,6 +17679,34 @@
       "bytes": 3536,
       "findings": [],
       "fingerprint": "3fd065b814abdc3f"
+    },
+    {
+      "name": "end-of-day-report",
+      "path": "plugins/pm-duet/skills/end-of-day-report",
+      "description": "Produce an end-of-day report an unattended agent can send honestly: what shipped (verified), what is drafted or waiting, what is blocked and on whom, and tomorrow's first action. Use when asked for an",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3107,
+      "findings": [],
+      "fingerprint": "31159b3af80a3c04"
+    },
+    {
+      "name": "end-of-day-report",
+      "path": "skills/end-of-day-report",
+      "description": "Produce an end-of-day report an unattended agent can send honestly: what shipped (verified), what is drafted or waiting, what is blocked and on whom, and tomorrow's first action. Use when asked for an",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3107,
+      "findings": [],
+      "fingerprint": "31159b3af80a3c04"
     },
     {
       "name": "end-of-life-wishes-conversation",
@@ -20448,9 +20700,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4045,
+      "bytes": 4348,
       "findings": [],
-      "fingerprint": "c90dc0a5c897151a"
+      "fingerprint": "368c143f757ac093"
     },
     {
       "name": "followup-sweep",
@@ -20462,9 +20714,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4045,
+      "bytes": 4348,
       "findings": [],
-      "fingerprint": "c90dc0a5c897151a"
+      "fingerprint": "368c143f757ac093"
     },
     {
       "name": "form-explainer",
@@ -22898,9 +23150,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4392,
+      "bytes": 4900,
       "findings": [],
-      "fingerprint": "0f99de0479b8b8a3"
+      "fingerprint": "9350f7cce36dfad3"
     },
     {
       "name": "inbox-triage-live",
@@ -22912,9 +23164,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4392,
+      "bytes": 4900,
       "findings": [],
-      "fingerprint": "0f99de0479b8b8a3"
+      "fingerprint": "9350f7cce36dfad3"
     },
     {
       "name": "inbox-unsubscribe-purge",
@@ -23391,6 +23643,34 @@
       "bytes": 10596,
       "findings": [],
       "fingerprint": "8e574622095da3b0"
+    },
+    {
+      "name": "interrupt-rules",
+      "path": "plugins/pm-duet/skills/interrupt-rules",
+      "description": "Write the between-brief alert rules for a proactive agent: exactly what may interrupt you, what waits for the next brief, and the wording of an interruption. Use when asked to set interrupt rules, onl",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3705,
+      "findings": [],
+      "fingerprint": "8a498623ab1f55cb"
+    },
+    {
+      "name": "interrupt-rules",
+      "path": "skills/interrupt-rules",
+      "description": "Write the between-brief alert rules for a proactive agent: exactly what may interrupt you, what waits for the next brief, and the wording of an interruption. Use when asked to set interrupt rules, onl",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3705,
+      "findings": [],
+      "fingerprint": "8a498623ab1f55cb"
     },
     {
       "name": "interview-me",
@@ -24732,9 +25012,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4985,
+      "bytes": 5292,
       "findings": [],
-      "fingerprint": "54bd900ee6fb8c8c"
+      "fingerprint": "b9ac1802da872fe7"
     },
     {
       "name": "late-invoice-chaser",
@@ -24746,9 +25026,9 @@
       "tier_name": "write",
       "file_count": 1,
       "unscanned_files": 0,
-      "bytes": 4985,
+      "bytes": 5292,
       "findings": [],
-      "fingerprint": "54bd900ee6fb8c8c"
+      "fingerprint": "b9ac1802da872fe7"
     },
     {
       "name": "late-invoice-escalation",
@@ -27509,6 +27789,34 @@
       "fingerprint": "f8c442102ad37176"
     },
     {
+      "name": "morning-brief-designer",
+      "path": "plugins/pm-duet/skills/morning-brief-designer",
+      "description": "Design a proactive agent's morning brief: which connected sources it reads, what earns a line, the fixed section order and length cap, and the wording rules that keep it honest. Use when asked to desi",
+      "grade": "A",
+      "score": 100,
+      "tier": 1,
+      "tier_name": "read",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3807,
+      "findings": [],
+      "fingerprint": "92070229c74d210d"
+    },
+    {
+      "name": "morning-brief-designer",
+      "path": "skills/morning-brief-designer",
+      "description": "Design a proactive agent's morning brief: which connected sources it reads, what earns a line, the fixed section order and length cap, and the wording rules that keep it honest. Use when asked to desi",
+      "grade": "A",
+      "score": 100,
+      "tier": 1,
+      "tier_name": "read",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3807,
+      "findings": [],
+      "fingerprint": "92070229c74d210d"
+    },
+    {
       "name": "morning-intelligence",
       "path": "plugins/pm-autopilot/skills/morning-intelligence",
       "description": "Interviews you across 15 questions to capture your role, topics, sources, exclusions, and format preferences, then writes a master prompt you can paste into a scheduled task or Claude Code Routine. Us",
@@ -29343,6 +29651,34 @@
       "fingerprint": "0cd35e6739dae851"
     },
     {
+      "name": "payroll-eve-check",
+      "path": "plugins/pm-duet/skills/payroll-eve-check",
+      "description": "Have a proactive agent check payroll the day before it runs in Gusto, Deel, Xero Payroll or similar: unusual pay changes, new starters and leavers, missing approvals, enough cash in the funding accoun",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3762,
+      "findings": [],
+      "fingerprint": "4c99f2152a37d34f"
+    },
+    {
+      "name": "payroll-eve-check",
+      "path": "skills/payroll-eve-check",
+      "description": "Have a proactive agent check payroll the day before it runs in Gusto, Deel, Xero Payroll or similar: unusual pay changes, new starters and leavers, missing approvals, enough cash in the funding accoun",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3762,
+      "findings": [],
+      "fingerprint": "4c99f2152a37d34f"
+    },
+    {
       "name": "paywall-optimization",
       "path": "plugins/pm-growth/skills/paywall-optimization",
       "description": "Design or optimize a paywall / upgrade screen to convert free users to paid without killing trust. Use when asked to improve a paywall, upgrade prompt, or free-to-paid conversion, or to decide what to",
@@ -30769,6 +31105,34 @@
       "bytes": 4408,
       "findings": [],
       "fingerprint": "f84811b985c7869b"
+    },
+    {
+      "name": "prepare-for-duet",
+      "path": "plugins/pm-duet/skills/prepare-for-duet",
+      "description": "A readiness audit for proactive agents, useful while you are still on the waitlist: what in your memory, recurring prompts, connectors and inbox habits will help or hurt an agent that acts between you",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3787,
+      "findings": [],
+      "fingerprint": "7b8775d1099b5d94"
+    },
+    {
+      "name": "prepare-for-duet",
+      "path": "skills/prepare-for-duet",
+      "description": "A readiness audit for proactive agents, useful while you are still on the waitlist: what in your memory, recurring prompts, connectors and inbox habits will help or hurt an agent that acts between you",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3787,
+      "findings": [],
+      "fingerprint": "7b8775d1099b5d94"
     },
     {
       "name": "prescription-cost-navigator",
@@ -36085,6 +36449,34 @@
       "fingerprint": "47f7b64b73148e0f"
     },
     {
+      "name": "send-approval-check",
+      "path": "plugins/pm-duet/skills/send-approval-check",
+      "description": "The gate before an agent sends anything on your behalf: one card showing recipient, sending account, subject, attachments, and the single sentence that commits you to something, so approving the wordi",
+      "grade": "A",
+      "score": 100,
+      "tier": 0,
+      "tier_name": "text",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3858,
+      "findings": [],
+      "fingerprint": "87945329220ef31e"
+    },
+    {
+      "name": "send-approval-check",
+      "path": "skills/send-approval-check",
+      "description": "The gate before an agent sends anything on your behalf: one card showing recipient, sending account, subject, attachments, and the single sentence that commits you to something, so approving the wordi",
+      "grade": "A",
+      "score": 100,
+      "tier": 0,
+      "tier_name": "text",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3858,
+      "findings": [],
+      "fingerprint": "87945329220ef31e"
+    },
+    {
       "name": "sensory-audit",
       "path": "plugins/pm-neurodivergent/skills/sensory-audit",
       "description": "Summarise what Sensory Audit does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact].",
@@ -36315,6 +36707,34 @@
       "bytes": 4386,
       "findings": [],
       "fingerprint": "b7bece0d1e9e1353"
+    },
+    {
+      "name": "shared-agent-charter",
+      "path": "plugins/pm-duet/skills/shared-agent-charter",
+      "description": "Write the charter for an AI agent a whole team shares (an OpenAI Dot in Slack or Teams, a shared Claude agent, a channel bot): who may give it instructions, which channels it works in, what it may say",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5351,
+      "findings": [],
+      "fingerprint": "24d7491965e2c485"
+    },
+    {
+      "name": "shared-agent-charter",
+      "path": "skills/shared-agent-charter",
+      "description": "Write the charter for an AI agent a whole team shares (an OpenAI Dot in Slack or Teams, a shared Claude agent, a channel bot): who may give it instructions, which channels it works in, what it may say",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5351,
+      "findings": [],
+      "fingerprint": "24d7491965e2c485"
     },
     {
       "name": "shared-drive-cleanup",
@@ -36567,6 +36987,34 @@
       "bytes": 6634,
       "findings": [],
       "fingerprint": "cf8df9338ef81854"
+    },
+    {
+      "name": "signature-pipeline-watch",
+      "path": "plugins/pm-duet/skills/signature-pipeline-watch",
+      "description": "Have a proactive agent watch documents waiting for signature in DocuSign, Adobe Sign or PandaDoc: which are stuck, for how long, with whom, which have expiry dates coming, and which signed ones still ",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3519,
+      "findings": [],
+      "fingerprint": "a8fb4dab060be895"
+    },
+    {
+      "name": "signature-pipeline-watch",
+      "path": "skills/signature-pipeline-watch",
+      "description": "Have a proactive agent watch documents waiting for signature in DocuSign, Adobe Sign or PandaDoc: which are stuck, for how long, with whom, which have expiry dates coming, and which signed ones still ",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3519,
+      "findings": [],
+      "fingerprint": "a8fb4dab060be895"
     },
     {
       "name": "singapore-cpf-explainer",
@@ -38158,9 +38606,9 @@
       "tier_name": "write",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 24870,
+      "bytes": 25593,
       "findings": [],
-      "fingerprint": "2dde54fa9f037dc8"
+      "fingerprint": "b398dd6feb0febf1"
     },
     {
       "name": "stakeholder-update",
@@ -38242,9 +38690,9 @@
       "tier_name": "write",
       "file_count": 4,
       "unscanned_files": 0,
-      "bytes": 24870,
+      "bytes": 25593,
       "findings": [],
-      "fingerprint": "2dde54fa9f037dc8"
+      "fingerprint": "b398dd6feb0febf1"
     },
     {
       "name": "standing-meeting-audit",
@@ -38273,6 +38721,34 @@
       "bytes": 5684,
       "findings": [],
       "fingerprint": "3507fc3702e8d9f4"
+    },
+    {
+      "name": "standing-orders",
+      "path": "plugins/pm-duet/skills/standing-orders",
+      "description": "Write the operating manual a proactive agent follows between your messages: who is a VIP, what it may always do, what it must never do, the tone it writes in, and when it must stop and ask. Use when a",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5355,
+      "findings": [],
+      "fingerprint": "7faea3ee75353f90"
+    },
+    {
+      "name": "standing-orders",
+      "path": "skills/standing-orders",
+      "description": "Write the operating manual a proactive agent follows between your messages: who is a VIP, what it may always do, what it must never do, the tone it writes in, and when it must stop and ask. Use when a",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 5355,
+      "findings": [],
+      "fingerprint": "7faea3ee75353f90"
     },
     {
       "name": "stargazing-tonight",
@@ -38525,6 +39001,34 @@
       "bytes": 5136,
       "findings": [],
       "fingerprint": "e0c2ec26f77659ae"
+    },
+    {
+      "name": "store-watch",
+      "path": "plugins/pm-duet/skills/store-watch",
+      "description": "Have a proactive agent watch an online shop (Shopify, WooCommerce, Etsy) for what needs the owner: best-sellers about to run out, a spike in refunds or returns on one product, bad reviews, failed orde",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3648,
+      "findings": [],
+      "fingerprint": "e492353bbdcf4761"
+    },
+    {
+      "name": "store-watch",
+      "path": "skills/store-watch",
+      "description": "Have a proactive agent watch an online shop (Shopify, WooCommerce, Etsy) for what needs the owner: best-sellers about to run out, a spike in refunds or returns on one product, bad reviews, failed orde",
+      "grade": "A",
+      "score": 100,
+      "tier": 2,
+      "tier_name": "write",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3648,
+      "findings": [],
+      "fingerprint": "e492353bbdcf4761"
     },
     {
       "name": "story-pitch",
@@ -42879,6 +43383,34 @@
       "bytes": 6044,
       "findings": [],
       "fingerprint": "d0b3b1dc90141ef8"
+    },
+    {
+      "name": "weekly-rollup",
+      "path": "plugins/pm-duet/skills/weekly-rollup",
+      "description": "Roll a week of daily reports and agent activity into one honest weekly summary: trajectory against goals, what shipped with proof, the recurring blocker, and what to change next week. Use when asked f",
+      "grade": "A",
+      "score": 100,
+      "tier": 0,
+      "tier_name": "text",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3222,
+      "findings": [],
+      "fingerprint": "4654a0f43a92a8dd"
+    },
+    {
+      "name": "weekly-rollup",
+      "path": "skills/weekly-rollup",
+      "description": "Roll a week of daily reports and agent activity into one honest weekly summary: trajectory against goals, what shipped with proof, the recurring blocker, and what to change next week. Use when asked f",
+      "grade": "A",
+      "score": 100,
+      "tier": 0,
+      "tier_name": "text",
+      "file_count": 1,
+      "unscanned_files": 0,
+      "bytes": 3222,
+      "findings": [],
+      "fingerprint": "4654a0f43a92a8dd"
     },
     {
       "name": "weekly-unstuck",

@@ -2,9 +2,9 @@
 
 Source: https://github.com/borghei/Claude-Skills
 
-**386 skills · average 96.2/100 · scanned 2026-10-20 with scanner v1**
+**386 skills · average 96.1/100 · scanned 2026-10-27 with scanner v1**
 
-Grades: A 349 · B 17 · C 10 · D 8 · F 2
+Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 ## Capability profile
 
@@ -20,21 +20,21 @@ Grades: A 349 · B 17 · C 10 · D 8 · F 2
 
 | Detector | Skills | Share |
 | --- | --: | --: |
-| `network-egress` | 55 | 14% |
-| `dotenv-access` | 18 | 5% |
-| `unpinned-install` | 16 | 4% |
-| `destructive` | 14 | 4% |
+| `network-egress` | 56 | 15% |
+| `dotenv-access` | 19 | 5% |
+| `unpinned-install` | 17 | 4% |
+| `destructive` | 15 | 4% |
 | `persistence` | 10 | 3% |
 | `env-key-reference` | 8 | 2% |
 | `instruction-override` | 7 | 2% |
 | `secret-access` | 7 | 2% |
 | `obfuscation` | 5 | 1% |
 | `privilege-escalation` | 3 | 1% |
+| `ip-literal-url` | 2 | 1% |
 | `conceal-from-user` | 1 | 0% |
-| `ip-literal-url` | 1 | 0% |
 | `zero-width` | 1 | 0% |
 
-## Everything below an A (37)
+## Everything below an A (38)
 
 ### F · 0/100 · `devops-workflow-engineer`
 
@@ -188,6 +188,18 @@ Grades: A 349 · B 17 · C 10 · D 8 · F 2
 | **high** | `instruction-override` | `assets/failure_mode_taxonomy.md:62` | plain | `**What:** Untrusted input (e.g., a document, a webpage, a tool result) contains instructions that override the` |
 | **high** | `obfuscation` | `assets/failure_mode_taxonomy.md:14` | plain | `- Faithfulness eval (RAGAS or custom rubric) on golden + online samples.` |
 | **high** | `obfuscation` | `references/ai-pm-frameworks-guide.md:125` | plain | `\| **RAGAS** \| RAG-specific eval (faithfulness, context relevance) \| Any RAG feature \|` |
+
+### C · 64/100 · `senior-ml-engineer`
+
+`engineering/senior-ml-engineer` — tier 3 (exec)
+
+> ML engineering skill for productionizing models, building MLOps pipelines, and integrating LLMs. Covers model deployment, feature stores, drift monitoring, RAG systems, and cost optimization.
+
+| Severity | Detector | Where | Context | Evidence |
+| --- | --- | --- | --- | --- |
+| **high** | `destructive` | `scripts/model_deployment_pipeline.py:231` | quote | `"    && rm -rf /var/lib/apt/lists/*\n") if py == "python3" else ""` |
+| **medium** | `network-egress` | `references/tool-reference.md:36` | plain | `\| `Dockerfile` \| Pinned slim base (`python:3.11-slim`, or a CUDA runtime image when `gpu` is true), non-root u` |
+| **medium** | `ip-literal-url` | `scripts/model_deployment_pipeline.py:232` | quote | `probe = (f"import urllib.request; urllib.request.urlopen('http://127.0.0.1:{s['port']}"` |
 
 ### C · 69/100 · `docker-development`
 
@@ -480,7 +492,7 @@ Grades: A 349 · B 17 · C 10 · D 8 · F 2
 | --- | --- | --- | --- | --- |
 | **medium** | `network-egress` | `references/auth-billing-and-tenancy.md:3` | plain | `Read this when wiring up NextAuth, building the Stripe checkout/webhook/portal flow, protecting routes with mi` |
 | **medium** | `network-egress` | `references/workflow-and-quality.md:40` | plain | `19. Implement webhook handler with signature verification` |
-| **medium** | `network-egress` | `SKILL.md:26` | plain | `- **Stripe billing** — checkout session, customer portal, and signature-verified webhook handler keeping subsc` |
+| **medium** | `network-egress` | `SKILL.md:32` | plain | `- **Stripe billing** — checkout session, customer portal, and signature-verified webhook handler keeping subsc` |
 | **low** | `dotenv-access` | `references/project-structure-and-schema.md:80` | fence | `├── .env.example` |
 | **low** | `dotenv-access` | `scripts/saas_scaffolder.py:218` | quote | `".env.example": None,` |
 
