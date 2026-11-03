@@ -2,9 +2,9 @@
 
 Source: https://github.com/anthropics/skills
 
-**20 skills · average 89/100 · scanned 2026-10-27 with scanner v1**
+**20 skills · average 88.6/100 · scanned 2026-11-03 with scanner v1**
 
-Grades: A 15 · B 3 · C 1 · F 1
+Grades: A 15 · B 3 · D 1 · F 1
 
 ## Capability profile
 
@@ -31,6 +31,7 @@ Grades: A 15 · B 3 · C 1 · F 1
 | `pipe-to-shell` | 1 | 5% |
 | `persistence` | 1 | 5% |
 | `dotenv-access` | 1 | 5% |
+| `ip-literal-url` | 1 | 5% |
 
 ## Everything below an A (5)
 
@@ -113,7 +114,7 @@ Grades: A 15 · B 3 · C 1 · F 1
 | **low** | `env-key-reference` | `typescript/managed-agents/README.md:19` | fence | `// ANTHROPIC_API_KEY, or ANTHROPIC_AUTH_TOKEN, or an `ant auth login` profile.` |
 | **low** | `unpinned-install` | `typescript/managed-agents/README.md:10` | fence | `npm install @anthropic-ai/sdk` |
 
-### C · 66/100 · `mcp-builder`
+### D · 58/100 · `mcp-builder`
 
 `skills/mcp-builder` — tier 3 (exec)
 
@@ -121,11 +122,14 @@ Grades: A 15 · B 3 · C 1 · F 1
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `destructive` | `reference/node_mcp_server.md:541` | fence | `"clean": "rm -rf dist"` |
-| **medium** | `network-egress` | `reference/node_mcp_server.md:474` | fence | `const response = await axios.get(`${API_URL}/resource/${resourceId}`);` |
+| **high** | `destructive` | `reference/node_mcp_server.md:543` | fence | `"clean": "rm -rf dist"` |
+| **medium** | `network-egress` | `reference/node_mcp_server_v2.md:167` | fence | `const response = await fetch(url, {` |
+| **medium** | `ip-literal-url` | `reference/node_mcp_server_v2.md:483` | fence | `console.error(`example-mcp-server listening on http://127.0.0.1:${port}/mcp`);` |
+| **medium** | `network-egress` | `reference/node_mcp_server.md:476` | fence | `const response = await axios.get(`${API_URL}/resource/${resourceId}`);` |
 | **medium** | `network-egress` | `reference/python_mcp_server.md:260` | fence | `response = requests.get(f"{API_URL}/resource/{resource_id}")  # Blocks` |
 | **low** | `env-key-reference` | `reference/evaluation.md:398` | fence | `export ANTHROPIC_API_KEY=your_api_key_here` |
 | **low** | `unpinned-install` | `reference/evaluation.md:392` | fence | `pip install anthropic mcp` |
+| **low** | `unpinned-install` | `reference/node_mcp_server_v2.md:14` | fence | `npm install @modelcontextprotocol/server zod` |
 
 ### B · 77/100 · `web-artifacts-builder`
 

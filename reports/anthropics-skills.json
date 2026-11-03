@@ -2,16 +2,16 @@
   "slug": "anthropics-skills",
   "name": "anthropics/skills",
   "url": "https://github.com/anthropics/skills",
-  "scanned_at": "2026-10-27",
+  "scanned_at": "2026-11-03",
   "scanner_version": 1,
   "skill_count": 20,
-  "average_score": 89,
+  "average_score": 88.6,
   "repo_grade": "review",
   "distribution": {
     "A": 15,
     "B": 3,
-    "C": 1,
-    "D": 0,
+    "C": 0,
+    "D": 1,
     "F": 1
   },
   "tiers": {
@@ -32,7 +32,8 @@
     "secret-access": 1,
     "pipe-to-shell": 1,
     "persistence": 1,
-    "dotenv-access": 1
+    "dotenv-access": 1,
+    "ip-literal-url": 1
   },
   "suppressed_skills": [],
   "skills": [
@@ -1690,13 +1691,13 @@
       "name": "mcp-builder",
       "path": "skills/mcp-builder",
       "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate externa",
-      "grade": "C",
-      "score": 66,
+      "grade": "D",
+      "score": 58,
       "tier": 3,
       "tier_name": "exec",
-      "file_count": 10,
+      "file_count": 11,
       "unscanned_files": 0,
-      "bytes": 121630,
+      "bytes": 158949,
       "findings": [
         {
           "id": "destructive",
@@ -1704,7 +1705,7 @@
           "declared_severity": "high",
           "context": "fence",
           "file": "reference/node_mcp_server.md",
-          "line": 541,
+          "line": 543,
           "match": "rm -rf dist\"",
           "evidence": "\"clean\": \"rm -rf dist\""
         },
@@ -1713,8 +1714,38 @@
           "severity": "medium",
           "declared_severity": "medium",
           "context": "fence",
+          "file": "reference/node_mcp_server_v2.md",
+          "line": 167,
+          "match": "fetch(",
+          "evidence": "const response = await fetch(url, {"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "reference/node_mcp_server_v2.md",
+          "line": 315,
+          "match": "fetch(",
+          "evidence": "response = await fetch(url, {"
+        },
+        {
+          "id": "ip-literal-url",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
+          "file": "reference/node_mcp_server_v2.md",
+          "line": 483,
+          "match": "http://127.0.0.1",
+          "evidence": "console.error(`example-mcp-server listening on http://127.0.0.1:${port}/mcp`);"
+        },
+        {
+          "id": "network-egress",
+          "severity": "medium",
+          "declared_severity": "medium",
+          "context": "fence",
           "file": "reference/node_mcp_server.md",
-          "line": 474,
+          "line": 476,
           "match": "axios.",
           "evidence": "const response = await axios.get(`${API_URL}/resource/${resourceId}`);"
         },
@@ -1724,7 +1755,7 @@
           "declared_severity": "medium",
           "context": "fence",
           "file": "reference/node_mcp_server.md",
-          "line": 480,
+          "line": 482,
           "match": "axios.",
           "evidence": "return axios.get(`${API_URL}/resource/${resourceId}`)"
         },
@@ -1779,17 +1810,47 @@
           "evidence": "pip install anthropic mcp"
         },
         {
+          "id": "ip-literal-url",
+          "severity": "low",
+          "declared_severity": "medium",
+          "context": "inline-code",
+          "file": "reference/node_mcp_server_v2.md",
+          "line": 683,
+          "match": "http://127.0.0.1:3000",
+          "evidence": "- For an HTTP server, start it (`TRANSPORT=http npm start`) and connect with `new StreamableHTTPClientTransport(new URL(\"http://127.0.0.1:3000/mcp\"))` from `@modelcontextprotocol/client` instead"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "reference/node_mcp_server_v2.md",
+          "line": 14,
+          "match": "npm install @modelcontextprotocol/server zod",
+          "evidence": "npm install @modelcontextprotocol/server zod"
+        },
+        {
+          "id": "unpinned-install",
+          "severity": "low",
+          "declared_severity": "low",
+          "context": "fence",
+          "file": "reference/node_mcp_server_v2.md",
+          "line": 15,
+          "match": "npm install @modelcontextprotocol/express @modelcontextprotocol/node express   # Streamable H",
+          "evidence": "npm install @modelcontextprotocol/express @modelcontextprotocol/node express   # Streamable HTTP only"
+        },
+        {
           "id": "network-egress",
           "severity": "low",
           "declared_severity": "medium",
           "context": "inline-code",
           "file": "reference/node_mcp_server.md",
-          "line": 942,
+          "line": 944,
           "match": "axios.",
           "evidence": "- [ ] Error handling uses proper type guards (e.g., `axios.isAxiosError`, `z.ZodError`)"
         }
       ],
-      "fingerprint": "e1a834f9b1889508"
+      "fingerprint": "91eee7bff7d1ac80"
     },
     {
       "name": "web-artifacts-builder",

@@ -33,7 +33,7 @@ No API key. No account. No model call. **No tokens spent** — this is regex and
 | [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills) | 2,879 | **99.7** | A 2869 · B 6 · C 4 | 307 (11%) | [details](reports/pm-claude-skills.md) |
 | [obra/superpowers](https://github.com/obra/superpowers) | 15 | **97.4** | A 14 · B 1 | 11 (73%) | [details](reports/obra-superpowers.md) |
 | [borghei/Claude-Skills](https://github.com/borghei/Claude-Skills) | 386 | **96.1** | A 348 · B 17 · C 11 · D 8 · F 2 | 370 (96%) | [details](reports/borghei-claude-skills.md) |
-| [anthropics/skills](https://github.com/anthropics/skills) | 20 | **89** | A 15 · B 3 · C 1 · F 1 | 11 (55%) | [details](reports/anthropics-skills.md) |
+| [anthropics/skills](https://github.com/anthropics/skills) | 20 | **88.6** | A 15 · B 3 · D 1 · F 1 | 11 (55%) | [details](reports/anthropics-skills.md) |
 
 <sub>Average score, 0–100. A repo of harmless text formatters will beat a repo of deployment tools, and that is correct — the score measures blast radius, not quality.</sub>
 
