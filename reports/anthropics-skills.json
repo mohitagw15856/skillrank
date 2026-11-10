@@ -2,7 +2,7 @@
   "slug": "anthropics-skills",
   "name": "anthropics/skills",
   "url": "https://github.com/anthropics/skills",
-  "scanned_at": "2026-11-03",
+  "scanned_at": "2026-11-10",
   "scanner_version": 1,
   "skill_count": 20,
   "average_score": 88.6,
@@ -1895,7 +1895,7 @@
       "tier_name": "exec",
       "file_count": 61,
       "unscanned_files": 39,
-      "bytes": 1128621,
+      "bytes": 1138498,
       "findings": [
         {
           "id": "destructive",
@@ -1918,7 +1918,7 @@
           "evidence": "`docx` is preinstalled — do not run `npm install` first; write the script and `require('docx')` directly. Only if that require fails: `npm install docx`. The model knows the API; these are the footgun"
         }
       ],
-      "fingerprint": "b2dfda60cb97ef2f"
+      "fingerprint": "e48b5ff306808604"
     },
     {
       "name": "pptx",
@@ -1930,7 +1930,7 @@
       "tier_name": "exec",
       "file_count": 56,
       "unscanned_files": 39,
-      "bytes": 1138993,
+      "bytes": 1148870,
       "findings": [
         {
           "id": "destructive",
@@ -1973,7 +1973,7 @@
           "evidence": "- **Icons:** render `react-icons` to SVG (`ReactDOMServer.renderToStaticMarkup`), rasterize with `sharp` at ≥256px, and insert via `addImage({ data: \"image/png;base64,\" + buf.toString(\"base64\") })` —"
         }
       ],
-      "fingerprint": "36b3ef46c0c209d6"
+      "fingerprint": "42fe3b278f7c33fe"
     },
     {
       "name": "frontend-design",
@@ -2457,7 +2457,7 @@
       "tier_name": "exec",
       "file_count": 12,
       "unscanned_files": 0,
-      "bytes": 58654,
+      "bytes": 68531,
       "findings": [
         {
           "id": "unpinned-install",
@@ -2470,7 +2470,7 @@
           "evidence": "# Requires: pip install pytesseract pdf2image"
         }
       ],
-      "fingerprint": "891a63cf55c82279"
+      "fingerprint": "0b33d0279f54014e"
     },
     {
       "name": "skill-creator",
@@ -2667,9 +2667,9 @@
       "tier_name": "exec",
       "file_count": 53,
       "unscanned_files": 39,
-      "bytes": 1102818,
+      "bytes": 1112695,
       "findings": [],
-      "fingerprint": "dded01b7edc8ce90"
+      "fingerprint": "f4aea48cdc954b99"
     }
   ]
 }

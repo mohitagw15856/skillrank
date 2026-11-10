@@ -2,7 +2,7 @@
   "slug": "obra-superpowers",
   "name": "obra/superpowers",
   "url": "https://github.com/obra/superpowers",
-  "scanned_at": "2026-11-03",
+  "scanned_at": "2026-11-10",
   "scanner_version": 1,
   "skill_count": 15,
   "average_score": 97.4,
@@ -38,7 +38,7 @@
       "tier_name": "exec",
       "file_count": 8,
       "unscanned_files": 1,
-      "bytes": 77371,
+      "bytes": 79366,
       "findings": [
         {
           "id": "destructive",
@@ -46,7 +46,7 @@
           "declared_severity": "high",
           "context": "plain",
           "file": "scripts/start-server.sh",
-          "line": 148,
+          "line": 155,
           "match": "rm -f \"$PID_FILE\"",
           "evidence": "rm -f \"$PID_FILE\""
         },
@@ -92,7 +92,7 @@
           "rollup": true
         }
       ],
-      "fingerprint": "5c502001c3ca901e"
+      "fingerprint": "e2d32558df616c98"
     },
     {
       "name": "diagnosing-superpowers",
@@ -147,9 +147,9 @@
       "score": 92,
       "tier": 3,
       "tier_name": "exec",
-      "file_count": 14,
-      "unscanned_files": 3,
-      "bytes": 57174,
+      "file_count": 15,
+      "unscanned_files": 4,
+      "bytes": 65175,
       "findings": [
         {
           "id": "destructive",
@@ -157,12 +157,12 @@
           "declared_severity": "high",
           "context": "inline-code",
           "file": "references/final-review.md",
-          "line": 43,
+          "line": 45,
           "match": "rm -rf <workspace>`) — the git history is",
           "evidence": "delete this plan's workspace (`rm -rf <workspace>`) — the git history is"
         }
       ],
-      "fingerprint": "5badea686eb87de3"
+      "fingerprint": "9cadfab110876fb9"
     },
     {
       "name": "writing-skills",
@@ -213,9 +213,9 @@
       "tier_name": "write",
       "file_count": 3,
       "unscanned_files": 2,
-      "bytes": 20644,
+      "bytes": 21335,
       "findings": [],
-      "fingerprint": "fa8ff6b2dbd7d06a"
+      "fingerprint": "6abb2f8c51feca51"
     },
     {
       "name": "finishing-a-development-branch",
@@ -267,11 +267,11 @@
       "score": 100,
       "tier": 3,
       "tier_name": "exec",
-      "file_count": 11,
+      "file_count": 6,
       "unscanned_files": 0,
-      "bytes": 40752,
+      "bytes": 28993,
       "findings": [],
-      "fingerprint": "1997375555f708a3"
+      "fingerprint": "b3d668dec8566d91"
     },
     {
       "name": "test-driven-development",

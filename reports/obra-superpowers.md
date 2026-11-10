@@ -2,7 +2,7 @@
 
 Source: https://github.com/obra/superpowers
 
-**15 skills · average 97.4/100 · scanned 2026-11-03 with scanner v1**
+**15 skills · average 97.4/100 · scanned 2026-11-10 with scanner v1**
 
 Grades: A 14 · B 1
 
@@ -34,7 +34,7 @@ Grades: A 14 · B 1
 
 | Severity | Detector | Where | Context | Evidence |
 | --- | --- | --- | --- | --- |
-| **high** | `destructive` | `scripts/start-server.sh:148` | plain | `rm -f "$PID_FILE"` |
+| **high** | `destructive` | `scripts/start-server.sh:155` | plain | `rm -f "$PID_FILE"` |
 | **high** | `destructive` | `scripts/stop-server.sh:22` | plain | `rm -f "${STATE_DIR}/server-info"` |
 
 
