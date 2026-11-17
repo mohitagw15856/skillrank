@@ -2,7 +2,7 @@
 
 Source: https://github.com/borghei/Claude-Skills
 
-**404 skills · average 95.6/100 · scanned 2026-11-10 with scanner v1**
+**404 skills · average 95.6/100 · scanned 2026-11-17 with scanner v1**
 
 Grades: A 358 · B 20 · C 15 · D 9 · F 2
 

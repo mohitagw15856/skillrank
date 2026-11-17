@@ -2,7 +2,7 @@
   "slug": "anthropics-skills",
   "name": "anthropics/skills",
   "url": "https://github.com/anthropics/skills",
-  "scanned_at": "2026-11-10",
+  "scanned_at": "2026-11-17",
   "scanner_version": 1,
   "skill_count": 20,
   "average_score": 88.6,
@@ -1895,7 +1895,7 @@
       "tier_name": "exec",
       "file_count": 61,
       "unscanned_files": 39,
-      "bytes": 1138498,
+      "bytes": 1166083,
       "findings": [
         {
           "id": "destructive",
@@ -1903,9 +1903,9 @@
           "declared_severity": "high",
           "context": "fence",
           "file": "SKILL.md",
-          "line": 56,
-          "match": "rm -f ../out.docx && zip -Xr ../out.docx .)",
-          "evidence": "(cd unpacked && rm -f ../out.docx && zip -Xr ../out.docx .)"
+          "line": 57,
+          "match": "rm -f ../out.docx && zip -XrDy ../out.docx .)",
+          "evidence": "(cd unpacked && rm -f ../out.docx && zip -XrDy ../out.docx .)"
         },
         {
           "id": "unpinned-install",
@@ -1918,7 +1918,7 @@
           "evidence": "`docx` is preinstalled — do not run `npm install` first; write the script and `require('docx')` directly. Only if that require fails: `npm install docx`. The model knows the API; these are the footgun"
         }
       ],
-      "fingerprint": "e48b5ff306808604"
+      "fingerprint": "e1deb98363e6d0fa"
     },
     {
       "name": "pptx",
@@ -1928,9 +1928,9 @@
       "score": 80,
       "tier": 3,
       "tier_name": "exec",
-      "file_count": 56,
+      "file_count": 58,
       "unscanned_files": 39,
-      "bytes": 1148870,
+      "bytes": 1199435,
       "findings": [
         {
           "id": "destructive",
@@ -1938,9 +1938,9 @@
           "declared_severity": "high",
           "context": "fence",
           "file": "SKILL.md",
-          "line": 62,
-          "match": "rm -f ../out.pptx && zip -Xr ../out.pptx .)           # zip from INSIDE the dir; rm first or deleted parts survive",
-          "evidence": "(cd unpacked && rm -f ../out.pptx && zip -Xr ../out.pptx .)           # zip from INSIDE the dir; rm first or deleted parts survive"
+          "line": 79,
+          "match": "rm -f ../out.pptx && zip -XrDy ../out.pptx .)         # zip from INSIDE the dir; rm first or deleted parts survive",
+          "evidence": "(cd unpacked && rm -f ../out.pptx && zip -XrDy ../out.pptx .)         # zip from INSIDE the dir; rm first or deleted parts survive"
         },
         {
           "id": "destructive",
@@ -1948,7 +1948,7 @@
           "declared_severity": "high",
           "context": "fence",
           "file": "SKILL.md",
-          "line": 227,
+          "line": 260,
           "match": "rm -f slide-*.jpg",
           "evidence": "rm -f slide-*.jpg"
         },
@@ -1958,7 +1958,7 @@
           "declared_severity": "low",
           "context": "inline-code",
           "file": "SKILL.md",
-          "line": 31,
+          "line": 33,
           "match": "npm install pptxgenjs`. The model knows the API; these are the footguns:",
           "evidence": "`pptxgenjs` is preinstalled — do not run `npm install` first; write the script and `require('pptxgenjs')` directly. Only if that require fails: `npm install pptxgenjs`. The model knows the API; these"
         },
@@ -1968,12 +1968,12 @@
           "declared_severity": "low",
           "context": "inline-code",
           "file": "SKILL.md",
-          "line": 50,
+          "line": 53,
           "match": "npm install react-icons react react-dom sharp` only if a require fails).",
           "evidence": "- **Icons:** render `react-icons` to SVG (`ReactDOMServer.renderToStaticMarkup`), rasterize with `sharp` at ≥256px, and insert via `addImage({ data: \"image/png;base64,\" + buf.toString(\"base64\") })` —"
         }
       ],
-      "fingerprint": "42fe3b278f7c33fe"
+      "fingerprint": "4f02c42dd428bd38"
     },
     {
       "name": "frontend-design",
@@ -2457,7 +2457,7 @@
       "tier_name": "exec",
       "file_count": 12,
       "unscanned_files": 0,
-      "bytes": 68531,
+      "bytes": 68566,
       "findings": [
         {
           "id": "unpinned-install",
@@ -2470,7 +2470,7 @@
           "evidence": "# Requires: pip install pytesseract pdf2image"
         }
       ],
-      "fingerprint": "0b33d0279f54014e"
+      "fingerprint": "56092269d3b92573"
     },
     {
       "name": "skill-creator",
@@ -2667,9 +2667,9 @@
       "tier_name": "exec",
       "file_count": 53,
       "unscanned_files": 39,
-      "bytes": 1112695,
+      "bytes": 1164551,
       "findings": [],
-      "fingerprint": "f4aea48cdc954b99"
+      "fingerprint": "936da8838029db30"
     }
   ]
 }
